@@ -1,0 +1,51 @@
+{
+  "name": "@proativa/api",
+  "version": "3.3.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node dist/main.js",
+    "start:dev": "prisma generate && node scripts/dev-with-tsc.mjs",
+    "build": "prisma generate && tsc -p tsconfig.build.json",
+    "lint": "tsc --noEmit -p tsconfig.json",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate deploy",
+    "prisma:seed": "tsx prisma/seed.ts",
+    "dev:api:env": "prisma generate && node scripts/dev-with-tsc.mjs",
+    "prisma:migrate:dev": "node --env-file=../../.env.development ../../node_modules/prisma/build/index.js migrate deploy",
+    "prisma:seed:dev": "node --env-file=../../.env.development --import tsx prisma/seed.ts",
+    "prisma:validate": "prisma validate",
+    "prisma:format": "prisma format"
+  },
+  "dependencies": {
+    "@nestjs/common": "12.4.2",
+    "@nestjs/core": "12.4.2",
+    "@nestjs/platform-express": "12.4.2",
+    "@prisma/adapter-pg": "7.10.1",
+    "@prisma/client": "7.10.1",
+    "argon2": "0.45.2",
+    "class-transformer": "0.5.1",
+    "class-validator": "0.14.2",
+    "cookie-parser": "1.4.7",
+    "helmet": "8.1.0",
+    "jsonwebtoken": "9.0.2",
+    "mysql2": "3.24.4",
+    "multer": "^2.0.0",
+    "pg": "8.23.1",
+    "reflect-metadata": "0.2.2",
+    "rxjs": "7.8.2",
+    "dotenv": "^17.0.0",
+    "bullmq": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "1.4.9",
+    "@types/express": "5.0.5",
+    "@types/jsonwebtoken": "9.0.10",
+    "@types/node": "24.10.1",
+    "@types/pg": "8.15.6",
+    "@types/multer": "^2.0.0",
+    "prisma": "7.10.1",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3"
+  }
+}

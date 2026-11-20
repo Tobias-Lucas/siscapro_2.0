@@ -1,0 +1,11 @@
+ID;Funcionalidade;Evidencia PHP;Implementacao V3.2;Pendencia para paridade;Status
+DMD-01;Consulta/listagem de demandas;proativa/empresa/demandaEmail/index.php;GET /api/demands + tela DemandasPage;Confirmar colunas, filtros, ordenacao e estados originais;Pendente de homologacao
+DMD-02;Cadastro de demanda;proativa/empresa/demandaEmail/adicionar.php;POST /api/demands;Mapear campos obrigatorios, validacoes, empresa, unidade e efeitos colaterais;Pendente de homologacao
+DMD-03;Alteracao de demanda;proativa/empresa/demandaEmail/alterar.php;PATCH /api/demands/:id;Confirmar transicoes, campos editaveis e trilha historica;Pendente de homologacao
+DMD-04;Adicionar tarefa;proativa/empresa/demandaEmail/adicionarTarefa.php;POST /api/demands/:id/tasks;Confirmar vinculos com aluno, demanda, responsavel e datas;Pendente de homologacao
+DMD-05;Administrar tarefa;proativa/empresa/demandaEmail/administrarTarefa.php;Tela e endpoints de tarefas;Mapear acoes e regras de administracao;Pendente de homologacao
+DMD-06;Alterar tarefa;proativa/empresa/demandaEmail/alterarTarefa.php;PATCH /api/demands/:id/tasks/:taskId;Confirmar campos, transicoes e historico;Pendente de homologacao
+DMD-07;Demandas concluidas;proativa/empresa/demandaEmail/concluidas.php;GET /api/demands/completed;Confirmar criterios de conclusao e filtros historicos;Pendente de homologacao
+DMD-08;Tarefas concluidas;proativa/empresa/demandaEmail/concluidasTarefa.php;GET /api/demands/tasks/completed;Confirmar criterios e relacoes exibidas;Pendente de homologacao
+DMD-09;Tipos de demanda;proativa/empresa/demandaEmail/tipo.php e tipoAlterar.php;GET/POST/PATCH /api/demands/types;Mapear campos, unicidade, inativacao e historico;Pendente de homologacao
+DMD-10;Relatorios de demandas atendidas e producao de contratos;proativa/relatorios/demandasPorEmail/ e proativa/financeiro/gestao/pesquisa/;Indicadores preliminares somente;Reproduzir criterios, filtros, agrupamentos, totais e exportacoes;Nao implementado

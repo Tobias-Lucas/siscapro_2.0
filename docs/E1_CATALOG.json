@@ -1,0 +1,1932 @@
+[
+  {
+    "model": "Unit",
+    "slug": "unit",
+    "fields": [
+      {
+        "key": "code",
+        "type": "String",
+        "optional": false,
+        "label": "Código"
+      },
+      {
+        "key": "name",
+        "type": "String",
+        "optional": false,
+        "label": "Nome"
+      },
+      {
+        "key": "city",
+        "type": "String",
+        "optional": true,
+        "label": "Cidade"
+      },
+      {
+        "key": "state",
+        "type": "String",
+        "optional": true,
+        "label": "Estado",
+        "options": [
+          "PLANNED",
+          "DONE",
+          "CANCELLED",
+          "RESCHEDULED"
+        ]
+      },
+      {
+        "key": "address",
+        "type": "String",
+        "optional": true,
+        "label": "Endereço"
+      },
+      {
+        "key": "status",
+        "type": "RecordStatus",
+        "optional": false,
+        "default": "ACTIVE",
+        "label": "Situação",
+        "options": [
+          "ACTIVE",
+          "INACTIVE",
+          "PENDING",
+          "ARCHIVED"
+        ]
+      }
+    ],
+    "label": "Unidades",
+    "group": "Institucional",
+    "roles": [
+      "SUPER_ADMIN",
+      "ADMIN"
+    ],
+    "modelKey": "unit"
+  },
+  {
+    "model": "Department",
+    "slug": "department",
+    "fields": [
+      {
+        "key": "code",
+        "type": "String",
+        "optional": false,
+        "label": "Código"
+      },
+      {
+        "key": "name",
+        "type": "String",
+        "optional": false,
+        "label": "Nome"
+      },
+      {
+        "key": "description",
+        "type": "String",
+        "optional": true,
+        "label": "Descrição",
+        "multiline": true
+      },
+      {
+        "key": "status",
+        "type": "RecordStatus",
+        "optional": false,
+        "default": "ACTIVE",
+        "label": "Situação",
+        "options": [
+          "ACTIVE",
+          "INACTIVE",
+          "PENDING",
+          "ARCHIVED"
+        ]
+      }
+    ],
+    "label": "Departamentos",
+    "group": "Institucional",
+    "roles": [
+      "SUPER_ADMIN",
+      "ADMIN"
+    ],
+    "modelKey": "department"
+  },
+  {
+    "model": "UserUnit",
+    "slug": "user-unit",
+    "fields": [
+      {
+        "key": "userId",
+        "type": "String",
+        "optional": false,
+        "ref": "User",
+        "label": "Usuário"
+      },
+      {
+        "key": "unitId",
+        "type": "String",
+        "optional": false,
+        "ref": "Unit",
+        "label": "Unidade"
+      },
+      {
+        "key": "departmentId",
+        "type": "String",
+        "optional": true,
+        "ref": "Department",
+        "label": "Departamento"
+      },
+      {
+        "key": "active",
+        "type": "Boolean",
+        "optional": false,
+        "default": "true",
+        "label": "Ativo"
+      }
+    ],
+    "label": "Lotação de usuários",
+    "group": "Institucional",
+    "roles": [
+      "SUPER_ADMIN",
+      "ADMIN"
+    ],
+    "modelKey": "userUnit"
+  },
+  {
+    "model": "ReferenceItem",
+    "slug": "reference-item",
+    "fields": [
+      {
+        "key": "domain",
+        "type": "String",
+        "optional": false,
+        "label": "Domain"
+      },
+      {
+        "key": "code",
+        "type": "String",
+        "optional": false,
+        "label": "Código"
+      },
+      {
+        "key": "label",
+        "type": "String",
+        "optional": false,
+        "label": "Descrição"
+      },
+      {
+        "key": "sortOrder",
+        "type": "Int",
+        "optional": false,
+        "default": "0",
+        "label": "Ordem"
+      },
+      {
+        "key": "active",
+        "type": "Boolean",
+        "optional": false,
+        "default": "true",
+        "label": "Ativo"
+      }
+    ],
+    "label": "Tabelas de referência",
+    "group": "Institucional",
+    "roles": [
+      "SUPER_ADMIN",
+      "ADMIN"
+    ],
+    "modelKey": "referenceItem"
+  },
+  {
+    "model": "CompanyGroup",
+    "slug": "company-group",
+    "fields": [
+      {
+        "key": "name",
+        "type": "String",
+        "optional": false,
+        "label": "Nome"
+      },
+      {
+        "key": "description",
+        "type": "String",
+        "optional": true,
+        "label": "Descrição",
+        "multiline": true
+      },
+      {
+        "key": "status",
+        "type": "RecordStatus",
+        "optional": false,
+        "default": "ACTIVE",
+        "label": "Situação",
+        "options": [
+          "ACTIVE",
+          "INACTIVE",
+          "PENDING",
+          "ARCHIVED"
+        ]
+      }
+    ],
+    "label": "Grupos empresariais",
+    "group": "Empresas",
+    "roles": [
+      "CONTRACTS",
+      "FINANCE",
+      "COMMERCIAL",
+      "HR"
+    ],
+    "modelKey": "companyGroup"
+  },
+  {
+    "model": "CompanyGroupMember",
+    "slug": "company-group-member",
+    "fields": [
+      {
+        "key": "groupId",
+        "type": "String",
+        "optional": false,
+        "ref": "CompanyGroup",
+        "label": "Grupo empresarial"
+      },
+      {
+        "key": "companyId",
+        "type": "String",
+        "optional": false,
+        "ref": "Company",
+        "label": "Empresa"
+      }
+    ],
+    "label": "Empresas por grupo",
+    "group": "Empresas",
+    "roles": [
+      "CONTRACTS",
+      "FINANCE",
+      "COMMERCIAL",
+      "HR"
+    ],
+    "modelKey": "companyGroupMember"
+  },
+  {
+    "model": "CompanyContact",
+    "slug": "company-contact",
+    "fields": [
+      {
+        "key": "companyId",
+        "type": "String",
+        "optional": false,
+        "ref": "Company",
+        "label": "Empresa"
+      },
+      {
+        "key": "fullName",
+        "type": "String",
+        "optional": false,
+        "label": "Nome completo"
+      },
+      {
+        "key": "email",
+        "type": "String",
+        "optional": true,
+        "label": "E-mail"
+      },
+      {
+        "key": "phone",
+        "type": "String",
+        "optional": true,
+        "label": "Telefone"
+      },
+      {
+        "key": "category",
+        "type": "String",
+        "optional": false,
+        "label": "Categoria"
+      },
+      {
+        "key": "position",
+        "type": "String",
+        "optional": true,
+        "label": "Função"
+      },
+      {
+        "key": "status",
+        "type": "RecordStatus",
+        "optional": false,
+        "default": "ACTIVE",
+        "label": "Situação",
+        "options": [
+          "ACTIVE",
+          "INACTIVE",
+          "PENDING",
+          "ARCHIVED"
+        ]
+      }
+    ],
+    "label": "Contatos das empresas",
+    "group": "Empresas",
+    "roles": [
+      "CONTRACTS",
+      "FINANCE",
+      "COMMERCIAL",
+      "HR"
+    ],
+    "modelKey": "companyContact"
+  },
+  {
+    "model": "CurriculumMatrix",
+    "slug": "curriculum-matrix",
+    "fields": [
+      {
+        "key": "courseId",
+        "type": "String",
+        "optional": false,
+        "ref": "Course",
+        "label": "Curso"
+      },
+      {
+        "key": "code",
+        "type": "String",
+        "optional": false,
+        "label": "Código"
+      },
+      {
+        "key": "version",
+        "type": "String",
+        "optional": false,
+        "label": "Versão"
+      },
+      {
+        "key": "title",
+        "type": "String",
+        "optional": false,
+        "label": "Título"
+      },
+      {
+        "key": "effectiveFrom",
+        "type": "DateTime",
+        "optional": true,
+        "label": "Início da vigência"
+      },
+      {
+        "key": "effectiveTo",
+        "type": "DateTime",
+        "optional": true,
+        "label": "Fim da vigência"
+      },
+      {
+        "key": "status",
+        "type": "RecordStatus",
+        "optional": false,
+        "default": "ACTIVE",
+        "label": "Situação",
+        "options": [
+          "OPEN",
+          "IN_PROGRESS",
+          "WAITING",
+          "DONE",
+          "CANCELLED"
+        ]
+      }
+    ],
+    "label": "Matrizes curriculares",
+    "group": "Secretaria",
+    "roles": [
+      "SECRETARY"
+    ],
+    "modelKey": "curriculumMatrix"
+  },
+  {
+    "model": "CurriculumModule",
+    "slug": "curriculum-module",
+    "fields": [
+      {
+        "key": "matrixId",
+        "type": "String",
+        "optional": false,
+        "ref": "CurriculumMatrix",
+        "label": "Matriz curricular"
+      },
+      {
+        "key": "disciplineId",
+        "type": "String",
+        "optional": true,
+        "ref": "Discipline",
+        "label": "Disciplina"
+      },
+      {
+        "key": "title",
+        "type": "String",
+        "optional": false,
+        "label": "Título"
+      },
+      {
+        "key": "sequence",
+        "type": "Int",
+        "optional": false,
+        "label": "Ordem"
+      },
+      {
+        "key": "plannedHours",
+        "type": "Int",
+        "optional": true,
+        "label": "Horas previstas"
+      },
+      {
+        "key": "lessonCount",
+        "type": "Int",
+        "optional": true,
+        "label": "Quantidade de aulas"
+      },
+      {
+        "key": "mandatory",
+        "type": "Boolean",
+        "optional": false,
+        "default": "true",
+        "label": "Obrigatório"
+      }
+    ],
+    "label": "Módulos da matriz",
+    "group": "Secretaria",
+    "roles": [
+      "SECRETARY"
+    ],
+    "modelKey": "curriculumModule"
+  },
+  {
+    "model": "AcademicLesson",
+    "slug": "academic-lesson",
+    "fields": [
+      {
+        "key": "classGroupId",
+        "type": "String",
+        "optional": false,
+        "ref": "ClassGroup",
+        "label": "Turma"
+      },
+      {
+        "key": "disciplineId",
+        "type": "String",
+        "optional": true,
+        "ref": "Discipline",
+        "label": "Disciplina"
+      },
+      {
+        "key": "teacherId",
+        "type": "String",
+        "optional": true,
+        "ref": "User",
+        "label": "Facilitador"
+      },
+      {
+        "key": "title",
+        "type": "String",
+        "optional": false,
+        "label": "Título"
+      },
+      {
+        "key": "lessonDate",
+        "type": "DateTime",
+        "optional": false,
+        "label": "Data da aula"
+      },
+      {
+        "key": "shift",
+        "type": "String",
+        "optional": false,
+        "label": "Turno"
+      },
+      {
+        "key": "room",
+        "type": "String",
+        "optional": true,
+        "label": "Sala"
+      },
+      {
+        "key": "state",
+        "type": "String",
+        "optional": false,
+        "default": "PLANNED",
+        "label": "Estado",
+        "options": [
+          "PLANNED",
+          "DONE",
+          "CANCELLED",
+          "RESCHEDULED"
+        ]
+      },
+      {
+        "key": "executedAt",
+        "type": "DateTime",
+        "optional": true,
+        "label": "Executed at"
+      }
+    ],
+    "label": "Datas e aulas",
+    "group": "Secretaria",
+    "roles": [
+      "SECRETARY"
+    ],
+    "modelKey": "academicLesson"
+  },
+  {
+    "model": "Holiday",
+    "slug": "holiday",
+    "fields": [
+      {
+        "key": "unitId",
+        "type": "String",
+        "optional": true,
+        "ref": "Unit",
+        "label": "Unidade"
+      },
+      {
+        "key": "holidayDate",
+        "type": "DateTime",
+        "optional": false,
+        "label": "Data do feriado"
+      },
+      {
+        "key": "name",
+        "type": "String",
+        "optional": false,
+        "label": "Nome"
+      },
+      {
+        "key": "scope",
+        "type": "String",
+        "optional": false,
+        "default": "INSTITUTIONAL",
+        "label": "Abrangência",
+        "options": [
+          "INSTITUTIONAL",
+          "MUNICIPAL",
+          "STATE",
+          "NATIONAL"
+        ]
+      }
+    ],
+    "label": "Feriados",
+    "group": "Institucional",
+    "roles": [
+      "SUPER_ADMIN",
+      "ADMIN"
+    ],
+    "modelKey": "holiday"
+  },
+  {
+    "model": "LearningMaterial",
+    "slug": "learning-material",
+    "fields": [
+      {
+        "key": "courseId",
+        "type": "String",
+        "optional": false,
+        "ref": "Course",
+        "label": "Curso"
+      },
+      {
+        "key": "disciplineId",
+        "type": "String",
+        "optional": true,
+        "ref": "Discipline",
+        "label": "Disciplina"
+      },
+      {
+        "key": "documentId",
+        "type": "String",
+        "optional": true,
+        "ref": "Document",
+        "label": "Documento"
+      },
+      {
+        "key": "title",
+        "type": "String",
+        "optional": false,
+        "label": "Título"
+      },
+      {
+        "key": "description",
+        "type": "String",
+        "optional": true,
+        "label": "Descrição",
+        "multiline": true
+      },
+      {
+        "key": "status",
+        "type": "RecordStatus",
+        "optional": false,
+        "default": "ACTIVE",
+        "label": "Situação",
+        "options": [
+          "ACTIVE",
+          "INACTIVE",
+          "PENDING",
+          "ARCHIVED"
+        ]
+      }
+    ],
+    "label": "Materiais didáticos",
+    "group": "Secretaria",
+    "roles": [
+      "SECRETARY"
+    ],
+    "modelKey": "learningMaterial"
+  },
+  {
+    "model": "MaterialRelease",
+    "slug": "material-release",
+    "fields": [
+      {
+        "key": "materialId",
+        "type": "String",
+        "optional": false,
+        "ref": "LearningMaterial",
+        "label": "Material"
+      },
+      {
+        "key": "personId",
+        "type": "String",
+        "optional": false,
+        "ref": "Person",
+        "label": "Aluno / pessoa"
+      },
+      {
+        "key": "releasedAt",
+        "type": "DateTime",
+        "optional": false,
+        "default": "now()",
+        "label": "Liberado em"
+      }
+    ],
+    "label": "Liberação de materiais",
+    "group": "Secretaria",
+    "roles": [
+      "SECRETARY"
+    ],
+    "modelKey": "materialRelease"
+  },
+  {
+    "model": "AbsenceJustification",
+    "slug": "absence-justification",
+    "fields": [
+      {
+        "key": "personId",
+        "type": "String",
+        "optional": false,
+        "ref": "Person",
+        "label": "Aluno / pessoa"
+      },
+      {
+        "key": "attendanceId",
+        "type": "String",
+        "optional": true,
+        "ref": "Attendance",
+        "label": "Frequência"
+      },
+      {
+        "key": "documentId",
+        "type": "String",
+        "optional": true,
+        "ref": "Document",
+        "label": "Documento"
+      },
+      {
+        "key": "reason",
+        "type": "String",
+        "optional": false,
+        "label": "Reason"
+      },
+      {
+        "key": "status",
+        "type": "RequestStatus",
+        "optional": false,
+        "default": "OPEN",
+        "label": "Situação",
+        "options": [
+          "OPEN",
+          "IN_PROGRESS",
+          "WAITING",
+          "DONE",
+          "CANCELLED"
+        ]
+      },
+      {
+        "key": "reviewNotes",
+        "type": "String",
+        "optional": true,
+        "label": "Observações de análise",
+        "multiline": true
+      }
+    ],
+    "label": "Justificativas de falta",
+    "group": "Secretaria",
+    "roles": [
+      "SECRETARY"
+    ],
+    "modelKey": "absenceJustification"
+  },
+  {
+    "model": "BusinessContract",
+    "slug": "business-contract",
+    "fields": [
+      {
+        "key": "companyId",
+        "type": "String",
+        "optional": false,
+        "ref": "Company",
+        "label": "Empresa"
+      },
+      {
+        "key": "number",
+        "type": "String",
+        "optional": false,
+        "label": "Número"
+      },
+      {
+        "key": "modality",
+        "type": "String",
+        "optional": true,
+        "label": "Modality"
+      },
+      {
+        "key": "startDate",
+        "type": "DateTime",
+        "optional": false,
+        "label": "Início"
+      },
+      {
+        "key": "endDate",
+        "type": "DateTime",
+        "optional": true,
+        "label": "Término"
+      },
+      {
+        "key": "amount",
+        "type": "Decimal",
+        "optional": true,
+        "label": "Valor (R$)"
+      },
+      {
+        "key": "status",
+        "type": "ContractStatus",
+        "optional": false,
+        "default": "DRAFT",
+        "label": "Situação",
+        "options": [
+          "DRAFT",
+          "PENDING_SIGNATURE",
+          "ACTIVE",
+          "SUSPENDED",
+          "TERMINATED",
+          "CANCELLED"
+        ]
+      },
+      {
+        "key": "notes",
+        "type": "String",
+        "optional": true,
+        "label": "Observações"
+      }
+    ],
+    "label": "Contratos empresariais",
+    "group": "Empresas",
+    "roles": [
+      "CONTRACTS",
+      "FINANCE",
+      "COMMERCIAL",
+      "HR"
+    ],
+    "modelKey": "businessContract"
+  },
+  {
+    "model": "ContractAmendment",
+    "slug": "contract-amendment",
+    "fields": [
+      {
+        "key": "contractId",
+        "type": "String",
+        "optional": false,
+        "ref": "Contract",
+        "label": "Contrato"
+      },
+      {
+        "key": "type",
+        "type": "String",
+        "optional": false,
+        "label": "Tipo"
+      },
+      {
+        "key": "effectiveAt",
+        "type": "DateTime",
+        "optional": false,
+        "label": "Data de vigência"
+      },
+      {
+        "key": "description",
+        "type": "String",
+        "optional": false,
+        "label": "Descrição",
+        "multiline": true
+      },
+      {
+        "key": "documentId",
+        "type": "String",
+        "optional": true,
+        "ref": "Document",
+        "label": "Documento"
+      },
+      {
+        "key": "status",
+        "type": "RequestStatus",
+        "optional": false,
+        "default": "OPEN",
+        "label": "Situação",
+        "options": [
+          "OPEN",
+          "IN_PROGRESS",
+          "WAITING",
+          "DONE",
+          "CANCELLED"
+        ]
+      }
+    ],
+    "label": "Aditivos contratuais",
+    "group": "Contratos",
+    "roles": [
+      "CONTRACTS",
+      "HR"
+    ],
+    "modelKey": "contractAmendment"
+  },
+  {
+    "model": "ContractMovement",
+    "slug": "contract-movement",
+    "fields": [
+      {
+        "key": "contractId",
+        "type": "String",
+        "optional": false,
+        "ref": "Contract",
+        "label": "Contrato"
+      },
+      {
+        "key": "actorId",
+        "type": "String",
+        "optional": true,
+        "ref": "User",
+        "label": "Usuário responsável"
+      },
+      {
+        "key": "kind",
+        "type": "String",
+        "optional": false,
+        "label": "Tipo"
+      },
+      {
+        "key": "previousState",
+        "type": "String",
+        "optional": true,
+        "label": "Situação anterior"
+      },
+      {
+        "key": "newState",
+        "type": "String",
+        "optional": true,
+        "label": "Nova situação"
+      },
+      {
+        "key": "effectiveAt",
+        "type": "DateTime",
+        "optional": false,
+        "label": "Data de vigência"
+      },
+      {
+        "key": "reason",
+        "type": "String",
+        "optional": true,
+        "label": "Reason"
+      }
+    ],
+    "label": "Movimentações contratuais",
+    "group": "Contratos",
+    "roles": [
+      "CONTRACTS",
+      "HR"
+    ],
+    "modelKey": "contractMovement"
+  },
+  {
+    "model": "Institution",
+    "slug": "institution",
+    "fields": [
+      {
+        "key": "name",
+        "type": "String",
+        "optional": false,
+        "label": "Nome"
+      },
+      {
+        "key": "cnpj",
+        "type": "String",
+        "optional": true,
+        "label": "Cnpj"
+      },
+      {
+        "key": "city",
+        "type": "String",
+        "optional": true,
+        "label": "Cidade"
+      },
+      {
+        "key": "state",
+        "type": "String",
+        "optional": true,
+        "label": "Estado",
+        "options": [
+          "PLANNED",
+          "DONE",
+          "CANCELLED",
+          "RESCHEDULED"
+        ]
+      },
+      {
+        "key": "contactEmail",
+        "type": "String",
+        "optional": true,
+        "label": "E-mail de contato"
+      },
+      {
+        "key": "status",
+        "type": "RecordStatus",
+        "optional": false,
+        "default": "ACTIVE",
+        "label": "Situação",
+        "options": [
+          "ACTIVE",
+          "INACTIVE",
+          "PENDING",
+          "ARCHIVED"
+        ]
+      }
+    ],
+    "label": "Instituições de ensino",
+    "group": "Estágio",
+    "roles": [
+      "CONTRACTS",
+      "SECRETARY"
+    ],
+    "modelKey": "institution"
+  },
+  {
+    "model": "InstitutionCourse",
+    "slug": "institution-course",
+    "fields": [
+      {
+        "key": "institutionId",
+        "type": "String",
+        "optional": false,
+        "ref": "Institution",
+        "label": "Instituição"
+      },
+      {
+        "key": "name",
+        "type": "String",
+        "optional": false,
+        "label": "Nome"
+      },
+      {
+        "key": "level",
+        "type": "String",
+        "optional": true,
+        "label": "Nível"
+      },
+      {
+        "key": "status",
+        "type": "RecordStatus",
+        "optional": false,
+        "default": "ACTIVE",
+        "label": "Situação",
+        "options": [
+          "ACTIVE",
+          "INACTIVE",
+          "PENDING",
+          "ARCHIVED"
+        ]
+      }
+    ],
+    "label": "Cursos das instituições",
+    "group": "Estágio",
+    "roles": [
+      "CONTRACTS",
+      "SECRETARY"
+    ],
+    "modelKey": "institutionCourse"
+  },
+  {
+    "model": "InternshipSupervisor",
+    "slug": "internship-supervisor",
+    "fields": [
+      {
+        "key": "companyId",
+        "type": "String",
+        "optional": false,
+        "ref": "Company",
+        "label": "Empresa"
+      },
+      {
+        "key": "userId",
+        "type": "String",
+        "optional": true,
+        "ref": "User",
+        "label": "Usuário"
+      },
+      {
+        "key": "fullName",
+        "type": "String",
+        "optional": false,
+        "label": "Nome completo"
+      },
+      {
+        "key": "email",
+        "type": "String",
+        "optional": true,
+        "label": "E-mail"
+      },
+      {
+        "key": "phone",
+        "type": "String",
+        "optional": true,
+        "label": "Telefone"
+      },
+      {
+        "key": "status",
+        "type": "RecordStatus",
+        "optional": false,
+        "default": "ACTIVE",
+        "label": "Situação",
+        "options": [
+          "ACTIVE",
+          "INACTIVE",
+          "PENDING",
+          "ARCHIVED"
+        ]
+      }
+    ],
+    "label": "Supervisores de estágio",
+    "group": "Estágio",
+    "roles": [
+      "CONTRACTS",
+      "SECRETARY"
+    ],
+    "modelKey": "internshipSupervisor"
+  },
+  {
+    "model": "InternshipReport",
+    "slug": "internship-report",
+    "fields": [
+      {
+        "key": "internshipId",
+        "type": "String",
+        "optional": false,
+        "ref": "Internship",
+        "label": "Estágio"
+      },
+      {
+        "key": "supervisorId",
+        "type": "String",
+        "optional": true,
+        "ref": "InternshipSupervisor",
+        "label": "Supervisor"
+      },
+      {
+        "key": "kind",
+        "type": "String",
+        "optional": false,
+        "label": "Tipo",
+        "options": [
+          "RA",
+          "TRE",
+          "OTHER"
+        ]
+      },
+      {
+        "key": "periodStart",
+        "type": "DateTime",
+        "optional": false,
+        "label": "Início do período"
+      },
+      {
+        "key": "periodEnd",
+        "type": "DateTime",
+        "optional": false,
+        "label": "Fim do período"
+      },
+      {
+        "key": "content",
+        "type": "String",
+        "optional": false,
+        "label": "Conteúdo",
+        "multiline": true
+      },
+      {
+        "key": "status",
+        "type": "RequestStatus",
+        "optional": false,
+        "default": "OPEN",
+        "label": "Situação",
+        "options": [
+          "OPEN",
+          "IN_PROGRESS",
+          "WAITING",
+          "DONE",
+          "CANCELLED"
+        ]
+      }
+    ],
+    "label": "Relatórios RA / TRE",
+    "group": "Estágio",
+    "roles": [
+      "CONTRACTS",
+      "SECRETARY"
+    ],
+    "modelKey": "internshipReport"
+  },
+  {
+    "model": "InternshipLeave",
+    "slug": "internship-leave",
+    "fields": [
+      {
+        "key": "internshipId",
+        "type": "String",
+        "optional": false,
+        "ref": "Internship",
+        "label": "Estágio"
+      },
+      {
+        "key": "startDate",
+        "type": "DateTime",
+        "optional": false,
+        "label": "Início"
+      },
+      {
+        "key": "endDate",
+        "type": "DateTime",
+        "optional": false,
+        "label": "Término"
+      },
+      {
+        "key": "reason",
+        "type": "String",
+        "optional": true,
+        "label": "Reason"
+      },
+      {
+        "key": "status",
+        "type": "RequestStatus",
+        "optional": false,
+        "default": "OPEN",
+        "label": "Situação",
+        "options": [
+          "OPEN",
+          "IN_PROGRESS",
+          "WAITING",
+          "DONE",
+          "CANCELLED"
+        ]
+      }
+    ],
+    "label": "Recessos de estágio",
+    "group": "Estágio",
+    "roles": [
+      "CONTRACTS",
+      "SECRETARY"
+    ],
+    "modelKey": "internshipLeave"
+  },
+  {
+    "model": "FinanceAccount",
+    "slug": "finance-account",
+    "fields": [
+      {
+        "key": "name",
+        "type": "String",
+        "optional": false,
+        "label": "Nome"
+      },
+      {
+        "key": "bankName",
+        "type": "String",
+        "optional": true,
+        "label": "Banco"
+      },
+      {
+        "key": "agency",
+        "type": "String",
+        "optional": true,
+        "label": "Agência"
+      },
+      {
+        "key": "accountNumber",
+        "type": "String",
+        "optional": true,
+        "label": "Conta"
+      },
+      {
+        "key": "pixKey",
+        "type": "String",
+        "optional": true,
+        "label": "Chave Pix"
+      },
+      {
+        "key": "status",
+        "type": "RecordStatus",
+        "optional": false,
+        "default": "ACTIVE",
+        "label": "Situação",
+        "options": [
+          "ACTIVE",
+          "INACTIVE",
+          "PENDING",
+          "ARCHIVED"
+        ]
+      }
+    ],
+    "label": "Contas bancárias",
+    "group": "Financeiro",
+    "roles": [
+      "FINANCE"
+    ],
+    "modelKey": "financeAccount"
+  },
+  {
+    "model": "FinanceCategory",
+    "slug": "finance-category",
+    "fields": [
+      {
+        "key": "name",
+        "type": "String",
+        "optional": false,
+        "label": "Nome"
+      },
+      {
+        "key": "kind",
+        "type": "String",
+        "optional": false,
+        "label": "Tipo"
+      },
+      {
+        "key": "active",
+        "type": "Boolean",
+        "optional": false,
+        "default": "true",
+        "label": "Ativo"
+      }
+    ],
+    "label": "Categorias financeiras",
+    "group": "Financeiro",
+    "roles": [
+      "FINANCE"
+    ],
+    "modelKey": "financeCategory"
+  },
+  {
+    "model": "FinanceMovement",
+    "slug": "finance-movement",
+    "fields": [
+      {
+        "key": "accountId",
+        "type": "String",
+        "optional": false,
+        "ref": "FinanceAccount",
+        "label": "Conta"
+      },
+      {
+        "key": "categoryId",
+        "type": "String",
+        "optional": true,
+        "ref": "FinanceCategory",
+        "label": "Categoria"
+      },
+      {
+        "key": "direction",
+        "type": "String",
+        "optional": false,
+        "label": "Entrada / saída",
+        "options": [
+          "IN",
+          "OUT"
+        ]
+      },
+      {
+        "key": "description",
+        "type": "String",
+        "optional": false,
+        "label": "Descrição",
+        "multiline": true
+      },
+      {
+        "key": "occurredAt",
+        "type": "DateTime",
+        "optional": false,
+        "label": "Data do lançamento"
+      },
+      {
+        "key": "amount",
+        "type": "Decimal",
+        "optional": false,
+        "label": "Valor (R$)"
+      },
+      {
+        "key": "externalReference",
+        "type": "String",
+        "optional": true,
+        "label": "Referência externa"
+      }
+    ],
+    "label": "Movimentações financeiras",
+    "group": "Financeiro",
+    "roles": [
+      "FINANCE"
+    ],
+    "modelKey": "financeMovement"
+  },
+  {
+    "model": "Invoice",
+    "slug": "invoice",
+    "fields": [
+      {
+        "key": "companyId",
+        "type": "String",
+        "optional": true,
+        "ref": "Company",
+        "label": "Empresa"
+      },
+      {
+        "key": "reference",
+        "type": "String",
+        "optional": false,
+        "label": "Referência"
+      },
+      {
+        "key": "competence",
+        "type": "String",
+        "optional": true,
+        "label": "Competência"
+      },
+      {
+        "key": "dueDate",
+        "type": "DateTime",
+        "optional": true,
+        "label": "Vencimento"
+      },
+      {
+        "key": "issuedAt",
+        "type": "DateTime",
+        "optional": true,
+        "label": "Emissão"
+      },
+      {
+        "key": "amount",
+        "type": "Decimal",
+        "optional": false,
+        "label": "Valor (R$)"
+      },
+      {
+        "key": "status",
+        "type": "RequestStatus",
+        "optional": false,
+        "default": "OPEN",
+        "label": "Situação",
+        "options": [
+          "OPEN",
+          "IN_PROGRESS",
+          "WAITING",
+          "DONE",
+          "CANCELLED"
+        ]
+      }
+    ],
+    "label": "Faturas",
+    "group": "Financeiro",
+    "roles": [
+      "FINANCE"
+    ],
+    "modelKey": "invoice"
+  },
+  {
+    "model": "InvoiceLine",
+    "slug": "invoice-line",
+    "fields": [
+      {
+        "key": "invoiceId",
+        "type": "String",
+        "optional": false,
+        "ref": "Invoice",
+        "label": "Fatura"
+      },
+      {
+        "key": "description",
+        "type": "String",
+        "optional": false,
+        "label": "Descrição",
+        "multiline": true
+      },
+      {
+        "key": "quantity",
+        "type": "Decimal",
+        "optional": false,
+        "label": "Quantidade"
+      },
+      {
+        "key": "unitPrice",
+        "type": "Decimal",
+        "optional": false,
+        "label": "Valor unitário (R$)"
+      },
+      {
+        "key": "amount",
+        "type": "Decimal",
+        "optional": false,
+        "label": "Valor (R$)"
+      }
+    ],
+    "label": "Itens de fatura",
+    "group": "Financeiro",
+    "roles": [
+      "FINANCE"
+    ],
+    "modelKey": "invoiceLine"
+  },
+  {
+    "model": "BillingAttachment",
+    "slug": "billing-attachment",
+    "fields": [
+      {
+        "key": "titleId",
+        "type": "String",
+        "optional": true,
+        "ref": "FinancialTitle",
+        "label": "Título financeiro"
+      },
+      {
+        "key": "invoiceId",
+        "type": "String",
+        "optional": true,
+        "ref": "Invoice",
+        "label": "Fatura"
+      },
+      {
+        "key": "documentId",
+        "type": "String",
+        "optional": false,
+        "ref": "Document",
+        "label": "Documento"
+      },
+      {
+        "key": "kind",
+        "type": "String",
+        "optional": false,
+        "label": "Tipo"
+      }
+    ],
+    "label": "Documentos de cobrança",
+    "group": "Financeiro",
+    "roles": [
+      "FINANCE"
+    ],
+    "modelKey": "billingAttachment"
+  },
+  {
+    "model": "ServiceInteraction",
+    "slug": "service-interaction",
+    "fields": [
+      {
+        "key": "requestId",
+        "type": "String",
+        "optional": false,
+        "ref": "ServiceRequest",
+        "label": "Atendimento"
+      },
+      {
+        "key": "authorId",
+        "type": "String",
+        "optional": false,
+        "ref": "User",
+        "label": "Responsável"
+      },
+      {
+        "key": "body",
+        "type": "String",
+        "optional": false,
+        "label": "Mensagem",
+        "multiline": true
+      },
+      {
+        "key": "status",
+        "type": "RequestStatus",
+        "optional": false,
+        "default": "OPEN",
+        "label": "Situação",
+        "options": [
+          "OPEN",
+          "IN_PROGRESS",
+          "WAITING",
+          "DONE",
+          "CANCELLED"
+        ]
+      }
+    ],
+    "label": "Interações de atendimento",
+    "group": "Atendimento",
+    "roles": [
+      "RECEPTION",
+      "SECRETARY",
+      "SOCIAL_SERVICE"
+    ],
+    "modelKey": "serviceInteraction"
+  },
+  {
+    "model": "SocialVisit",
+    "slug": "social-visit",
+    "fields": [
+      {
+        "key": "personId",
+        "type": "String",
+        "optional": true,
+        "ref": "Person",
+        "label": "Aluno / pessoa"
+      },
+      {
+        "key": "companyId",
+        "type": "String",
+        "optional": true,
+        "ref": "Company",
+        "label": "Empresa"
+      },
+      {
+        "key": "authorId",
+        "type": "String",
+        "optional": false,
+        "ref": "User",
+        "label": "Responsável"
+      },
+      {
+        "key": "visitDate",
+        "type": "DateTime",
+        "optional": false,
+        "label": "Data da visita"
+      },
+      {
+        "key": "summary",
+        "type": "String",
+        "optional": false,
+        "label": "Resumo",
+        "multiline": true
+      },
+      {
+        "key": "status",
+        "type": "RequestStatus",
+        "optional": false,
+        "default": "OPEN",
+        "label": "Situação",
+        "options": [
+          "OPEN",
+          "IN_PROGRESS",
+          "WAITING",
+          "DONE",
+          "CANCELLED"
+        ]
+      }
+    ],
+    "label": "Visitas e Serviço Social",
+    "group": "Atendimento",
+    "roles": [
+      "SOCIAL_SERVICE"
+    ],
+    "modelKey": "socialVisit"
+  },
+  {
+    "model": "SelectionProcess",
+    "slug": "selection-process",
+    "fields": [
+      {
+        "key": "title",
+        "type": "String",
+        "optional": false,
+        "label": "Título"
+      },
+      {
+        "key": "code",
+        "type": "String",
+        "optional": true,
+        "label": "Código"
+      },
+      {
+        "key": "startDate",
+        "type": "DateTime",
+        "optional": true,
+        "label": "Início"
+      },
+      {
+        "key": "endDate",
+        "type": "DateTime",
+        "optional": true,
+        "label": "Término"
+      },
+      {
+        "key": "status",
+        "type": "RequestStatus",
+        "optional": false,
+        "default": "OPEN",
+        "label": "Situação",
+        "options": [
+          "OPEN",
+          "IN_PROGRESS",
+          "WAITING",
+          "DONE",
+          "CANCELLED"
+        ]
+      },
+      {
+        "key": "description",
+        "type": "String",
+        "optional": true,
+        "label": "Descrição",
+        "multiline": true
+      }
+    ],
+    "label": "Processos seletivos",
+    "group": "Recrutamento",
+    "roles": [
+      "TRIAGE",
+      "COMMERCIAL"
+    ],
+    "modelKey": "selectionProcess"
+  },
+  {
+    "model": "SelectionEntry",
+    "slug": "selection-entry",
+    "fields": [
+      {
+        "key": "processId",
+        "type": "String",
+        "optional": false,
+        "ref": "SelectionProcess",
+        "label": "Processo seletivo"
+      },
+      {
+        "key": "personId",
+        "type": "String",
+        "optional": false,
+        "ref": "Person",
+        "label": "Aluno / pessoa"
+      },
+      {
+        "key": "score",
+        "type": "Decimal",
+        "optional": true,
+        "label": "Nota"
+      },
+      {
+        "key": "rank",
+        "type": "Int",
+        "optional": true,
+        "label": "Classificação"
+      },
+      {
+        "key": "status",
+        "type": "RequestStatus",
+        "optional": false,
+        "default": "OPEN",
+        "label": "Situação",
+        "options": [
+          "OPEN",
+          "IN_PROGRESS",
+          "WAITING",
+          "DONE",
+          "CANCELLED"
+        ]
+      }
+    ],
+    "label": "Inscrições em processos",
+    "group": "Recrutamento",
+    "roles": [
+      "TRIAGE",
+      "COMMERCIAL"
+    ],
+    "modelKey": "selectionEntry"
+  },
+  {
+    "model": "PortalMessage",
+    "slug": "portal-message",
+    "fields": [
+      {
+        "key": "recipientId",
+        "type": "String",
+        "optional": false,
+        "ref": "User",
+        "label": "Destinatário"
+      },
+      {
+        "key": "subject",
+        "type": "String",
+        "optional": false,
+        "label": "Assunto"
+      },
+      {
+        "key": "body",
+        "type": "String",
+        "optional": false,
+        "label": "Mensagem",
+        "multiline": true
+      },
+      {
+        "key": "readAt",
+        "type": "DateTime",
+        "optional": true,
+        "label": "Lido em"
+      },
+      {
+        "key": "channel",
+        "type": "String",
+        "optional": false,
+        "default": "IN_APP",
+        "label": "Canal",
+        "options": [
+          "IN_APP",
+          "EMAIL",
+          "WHATSAPP"
+        ]
+      }
+    ],
+    "label": "Comunicações internas",
+    "group": "Comunicação",
+    "roles": [
+      "SECRETARY",
+      "CONTRACTS",
+      "SOCIAL_SERVICE",
+      "RECEPTION"
+    ],
+    "modelKey": "portalMessage"
+  },
+  {
+    "model": "DocumentTemplate",
+    "slug": "document-template",
+    "fields": [
+      {
+        "key": "name",
+        "type": "String",
+        "optional": false,
+        "label": "Nome"
+      },
+      {
+        "key": "type",
+        "type": "String",
+        "optional": false,
+        "label": "Tipo"
+      },
+      {
+        "key": "templateText",
+        "type": "String",
+        "optional": false,
+        "label": "Modelo de texto",
+        "multiline": true
+      },
+      {
+        "key": "version",
+        "type": "Int",
+        "optional": false,
+        "default": "1",
+        "label": "Versão"
+      },
+      {
+        "key": "status",
+        "type": "RecordStatus",
+        "optional": false,
+        "default": "ACTIVE",
+        "label": "Situação",
+        "options": [
+          "ACTIVE",
+          "INACTIVE",
+          "PENDING",
+          "ARCHIVED"
+        ]
+      }
+    ],
+    "label": "Modelos de documentos",
+    "group": "Documentos",
+    "roles": [
+      "SUPER_ADMIN",
+      "ADMIN",
+      "CONTRACTS"
+    ],
+    "modelKey": "documentTemplate"
+  },
+  {
+    "model": "DocumentReview",
+    "slug": "document-review",
+    "fields": [
+      {
+        "key": "documentId",
+        "type": "String",
+        "optional": false,
+        "ref": "Document",
+        "label": "Documento"
+      },
+      {
+        "key": "reviewerId",
+        "type": "String",
+        "optional": false,
+        "ref": "User",
+        "label": "Avaliador"
+      },
+      {
+        "key": "status",
+        "type": "RequestStatus",
+        "optional": false,
+        "default": "OPEN",
+        "label": "Situação",
+        "options": [
+          "OPEN",
+          "IN_PROGRESS",
+          "WAITING",
+          "DONE",
+          "CANCELLED"
+        ]
+      },
+      {
+        "key": "note",
+        "type": "String",
+        "optional": true,
+        "label": "Note",
+        "multiline": true
+      },
+      {
+        "key": "reviewedAt",
+        "type": "DateTime",
+        "optional": true,
+        "label": "Data da análise"
+      }
+    ],
+    "label": "Análise documental",
+    "group": "Documentos",
+    "roles": [
+      "SECRETARY",
+      "CONTRACTS",
+      "SOCIAL_SERVICE"
+    ],
+    "modelKey": "documentReview"
+  },
+  {
+    "model": "LegacySyncIssue",
+    "slug": "legacy-sync-issue",
+    "fields": [
+      {
+        "key": "sourceTable",
+        "type": "String",
+        "optional": false,
+        "label": "Tabela de origem"
+      },
+      {
+        "key": "legacyRecordId",
+        "type": "String",
+        "optional": false,
+        "label": "ID no legado"
+      },
+      {
+        "key": "errorCode",
+        "type": "String",
+        "optional": false,
+        "label": "Código do erro"
+      },
+      {
+        "key": "description",
+        "type": "String",
+        "optional": false,
+        "label": "Descrição",
+        "multiline": true
+      },
+      {
+        "key": "resolvedAt",
+        "type": "DateTime",
+        "optional": true,
+        "label": "Resolvido em"
+      },
+      {
+        "key": "status",
+        "type": "RequestStatus",
+        "optional": false,
+        "default": "OPEN",
+        "label": "Situação",
+        "options": [
+          "OPEN",
+          "IN_PROGRESS",
+          "WAITING",
+          "DONE",
+          "CANCELLED"
+        ]
+      }
+    ],
+    "label": "Pendências de migração",
+    "group": "Institucional",
+    "roles": [
+      "SUPER_ADMIN"
+    ],
+    "modelKey": "legacySyncIssue"
+  }
+]

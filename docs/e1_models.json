@@ -1,0 +1,1590 @@
+[
+  {
+    "model": "Unit",
+    "slug": "unit",
+    "fields": [
+      {
+        "key": "code",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "name",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "city",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "state",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "address",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "status",
+        "type": "RecordStatus",
+        "optional": false,
+        "ref": null,
+        "default": "ACTIVE"
+      }
+    ]
+  },
+  {
+    "model": "Department",
+    "slug": "department",
+    "fields": [
+      {
+        "key": "code",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "name",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "description",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "status",
+        "type": "RecordStatus",
+        "optional": false,
+        "ref": null,
+        "default": "ACTIVE"
+      }
+    ]
+  },
+  {
+    "model": "UserUnit",
+    "slug": "user-unit",
+    "fields": [
+      {
+        "key": "userId",
+        "type": "String",
+        "optional": false,
+        "ref": "User",
+        "default": null
+      },
+      {
+        "key": "unitId",
+        "type": "String",
+        "optional": false,
+        "ref": "Unit",
+        "default": null
+      },
+      {
+        "key": "departmentId",
+        "type": "String",
+        "optional": true,
+        "ref": "Department",
+        "default": null
+      },
+      {
+        "key": "active",
+        "type": "Boolean",
+        "optional": false,
+        "ref": null,
+        "default": "true"
+      }
+    ]
+  },
+  {
+    "model": "ReferenceItem",
+    "slug": "reference-item",
+    "fields": [
+      {
+        "key": "domain",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "code",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "label",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "sortOrder",
+        "type": "Int",
+        "optional": false,
+        "ref": null,
+        "default": "0"
+      },
+      {
+        "key": "active",
+        "type": "Boolean",
+        "optional": false,
+        "ref": null,
+        "default": "true"
+      }
+    ]
+  },
+  {
+    "model": "CompanyGroup",
+    "slug": "company-group",
+    "fields": [
+      {
+        "key": "name",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "description",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "status",
+        "type": "RecordStatus",
+        "optional": false,
+        "ref": null,
+        "default": "ACTIVE"
+      }
+    ]
+  },
+  {
+    "model": "CompanyGroupMember",
+    "slug": "company-group-member",
+    "fields": [
+      {
+        "key": "groupId",
+        "type": "String",
+        "optional": false,
+        "ref": "CompanyGroup",
+        "default": null
+      },
+      {
+        "key": "companyId",
+        "type": "String",
+        "optional": false,
+        "ref": "Company",
+        "default": null
+      }
+    ]
+  },
+  {
+    "model": "CompanyContact",
+    "slug": "company-contact",
+    "fields": [
+      {
+        "key": "companyId",
+        "type": "String",
+        "optional": false,
+        "ref": "Company",
+        "default": null
+      },
+      {
+        "key": "fullName",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "email",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "phone",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "category",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "position",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "status",
+        "type": "RecordStatus",
+        "optional": false,
+        "ref": null,
+        "default": "ACTIVE"
+      }
+    ]
+  },
+  {
+    "model": "CurriculumMatrix",
+    "slug": "curriculum-matrix",
+    "fields": [
+      {
+        "key": "courseId",
+        "type": "String",
+        "optional": false,
+        "ref": "Course",
+        "default": null
+      },
+      {
+        "key": "code",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "version",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "title",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "effectiveFrom",
+        "type": "DateTime",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "effectiveTo",
+        "type": "DateTime",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "status",
+        "type": "RecordStatus",
+        "optional": false,
+        "ref": null,
+        "default": "ACTIVE"
+      }
+    ]
+  },
+  {
+    "model": "CurriculumModule",
+    "slug": "curriculum-module",
+    "fields": [
+      {
+        "key": "matrixId",
+        "type": "String",
+        "optional": false,
+        "ref": "CurriculumMatrix",
+        "default": null
+      },
+      {
+        "key": "disciplineId",
+        "type": "String",
+        "optional": true,
+        "ref": "Discipline",
+        "default": null
+      },
+      {
+        "key": "title",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "sequence",
+        "type": "Int",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "plannedHours",
+        "type": "Int",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "lessonCount",
+        "type": "Int",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "mandatory",
+        "type": "Boolean",
+        "optional": false,
+        "ref": null,
+        "default": "true"
+      }
+    ]
+  },
+  {
+    "model": "AcademicLesson",
+    "slug": "academic-lesson",
+    "fields": [
+      {
+        "key": "classGroupId",
+        "type": "String",
+        "optional": false,
+        "ref": "ClassGroup",
+        "default": null
+      },
+      {
+        "key": "disciplineId",
+        "type": "String",
+        "optional": true,
+        "ref": "Discipline",
+        "default": null
+      },
+      {
+        "key": "teacherId",
+        "type": "String",
+        "optional": true,
+        "ref": "User",
+        "default": null
+      },
+      {
+        "key": "title",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "lessonDate",
+        "type": "DateTime",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "shift",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "room",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "state",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": "PLANNED"
+      },
+      {
+        "key": "executedAt",
+        "type": "DateTime",
+        "optional": true,
+        "ref": null,
+        "default": null
+      }
+    ]
+  },
+  {
+    "model": "Holiday",
+    "slug": "holiday",
+    "fields": [
+      {
+        "key": "unitId",
+        "type": "String",
+        "optional": true,
+        "ref": "Unit",
+        "default": null
+      },
+      {
+        "key": "holidayDate",
+        "type": "DateTime",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "name",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "scope",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": "INSTITUTIONAL"
+      }
+    ]
+  },
+  {
+    "model": "LearningMaterial",
+    "slug": "learning-material",
+    "fields": [
+      {
+        "key": "courseId",
+        "type": "String",
+        "optional": false,
+        "ref": "Course",
+        "default": null
+      },
+      {
+        "key": "disciplineId",
+        "type": "String",
+        "optional": true,
+        "ref": "Discipline",
+        "default": null
+      },
+      {
+        "key": "documentId",
+        "type": "String",
+        "optional": true,
+        "ref": "Document",
+        "default": null
+      },
+      {
+        "key": "title",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "description",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "status",
+        "type": "RecordStatus",
+        "optional": false,
+        "ref": null,
+        "default": "ACTIVE"
+      }
+    ]
+  },
+  {
+    "model": "MaterialRelease",
+    "slug": "material-release",
+    "fields": [
+      {
+        "key": "materialId",
+        "type": "String",
+        "optional": false,
+        "ref": "LearningMaterial",
+        "default": null
+      },
+      {
+        "key": "personId",
+        "type": "String",
+        "optional": false,
+        "ref": "Person",
+        "default": null
+      },
+      {
+        "key": "releasedAt",
+        "type": "DateTime",
+        "optional": false,
+        "ref": null,
+        "default": "now()"
+      }
+    ]
+  },
+  {
+    "model": "AbsenceJustification",
+    "slug": "absence-justification",
+    "fields": [
+      {
+        "key": "personId",
+        "type": "String",
+        "optional": false,
+        "ref": "Person",
+        "default": null
+      },
+      {
+        "key": "attendanceId",
+        "type": "String",
+        "optional": true,
+        "ref": "Attendance",
+        "default": null
+      },
+      {
+        "key": "documentId",
+        "type": "String",
+        "optional": true,
+        "ref": "Document",
+        "default": null
+      },
+      {
+        "key": "reason",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "status",
+        "type": "RequestStatus",
+        "optional": false,
+        "ref": null,
+        "default": "OPEN"
+      },
+      {
+        "key": "reviewNotes",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      }
+    ]
+  },
+  {
+    "model": "BusinessContract",
+    "slug": "business-contract",
+    "fields": [
+      {
+        "key": "companyId",
+        "type": "String",
+        "optional": false,
+        "ref": "Company",
+        "default": null
+      },
+      {
+        "key": "number",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "modality",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "startDate",
+        "type": "DateTime",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "endDate",
+        "type": "DateTime",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "amount",
+        "type": "Decimal",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "status",
+        "type": "ContractStatus",
+        "optional": false,
+        "ref": null,
+        "default": "DRAFT"
+      },
+      {
+        "key": "notes",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      }
+    ]
+  },
+  {
+    "model": "ContractAmendment",
+    "slug": "contract-amendment",
+    "fields": [
+      {
+        "key": "contractId",
+        "type": "String",
+        "optional": false,
+        "ref": "Contract",
+        "default": null
+      },
+      {
+        "key": "type",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "effectiveAt",
+        "type": "DateTime",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "description",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "documentId",
+        "type": "String",
+        "optional": true,
+        "ref": "Document",
+        "default": null
+      },
+      {
+        "key": "status",
+        "type": "RequestStatus",
+        "optional": false,
+        "ref": null,
+        "default": "OPEN"
+      }
+    ]
+  },
+  {
+    "model": "ContractMovement",
+    "slug": "contract-movement",
+    "fields": [
+      {
+        "key": "contractId",
+        "type": "String",
+        "optional": false,
+        "ref": "Contract",
+        "default": null
+      },
+      {
+        "key": "actorId",
+        "type": "String",
+        "optional": true,
+        "ref": "User",
+        "default": null
+      },
+      {
+        "key": "kind",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "previousState",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "newState",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "effectiveAt",
+        "type": "DateTime",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "reason",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      }
+    ]
+  },
+  {
+    "model": "Institution",
+    "slug": "institution",
+    "fields": [
+      {
+        "key": "name",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "cnpj",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "city",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "state",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "contactEmail",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "status",
+        "type": "RecordStatus",
+        "optional": false,
+        "ref": null,
+        "default": "ACTIVE"
+      }
+    ]
+  },
+  {
+    "model": "InstitutionCourse",
+    "slug": "institution-course",
+    "fields": [
+      {
+        "key": "institutionId",
+        "type": "String",
+        "optional": false,
+        "ref": "Institution",
+        "default": null
+      },
+      {
+        "key": "name",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "level",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "status",
+        "type": "RecordStatus",
+        "optional": false,
+        "ref": null,
+        "default": "ACTIVE"
+      }
+    ]
+  },
+  {
+    "model": "InternshipSupervisor",
+    "slug": "internship-supervisor",
+    "fields": [
+      {
+        "key": "companyId",
+        "type": "String",
+        "optional": false,
+        "ref": "Company",
+        "default": null
+      },
+      {
+        "key": "userId",
+        "type": "String",
+        "optional": true,
+        "ref": "User",
+        "default": null
+      },
+      {
+        "key": "fullName",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "email",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "phone",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "status",
+        "type": "RecordStatus",
+        "optional": false,
+        "ref": null,
+        "default": "ACTIVE"
+      }
+    ]
+  },
+  {
+    "model": "InternshipReport",
+    "slug": "internship-report",
+    "fields": [
+      {
+        "key": "internshipId",
+        "type": "String",
+        "optional": false,
+        "ref": "Internship",
+        "default": null
+      },
+      {
+        "key": "supervisorId",
+        "type": "String",
+        "optional": true,
+        "ref": "InternshipSupervisor",
+        "default": null
+      },
+      {
+        "key": "kind",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "periodStart",
+        "type": "DateTime",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "periodEnd",
+        "type": "DateTime",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "content",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "status",
+        "type": "RequestStatus",
+        "optional": false,
+        "ref": null,
+        "default": "OPEN"
+      }
+    ]
+  },
+  {
+    "model": "InternshipLeave",
+    "slug": "internship-leave",
+    "fields": [
+      {
+        "key": "internshipId",
+        "type": "String",
+        "optional": false,
+        "ref": "Internship",
+        "default": null
+      },
+      {
+        "key": "startDate",
+        "type": "DateTime",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "endDate",
+        "type": "DateTime",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "reason",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "status",
+        "type": "RequestStatus",
+        "optional": false,
+        "ref": null,
+        "default": "OPEN"
+      }
+    ]
+  },
+  {
+    "model": "FinanceAccount",
+    "slug": "finance-account",
+    "fields": [
+      {
+        "key": "name",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "bankName",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "agency",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "accountNumber",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "pixKey",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "status",
+        "type": "RecordStatus",
+        "optional": false,
+        "ref": null,
+        "default": "ACTIVE"
+      }
+    ]
+  },
+  {
+    "model": "FinanceCategory",
+    "slug": "finance-category",
+    "fields": [
+      {
+        "key": "name",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "kind",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "active",
+        "type": "Boolean",
+        "optional": false,
+        "ref": null,
+        "default": "true"
+      }
+    ]
+  },
+  {
+    "model": "FinanceMovement",
+    "slug": "finance-movement",
+    "fields": [
+      {
+        "key": "accountId",
+        "type": "String",
+        "optional": false,
+        "ref": "FinanceAccount",
+        "default": null
+      },
+      {
+        "key": "categoryId",
+        "type": "String",
+        "optional": true,
+        "ref": "FinanceCategory",
+        "default": null
+      },
+      {
+        "key": "direction",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "description",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "occurredAt",
+        "type": "DateTime",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "amount",
+        "type": "Decimal",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "externalReference",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      }
+    ]
+  },
+  {
+    "model": "Invoice",
+    "slug": "invoice",
+    "fields": [
+      {
+        "key": "companyId",
+        "type": "String",
+        "optional": true,
+        "ref": "Company",
+        "default": null
+      },
+      {
+        "key": "reference",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "competence",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "dueDate",
+        "type": "DateTime",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "issuedAt",
+        "type": "DateTime",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "amount",
+        "type": "Decimal",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "status",
+        "type": "RequestStatus",
+        "optional": false,
+        "ref": null,
+        "default": "OPEN"
+      }
+    ]
+  },
+  {
+    "model": "InvoiceLine",
+    "slug": "invoice-line",
+    "fields": [
+      {
+        "key": "invoiceId",
+        "type": "String",
+        "optional": false,
+        "ref": "Invoice",
+        "default": null
+      },
+      {
+        "key": "description",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "quantity",
+        "type": "Decimal",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "unitPrice",
+        "type": "Decimal",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "amount",
+        "type": "Decimal",
+        "optional": false,
+        "ref": null,
+        "default": null
+      }
+    ]
+  },
+  {
+    "model": "BillingAttachment",
+    "slug": "billing-attachment",
+    "fields": [
+      {
+        "key": "titleId",
+        "type": "String",
+        "optional": true,
+        "ref": "FinancialTitle",
+        "default": null
+      },
+      {
+        "key": "invoiceId",
+        "type": "String",
+        "optional": true,
+        "ref": "Invoice",
+        "default": null
+      },
+      {
+        "key": "documentId",
+        "type": "String",
+        "optional": false,
+        "ref": "Document",
+        "default": null
+      },
+      {
+        "key": "kind",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      }
+    ]
+  },
+  {
+    "model": "ServiceInteraction",
+    "slug": "service-interaction",
+    "fields": [
+      {
+        "key": "requestId",
+        "type": "String",
+        "optional": false,
+        "ref": "ServiceRequest",
+        "default": null
+      },
+      {
+        "key": "authorId",
+        "type": "String",
+        "optional": false,
+        "ref": "User",
+        "default": null
+      },
+      {
+        "key": "body",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "status",
+        "type": "RequestStatus",
+        "optional": false,
+        "ref": null,
+        "default": "OPEN"
+      }
+    ]
+  },
+  {
+    "model": "SocialVisit",
+    "slug": "social-visit",
+    "fields": [
+      {
+        "key": "personId",
+        "type": "String",
+        "optional": true,
+        "ref": "Person",
+        "default": null
+      },
+      {
+        "key": "companyId",
+        "type": "String",
+        "optional": true,
+        "ref": "Company",
+        "default": null
+      },
+      {
+        "key": "authorId",
+        "type": "String",
+        "optional": false,
+        "ref": "User",
+        "default": null
+      },
+      {
+        "key": "visitDate",
+        "type": "DateTime",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "summary",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "status",
+        "type": "RequestStatus",
+        "optional": false,
+        "ref": null,
+        "default": "OPEN"
+      }
+    ]
+  },
+  {
+    "model": "SelectionProcess",
+    "slug": "selection-process",
+    "fields": [
+      {
+        "key": "title",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "code",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "startDate",
+        "type": "DateTime",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "endDate",
+        "type": "DateTime",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "status",
+        "type": "RequestStatus",
+        "optional": false,
+        "ref": null,
+        "default": "OPEN"
+      },
+      {
+        "key": "description",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      }
+    ]
+  },
+  {
+    "model": "SelectionEntry",
+    "slug": "selection-entry",
+    "fields": [
+      {
+        "key": "processId",
+        "type": "String",
+        "optional": false,
+        "ref": "SelectionProcess",
+        "default": null
+      },
+      {
+        "key": "personId",
+        "type": "String",
+        "optional": false,
+        "ref": "Person",
+        "default": null
+      },
+      {
+        "key": "score",
+        "type": "Decimal",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "rank",
+        "type": "Int",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "status",
+        "type": "RequestStatus",
+        "optional": false,
+        "ref": null,
+        "default": "OPEN"
+      }
+    ]
+  },
+  {
+    "model": "PortalMessage",
+    "slug": "portal-message",
+    "fields": [
+      {
+        "key": "recipientId",
+        "type": "String",
+        "optional": false,
+        "ref": "User",
+        "default": null
+      },
+      {
+        "key": "subject",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "body",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "readAt",
+        "type": "DateTime",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "channel",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": "IN_APP"
+      }
+    ]
+  },
+  {
+    "model": "DocumentTemplate",
+    "slug": "document-template",
+    "fields": [
+      {
+        "key": "name",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "type",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "templateText",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "version",
+        "type": "Int",
+        "optional": false,
+        "ref": null,
+        "default": "1"
+      },
+      {
+        "key": "status",
+        "type": "RecordStatus",
+        "optional": false,
+        "ref": null,
+        "default": "ACTIVE"
+      }
+    ]
+  },
+  {
+    "model": "DocumentReview",
+    "slug": "document-review",
+    "fields": [
+      {
+        "key": "documentId",
+        "type": "String",
+        "optional": false,
+        "ref": "Document",
+        "default": null
+      },
+      {
+        "key": "reviewerId",
+        "type": "String",
+        "optional": false,
+        "ref": "User",
+        "default": null
+      },
+      {
+        "key": "status",
+        "type": "RequestStatus",
+        "optional": false,
+        "ref": null,
+        "default": "OPEN"
+      },
+      {
+        "key": "note",
+        "type": "String",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "reviewedAt",
+        "type": "DateTime",
+        "optional": true,
+        "ref": null,
+        "default": null
+      }
+    ]
+  },
+  {
+    "model": "LegacySyncIssue",
+    "slug": "legacy-sync-issue",
+    "fields": [
+      {
+        "key": "sourceTable",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "legacyRecordId",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "errorCode",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "description",
+        "type": "String",
+        "optional": false,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "resolvedAt",
+        "type": "DateTime",
+        "optional": true,
+        "ref": null,
+        "default": null
+      },
+      {
+        "key": "status",
+        "type": "RequestStatus",
+        "optional": false,
+        "ref": null,
+        "default": "OPEN"
+      }
+    ]
+  }
+]

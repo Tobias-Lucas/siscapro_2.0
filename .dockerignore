@@ -1,0 +1,32 @@
+.git
+.github
+**/node_modules
+**/dist
+**/.env
+**/.env.*
+!**/.env.example
+**/.DS_Store
+*.zip
+*.sql
+# Keep Prisma migrations in the Docker build context. Dump files stay excluded.
+!**/prisma/migrations/**/migration.sql
+*.pdf
+proativa_work
+
+.env.development
+.env.production
+DEV_ADMIN_CREDENTIALS.txt
+.local-documents
+.env.development.example
+.env.production.example
+# Always keep raw personal data and development credentials out of Docker build contexts
+.local-private-imports
+.local-private-imports/**
+.local-dev-users-credentials.md
+.local-documents
+.local-documents/**
+DEV_ADMIN_CREDENTIALS.txt
+*.sql.gz
+*.dump
+*.bak
+*.backup-before-*

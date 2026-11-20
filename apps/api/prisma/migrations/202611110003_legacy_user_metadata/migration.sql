@@ -1,0 +1,2 @@
+ALTER TABLE "User" ADD COLUMN IF NOT EXISTS "legacyRoleRaw" TEXT;
+ALTER TABLE "User" ADD COLUMN IF NOT EXISTS "legacyDepartmentRaw" TEXT;

@@ -1,0 +1,1793 @@
+[
+  {
+    "code": "ACA-01",
+    "name": "Lançamento de frequência dos alunos",
+    "sourcePage": 3,
+    "detail": "Reproduzir o registro de presenças e faltas                         R",
+    "module": "Academico",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ACA-02",
+    "name": "Lançamento de frequência por turma",
+    "sourcePage": 3,
+    "detail": "Manter as operações coletivas e individuais existentes              S",
+    "module": "Academico",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ACA-03",
+    "name": "Preservar as particularidades dos diferentes programas",
+    "sourcePage": 3,
+    "detail": "P",
+    "module": "Academico",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ACA-04",
+    "name": "Reunir os procedimentos de correção em um fluxo coerente",
+    "sourcePage": 3,
+    "detail": "R",
+    "module": "Academico",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ACA-05",
+    "name": "Registro retroativo de frequência",
+    "sourcePage": 3,
+    "detail": "Manter as rotinas existentes para períodos anteriores               P",
+    "module": "Academico",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ACA-06",
+    "name": "Consulta de frequência individual",
+    "sourcePage": 3,
+    "detail": "Preservar as consultas do histórico de cada aluno                   S",
+    "module": "Academico",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ACA-07",
+    "name": "Justificativa de faltas",
+    "sourcePage": 3,
+    "detail": "R",
+    "module": "Academico",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ACA-08",
+    "name": "Lançamento de notas",
+    "sourcePage": 3,
+    "detail": "R",
+    "module": "Academico",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ACA-09",
+    "name": "Alteração e consulta de notas",
+    "sourcePage": 3,
+    "detail": "Manter as mesmas informações e operações autorizadas                S",
+    "module": "Academico",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ACA-10",
+    "name": "Espelhos e relatórios de notas",
+    "sourcePage": 3,
+    "detail": "P",
+    "module": "Academico",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ACA-11",
+    "name": "Histórico escolar",
+    "sourcePage": 3,
+    "detail": "Manter consulta, pré-visualização e emissão dos históricos         P, S",
+    "module": "Academico",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ACA-12",
+    "name": "Consolidar a apresentação das consultas existentes",
+    "sourcePage": 3,
+    "detail": "R, S",
+    "module": "Academico",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ACA-13",
+    "name": "Manter os dados históricos vinculados aos alunos",
+    "sourcePage": 3,
+    "detail": "R",
+    "module": "Academico",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ADM-01",
+    "name": "Acesso ao sistema por usuários internos",
+    "sourcePage": 1,
+    "detail": "Manter autenticação e acesso às áreas autorizadas               R",
+    "module": "Administracao",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ADM-02",
+    "name": "Cadastro e edição de usuários",
+    "sourcePage": 1,
+    "detail": "Centralizar a gestão dos usuários internos                     R, S",
+    "module": "Administracao",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ADM-03",
+    "name": "Preservar as restrições de acesso por função e departamento",
+    "sourcePage": 1,
+    "detail": "R",
+    "module": "Administracao",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ADM-04",
+    "name": "Vinculação de usuários às unidades",
+    "sourcePage": 1,
+    "detail": "Manter a separação das operações e informações por unidade      P",
+    "module": "Administracao",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ADM-05",
+    "name": "R, S",
+    "sourcePage": 1,
+    "detail": "",
+    "module": "Administracao",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ADM-06",
+    "name": "Histórico de acesso dos usuários",
+    "sourcePage": 1,
+    "detail": "Manter consultas de acesso e atividade                          P",
+    "module": "Administracao",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ADM-07",
+    "name": "Cadastro de unidades da Proativa",
+    "sourcePage": 1,
+    "detail": "R",
+    "module": "Administracao",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ADM-08",
+    "name": "S",
+    "sourcePage": 1,
+    "detail": "",
+    "module": "Administracao",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ADM-09",
+    "name": "R",
+    "sourcePage": 1,
+    "detail": "",
+    "module": "Administracao",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ADM-10",
+    "name": "P, S",
+    "sourcePage": 1,
+    "detail": "",
+    "module": "Administracao",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ALU-01",
+    "name": "Cadastro de alunos",
+    "sourcePage": 2,
+    "detail": "R",
+    "module": "Alunos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ALU-02",
+    "name": "Consulta e pesquisa de alunos",
+    "sourcePage": 2,
+    "detail": "S",
+    "module": "Alunos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ALU-03",
+    "name": "Reorganizar a edição por grupos de informações",
+    "sourcePage": 2,
+    "detail": "R, S",
+    "module": "Alunos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ALU-04",
+    "name": "Manter os campos e vínculos utilizados nos processos atuais",
+    "sourcePage": 2,
+    "detail": "R",
+    "module": "Alunos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ALU-05",
+    "name": "Preservar os registros, com acesso restrito aos responsáveis",
+    "sourcePage": 2,
+    "detail": "R",
+    "module": "Alunos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ALU-06",
+    "name": "Consulta de alunos ativos e inativos",
+    "sourcePage": 2,
+    "detail": "Manter a classificação e os históricos correspondentes            P",
+    "module": "Alunos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ALU-07",
+    "name": "Reunir os arquivos e dados relacionados ao mesmo cadastro",
+    "sourcePage": 2,
+    "detail": "R, S",
+    "module": "Alunos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ALU-08",
+    "name": "Preservar as consultas de pendências e situações cadastrais",
+    "sourcePage": 2,
+    "detail": "P",
+    "module": "Alunos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ALU-09",
+    "name": "Integrar o acesso do aluno ao seu cadastro institucional",
+    "sourcePage": 2,
+    "detail": "R",
+    "module": "Alunos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ALU-10",
+    "name": "R",
+    "sourcePage": 2,
+    "detail": "",
+    "module": "Alunos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ATD-01",
+    "name": "Registro de atendimento a alunos",
+    "sourcePage": 9,
+    "detail": "Manter informações, responsáveis, observações e documentos     R",
+    "module": "Atendimento",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ATD-02",
+    "name": "Consulta de histórico de atendimento",
+    "sourcePage": 9,
+    "detail": "Preservar registros e filtros existentes                       S",
+    "module": "Atendimento",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ATD-03",
+    "name": "Registro de atendimento a empresas",
+    "sourcePage": 9,
+    "detail": "Manter histórico de contatos e informações de atendimento      R",
+    "module": "Atendimento",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ATD-04",
+    "name": "Preservar informações e histórico correspondentes",
+    "sourcePage": 9,
+    "detail": "R",
+    "module": "Atendimento",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ATD-05",
+    "name": "Manter registros vinculados aos alunos",
+    "sourcePage": 9,
+    "detail": "R",
+    "module": "Atendimento",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ATD-06",
+    "name": "Cadastro e histórico de visitas",
+    "sourcePage": 9,
+    "detail": "Preservar contatos, datas, assuntos e unidades                 S",
+    "module": "Atendimento",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ATD-07",
+    "name": "Manter registros, observações e relatórios existentes",
+    "sourcePage": 9,
+    "detail": "R",
+    "module": "Atendimento",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ATD-08",
+    "name": "Questionário socioeconômico",
+    "sourcePage": 9,
+    "detail": "R",
+    "module": "Atendimento",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ATD-09",
+    "name": "Manter os formulários, resultados e históricos existentes",
+    "sourcePage": 9,
+    "detail": "R",
+    "module": "Atendimento",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ATD-10",
+    "name": "Abertura de chamados",
+    "sourcePage": 10,
+    "detail": "S",
+    "module": "Atendimento",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ATD-11",
+    "name": "Manter interações, situações e anexos",
+    "sourcePage": 10,
+    "detail": "S",
+    "module": "Atendimento",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ATD-12",
+    "name": "Fechamento e reabertura de chamados",
+    "sourcePage": 10,
+    "detail": "Preservar os procedimentos atuais                                  P",
+    "module": "Atendimento",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ATD-13",
+    "name": "Manter origem, assunto, responsável, situação e datas",
+    "sourcePage": 10,
+    "detail": "R",
+    "module": "Atendimento",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ATD-14",
+    "name": "Preservar prazos, responsáveis, andamento e conclusão",
+    "sourcePage": 10,
+    "detail": "R",
+    "module": "Atendimento",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "ATD-15",
+    "name": "Manter filtros e relatórios atuais",
+    "sourcePage": 10,
+    "detail": "S",
+    "module": "Atendimento",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "COM-01",
+    "name": "Reunir os modelos utilizados pelos setores",
+    "sourcePage": 10,
+    "detail": "R",
+    "module": "Comunicacao",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "COM-02",
+    "name": "Preservar os procedimentos existentes",
+    "sourcePage": 10,
+    "detail": "P",
+    "module": "Comunicacao",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "COM-03",
+    "name": "Manter os avisos vinculados às ações correspondentes",
+    "sourcePage": 10,
+    "detail": "P",
+    "module": "Comunicacao",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "COM-04",
+    "name": "Envio de notificações empresariais",
+    "sourcePage": 10,
+    "detail": "Preservar os comunicados atuais                                    P",
+    "module": "Comunicacao",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "COM-05",
+    "name": "Manter os avisos atualmente executados",
+    "sourcePage": 11,
+    "detail": "P",
+    "module": "Comunicacao",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "COM-06",
+    "name": "Envio de mensagens em massa",
+    "sourcePage": 11,
+    "detail": "Preservar os fluxos e critérios de destinatários já existentes     S",
+    "module": "Comunicacao",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "COM-07",
+    "name": "Manter os dados e vínculos atualmente controlados",
+    "sourcePage": 11,
+    "detail": "R",
+    "module": "Comunicacao",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "COM-08",
+    "name": "Preservar os procedimentos existentes de comunicação",
+    "sourcePage": 11,
+    "detail": "S",
+    "module": "Comunicacao",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "COM-09",
+    "name": "Organizar as orientações e solicitações disponíveis",
+    "sourcePage": 11,
+    "detail": "S",
+    "module": "Comunicacao",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "CON-01",
+    "name": "R",
+    "sourcePage": 6,
+    "detail": "",
+    "module": "Contratos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "CON-02",
+    "name": "Manter os procedimentos de manutenção contratual",
+    "sourcePage": 6,
+    "detail": "R",
+    "module": "Contratos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "CON-03",
+    "name": "Preservar os dados e regras utilizados atualmente",
+    "sourcePage": 6,
+    "detail": "R",
+    "module": "Contratos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "CON-04",
+    "name": "Cadastro de contratos de estágio",
+    "sourcePage": 6,
+    "detail": "Manter as particularidades dos contratos de estágio             R",
+    "module": "Contratos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "CON-05",
+    "name": "Preservar as modalidades, condições e modelos aplicáveis",
+    "sourcePage": 6,
+    "detail": "R",
+    "module": "Contratos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "CON-06",
+    "name": "Emissão de documentos contratuais",
+    "sourcePage": 6,
+    "detail": "Reproduzir os modelos utilizados no sistema atual               S",
+    "module": "Contratos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "CON-07",
+    "name": "Anexação de contratos assinados",
+    "sourcePage": 6,
+    "detail": "Preservar o vínculo entre documento, contrato e pessoa          R",
+    "module": "Contratos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "CON-08",
+    "name": "Emissão de termos aditivos",
+    "sourcePage": 6,
+    "detail": "Manter os formulários e modelos existentes                      S",
+    "module": "Contratos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "CON-09",
+    "name": "Reproduzir os procedimentos utilizados atualmente",
+    "sourcePage": 6,
+    "detail": "R",
+    "module": "Contratos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "CON-10",
+    "name": "Suspensão contratual",
+    "sourcePage": 6,
+    "detail": "Preservar motivos, períodos e situações de suspensão            P",
+    "module": "Contratos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "CON-11",
+    "name": "Manter o processo e seus efeitos nos registros relacionados",
+    "sourcePage": 6,
+    "detail": "R",
+    "module": "Contratos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "CON-12",
+    "name": "Transferência de contrato",
+    "sourcePage": 6,
+    "detail": "R",
+    "module": "Contratos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "CON-13",
+    "name": "Redução de carga horária",
+    "sourcePage": 6,
+    "detail": "Manter os procedimentos específicos existentes                  P",
+    "module": "Contratos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "CON-14",
+    "name": "Preservar consultas e relatórios de vigência",
+    "sourcePage": 6,
+    "detail": "S",
+    "module": "Contratos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "CON-15",
+    "name": "Manter histórico e filtros disponíveis",
+    "sourcePage": 6,
+    "detail": "S",
+    "module": "Contratos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "CON-16",
+    "name": "Administração de motivos contratuais",
+    "sourcePage": 6,
+    "detail": "R",
+    "module": "Contratos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "CON-17",
+    "name": "Preservar os documentos e seus vínculos",
+    "sourcePage": 7,
+    "detail": "R",
+    "module": "Contratos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "DOC-01",
+    "name": "Envio e armazenamento de documentos",
+    "sourcePage": 10,
+    "detail": "Preservar anexos e vínculos aos cadastros correspondentes          R",
+    "module": "Documentos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "DOC-02",
+    "name": "Análise de documentação de alunos",
+    "sourcePage": 10,
+    "detail": "R",
+    "module": "Documentos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "DOC-03",
+    "name": "Preservar os procedimentos existentes",
+    "sourcePage": 10,
+    "detail": "S",
+    "module": "Documentos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "DOC-04",
+    "name": "Reorganizar solicitações, situações e respostas",
+    "sourcePage": 10,
+    "detail": "R, S",
+    "module": "Documentos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "DOC-05",
+    "name": "Preservar os modelos e critérios atuais",
+    "sourcePage": 10,
+    "detail": "S",
+    "module": "Documentos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "DOC-06",
+    "name": "Documentos de cursos e instituições",
+    "sourcePage": 10,
+    "detail": "Manter arquivos e vínculos aos registros acadêmicos                R",
+    "module": "Documentos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "DOC-07",
+    "name": "Preservar a relação entre documentos e vínculos contratuais",
+    "sourcePage": 10,
+    "detail": "R",
+    "module": "Documentos",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "EMP-01",
+    "name": "Cadastro de empresas",
+    "sourcePage": 5,
+    "detail": "R",
+    "module": "Empresas",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "EMP-02",
+    "name": "Edição e consulta de empresas",
+    "sourcePage": 5,
+    "detail": "Preservar consultas e alterações autorizadas                  S",
+    "module": "Empresas",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "EMP-03",
+    "name": "Agrupamento de empresas",
+    "sourcePage": 5,
+    "detail": "Manter empresas pertencentes ao mesmo grupo empresarial       R",
+    "module": "Empresas",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "EMP-04",
+    "name": "Controle de empresas ativas e inativas",
+    "sourcePage": 5,
+    "detail": "Preservar situações e consultas correspondentes               P",
+    "module": "Empresas",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "EMP-05",
+    "name": "R",
+    "sourcePage": 5,
+    "detail": "",
+    "module": "Empresas",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "EMP-06",
+    "name": "Preservar as verificações e condições de uso existentes",
+    "sourcePage": 5,
+    "detail": "R",
+    "module": "Empresas",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "EMP-07",
+    "name": "Consulta de contratos empresariais",
+    "sourcePage": 5,
+    "detail": "Reunir os vínculos contratuais da empresa                     S",
+    "module": "Empresas",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "EMP-08",
+    "name": "Registro de atendimentos de empresas",
+    "sourcePage": 5,
+    "detail": "Manter os históricos de relacionamento                        R",
+    "module": "Empresas",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "EMP-09",
+    "name": "Preservar registros e informações relacionadas",
+    "sourcePage": 5,
+    "detail": "P",
+    "module": "Empresas",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "EST-01",
+    "name": "Cadastro de instituições de ensino",
+    "sourcePage": 7,
+    "detail": "R",
+    "module": "Estagio",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "EST-02",
+    "name": "Cadastro de cursos das instituições",
+    "sourcePage": 7,
+    "detail": "Manter cursos, níveis e vínculos institucionais                     R",
+    "module": "Estagio",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "EST-03",
+    "name": "Preservar atividades, cursos e classificações existentes",
+    "sourcePage": 7,
+    "detail": "R",
+    "module": "Estagio",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "EST-04",
+    "name": "Cadastro de jornadas de estágio",
+    "sourcePage": 7,
+    "detail": "Manter jornadas e horários atualmente utilizados                    P",
+    "module": "Estagio",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "EST-05",
+    "name": "Preservar os registros relacionados aos estágios",
+    "sourcePage": 7,
+    "detail": "R",
+    "module": "Estagio",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "EST-06",
+    "name": "Cadastro e manutenção de supervisores",
+    "sourcePage": 7,
+    "detail": "Manter pessoas responsáveis, empresas e vínculos                    R",
+    "module": "Estagio",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "EST-07",
+    "name": "Preservar os relacionamentos e períodos aplicáveis",
+    "sourcePage": 7,
+    "detail": "R",
+    "module": "Estagio",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "EST-08",
+    "name": "Manter datas, situações e documentos correspondentes",
+    "sourcePage": 7,
+    "detail": "P",
+    "module": "Estagio",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "EST-09",
+    "name": "Preservar o histórico contratual e documental",
+    "sourcePage": 7,
+    "detail": "R",
+    "module": "Estagio",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "EST-10",
+    "name": "Manter os modelos e conteúdos existentes",
+    "sourcePage": 7,
+    "detail": "P",
+    "module": "Estagio",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "FAC-01",
+    "name": "Acesso individual do facilitador",
+    "sourcePage": 4,
+    "detail": "Manter a autenticação e as permissões correspondentes              R",
+    "module": "Facilitador",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "FAC-02",
+    "name": "Consulta de turmas vinculadas",
+    "sourcePage": 4,
+    "detail": "S",
+    "module": "Facilitador",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "FAC-03",
+    "name": "Consulta de alunos das turmas",
+    "sourcePage": 4,
+    "detail": "Preservar os dados necessários ao acompanhamento                   S",
+    "module": "Facilitador",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "FAC-04",
+    "name": "Lançamento de frequência",
+    "sourcePage": 4,
+    "detail": "R, S",
+    "module": "Facilitador",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "FAC-05",
+    "name": "Consulta de frequência de alunos",
+    "sourcePage": 4,
+    "detail": "Preservar os históricos e demonstrativos autorizados               P",
+    "module": "Facilitador",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "FAC-06",
+    "name": "Manter as consultas presentes no portal",
+    "sourcePage": 4,
+    "detail": "P",
+    "module": "Facilitador",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "FAC-07",
+    "name": "Preservar as informações disponibilizadas ao facilitador",
+    "sourcePage": 4,
+    "detail": "P",
+    "module": "Facilitador",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "FAC-08",
+    "name": "Atualização de dados de acesso",
+    "sourcePage": 4,
+    "detail": "Manter edição de dados permitidos e alteração de senha            R, S",
+    "module": "Facilitador",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "FIN-01",
+    "name": "Cadastro de bancos e contas",
+    "sourcePage": 8,
+    "detail": "Preservar instituições, contas e informações financeiras         R",
+    "module": "Financeiro",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "FIN-02",
+    "name": "Cadastro de tipos de receitas e despesas",
+    "sourcePage": 8,
+    "detail": "Manter a classificação atualmente utilizada                      R",
+    "module": "Financeiro",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "FIN-03",
+    "name": "Lançamento de receitas",
+    "sourcePage": 8,
+    "detail": "Reproduzir o registro de entradas financeiras                    S",
+    "module": "Financeiro",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "FIN-04",
+    "name": "Lançamento de despesas",
+    "sourcePage": 8,
+    "detail": "Reproduzir o registro de saídas financeiras                      S",
+    "module": "Financeiro",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "FIN-05",
+    "name": "Manter as operações existentes de lançamento",
+    "sourcePage": 8,
+    "detail": "R",
+    "module": "Financeiro",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "FIN-06",
+    "name": "Consulta de extratos e movimentações",
+    "sourcePage": 8,
+    "detail": "Preservar consultas por banco, período e natureza                S",
+    "module": "Financeiro",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "FIN-07",
+    "name": "Cadastro de cobranças contratuais",
+    "sourcePage": 8,
+    "detail": "Preservar as regras atualmente aplicadas às cobranças            R",
+    "module": "Financeiro",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "FIN-08",
+    "name": "Cobranças mensais de empresas",
+    "sourcePage": 8,
+    "detail": "Reproduzir o processamento e os demonstrativos atuais            R",
+    "module": "Financeiro",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "FIN-09",
+    "name": "Cobranças individuais e agrupadas",
+    "sourcePage": 8,
+    "detail": "Manter as particularidades de faturamento existentes             R",
+    "module": "Financeiro",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "FIN-10",
+    "name": "Histórico de cobranças por contrato",
+    "sourcePage": 8,
+    "detail": "Preservar competências, valores, situações e vínculos            R",
+    "module": "Financeiro",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "FIN-11",
+    "name": "Lançamento e consulta de mensalidades",
+    "sourcePage": 8,
+    "detail": "R",
+    "module": "Financeiro",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "FIN-12",
+    "name": "Baixa e retificação de pagamentos",
+    "sourcePage": 8,
+    "detail": "Manter os procedimentos de atualização financeira                S",
+    "module": "Financeiro",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "FIN-13",
+    "name": "Preservar as regras e registros necessários",
+    "sourcePage": 8,
+    "detail": "R",
+    "module": "Financeiro",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "FIN-14",
+    "name": "Manter os procedimentos e observações existentes",
+    "sourcePage": 8,
+    "detail": "P",
+    "module": "Financeiro",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "FIN-15",
+    "name": "Emissão de espelhos de cobrança",
+    "sourcePage": 8,
+    "detail": "Reproduzir os modelos e cálculos atuais                          S",
+    "module": "Financeiro",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "FIN-16",
+    "name": "Manter documentos e canais de envio existentes",
+    "sourcePage": 8,
+    "detail": "R",
+    "module": "Financeiro",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "FIN-17",
+    "name": "Emissão de recibos empresariais",
+    "sourcePage": 8,
+    "detail": "Preservar os modelos aplicáveis                                  P",
+    "module": "Financeiro",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "FIN-18",
+    "name": "Preservar vencimentos, parcelas, valores e documentos",
+    "sourcePage": 8,
+    "detail": "R",
+    "module": "Financeiro",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "FIN-19",
+    "name": "Manter os registros de pagamentos efetuados",
+    "sourcePage": 8,
+    "detail": "S",
+    "module": "Financeiro",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "FIN-20",
+    "name": "Consulta de contas pagas e pendentes",
+    "sourcePage": 8,
+    "detail": "Preservar consultas e filtros por situação                       S",
+    "module": "Financeiro",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "FIN-21",
+    "name": "Consulta de inadimplência",
+    "sourcePage": 8,
+    "detail": "Manter os critérios e relatórios atuais                          S",
+    "module": "Financeiro",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "FIN-22",
+    "name": "Preservar informações e demonstrativos de produção",
+    "sourcePage": 8,
+    "detail": "R",
+    "module": "Financeiro",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "FIN-23",
+    "name": "Reproduzir os relatórios e cálculos existentes",
+    "sourcePage": 8,
+    "detail": "P",
+    "module": "Financeiro",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "PAL-01",
+    "name": "Acesso à área do aluno",
+    "sourcePage": 4,
+    "detail": "Manter autenticação e visualização das informações individuais     R",
+    "module": "Portal aluno",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "PAL-02",
+    "name": "Reorganizar a apresentação dos vínculos do aluno",
+    "sourcePage": 4,
+    "detail": "S",
+    "module": "Portal aluno",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "PAL-03",
+    "name": "Consulta de notas",
+    "sourcePage": 4,
+    "detail": "Preservar resultados e detalhes das avaliações                     S",
+    "module": "Portal aluno",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "PAL-04",
+    "name": "Consulta de frequência",
+    "sourcePage": 4,
+    "detail": "Manter os registros e períodos disponíveis                         S",
+    "module": "Portal aluno",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "PAL-05",
+    "name": "Preservar as informações disponibilizadas ao aluno",
+    "sourcePage": 4,
+    "detail": "P",
+    "module": "Portal aluno",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "PAL-06",
+    "name": "Abertura de requerimentos",
+    "sourcePage": 4,
+    "detail": "Reproduzir os formulários e tipos de solicitação existentes        S",
+    "module": "Portal aluno",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "PAL-07",
+    "name": "Acompanhamento de requerimentos",
+    "sourcePage": 4,
+    "detail": "Manter situações, respostas e histórico das solicitações           S",
+    "module": "Portal aluno",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "PAL-08",
+    "name": "Solicitação de justificativa de falta",
+    "sourcePage": 4,
+    "detail": "Preservar envio de justificativa e documentação                    S",
+    "module": "Portal aluno",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "PAL-09",
+    "name": "Manter o processo de solicitação e seu encaminhamento",
+    "sourcePage": 4,
+    "detail": "P",
+    "module": "Portal aluno",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "PAL-10",
+    "name": "Consulta e envio de documentos",
+    "sourcePage": 4,
+    "detail": "Reorganizar os arquivos vinculados ao aluno                       R, S",
+    "module": "Portal aluno",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "PAL-11",
+    "name": "Consulta de boletos",
+    "sourcePage": 4,
+    "detail": "Preservar os documentos financeiros disponíveis                    P",
+    "module": "Portal aluno",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "PAL-12",
+    "name": "Emissão de declaração de matrícula",
+    "sourcePage": 4,
+    "detail": "Preservar os modelos e informações existentes                      P",
+    "module": "Portal aluno",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "PAL-13",
+    "name": "Consulta de vagas e candidaturas",
+    "sourcePage": 4,
+    "detail": "Manter acesso às oportunidades e à participação nos processos      S",
+    "module": "Portal aluno",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "PAL-14",
+    "name": "Consulta de processos seletivos",
+    "sourcePage": 4,
+    "detail": "Preservar informações e resultados disponíveis                     P",
+    "module": "Portal aluno",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "PAL-15",
+    "name": "Currículo eletrônico",
+    "sourcePage": 4,
+    "detail": "Manter os dados e operações de currículo existentes                S",
+    "module": "Portal aluno",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "PAL-16",
+    "name": "Preservar formulários e registros atualmente disponíveis",
+    "sourcePage": 5,
+    "detail": "R",
+    "module": "Portal aluno",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "PAL-17",
+    "name": "Reunir a administração da conta em uma área organizada",
+    "sourcePage": 5,
+    "detail": "S",
+    "module": "Portal aluno",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "PEMP-01",
+    "name": "Acesso da empresa ao portal",
+    "sourcePage": 5,
+    "detail": "Preservar acesso às informações da organização                R",
+    "module": "Portal empresa",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "PEMP-02",
+    "name": "Administração de dados da empresa",
+    "sourcePage": 5,
+    "detail": "Manter informações de perfil e alterações permitidas          S",
+    "module": "Portal empresa",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "PEMP-03",
+    "name": "Consulta de aprendizes ativos e inativos",
+    "sourcePage": 5,
+    "detail": "Preservar relação de aprendizes por situação                  S",
+    "module": "Portal empresa",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "PEMP-04",
+    "name": "Consulta de estagiários ativos e inativos",
+    "sourcePage": 5,
+    "detail": "Preservar relação de estagiários por situação                 S",
+    "module": "Portal empresa",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "PEMP-05",
+    "name": "Consulta de contratos individuais",
+    "sourcePage": 5,
+    "detail": "Manter documentos e informações contratuais                   P",
+    "module": "Portal empresa",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "PEMP-06",
+    "name": "Consulta de frequência dos aprendizes",
+    "sourcePage": 5,
+    "detail": "Preservar consulta individual e agrupada                      S",
+    "module": "Portal empresa",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "PEMP-07",
+    "name": "Consulta de calendário acadêmico",
+    "sourcePage": 5,
+    "detail": "Manter acesso à programação disponibilizada                   P",
+    "module": "Portal empresa",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "PEMP-08",
+    "name": "Consulta de notas e relatórios",
+    "sourcePage": 5,
+    "detail": "Reorganizar consultas individuais e consolidadas              S",
+    "module": "Portal empresa",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "PEMP-09",
+    "name": "Preservar as informações existentes",
+    "sourcePage": 5,
+    "detail": "P",
+    "module": "Portal empresa",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "PEMP-10",
+    "name": "Manter faturas, boletos, notas e documentos disponíveis",
+    "sourcePage": 5,
+    "detail": "S",
+    "module": "Portal empresa",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "PEMP-11",
+    "name": "Preservar os procedimentos atuais",
+    "sourcePage": 6,
+    "detail": "P",
+    "module": "Portal empresa",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "PEMP-12",
+    "name": "Gestão de supervisores de estágio",
+    "sourcePage": 6,
+    "detail": "R",
+    "module": "Portal empresa",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "PEMP-13",
+    "name": "Solicitação de abertura de vagas",
+    "sourcePage": 6,
+    "detail": "Preservar os formulários e encaminhamentos existentes           S",
+    "module": "Portal empresa",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "PEMP-14",
+    "name": "Manter as listagens e informações correspondentes",
+    "sourcePage": 6,
+    "detail": "S",
+    "module": "Portal empresa",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "PEMP-15",
+    "name": "Preservar os procedimentos e documentos aplicáveis",
+    "sourcePage": 6,
+    "detail": "P",
+    "module": "Portal empresa",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "REC-01",
+    "name": "Cadastro de vagas",
+    "sourcePage": 9,
+    "detail": "Manter informações de vagas, empresas, requisitos e períodos     R",
+    "module": "Recrutamento",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "REC-02",
+    "name": "Publicação e edição de vagas",
+    "sourcePage": 9,
+    "detail": "Preservar as operações de manutenção das oportunidades         S",
+    "module": "Recrutamento",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "REC-03",
+    "name": "Manter as situações e procedimentos existentes",
+    "sourcePage": 9,
+    "detail": "P",
+    "module": "Recrutamento",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "REC-04",
+    "name": "Cadastro e consulta de candidatos",
+    "sourcePage": 9,
+    "detail": "R",
+    "module": "Recrutamento",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "REC-05",
+    "name": "Inscrição e candidatura a vagas",
+    "sourcePage": 9,
+    "detail": "Manter os formulários e registros de participação              S",
+    "module": "Recrutamento",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "REC-06",
+    "name": "Preservar informações de encaminhamento e acompanhamento",
+    "sourcePage": 9,
+    "detail": "R",
+    "module": "Recrutamento",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "REC-07",
+    "name": "Manter o histórico de candidaturas",
+    "sourcePage": 9,
+    "detail": "P",
+    "module": "Recrutamento",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "REC-08",
+    "name": "Emissão de cartas de encaminhamento",
+    "sourcePage": 9,
+    "detail": "Reproduzir os modelos de documentos existentes                 S",
+    "module": "Recrutamento",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "REC-09",
+    "name": "Preservar editais, períodos, responsáveis e situações",
+    "sourcePage": 9,
+    "detail": "R",
+    "module": "Recrutamento",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "REC-10",
+    "name": "Manter os dados e arquivos correspondentes",
+    "sourcePage": 9,
+    "detail": "R",
+    "module": "Recrutamento",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "REC-11",
+    "name": "Emissão de comprovantes de inscrição",
+    "sourcePage": 9,
+    "detail": "Preservar modelos e informações atuais                         P",
+    "module": "Recrutamento",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "REC-12",
+    "name": "Listagens de inscritos e classificados",
+    "sourcePage": 9,
+    "detail": "Manter as consultas e classificações disponíveis               S",
+    "module": "Recrutamento",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "REC-13",
+    "name": "Preservar os demonstrativos existentes",
+    "sourcePage": 9,
+    "detail": "P",
+    "module": "Recrutamento",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "SEC-01",
+    "name": "Cadastro e manutenção de cursos",
+    "sourcePage": 2,
+    "detail": "R",
+    "module": "Secretaria",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "SEC-02",
+    "name": "Cadastro de turmas",
+    "sourcePage": 2,
+    "detail": "R",
+    "module": "Secretaria",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "SEC-03",
+    "name": "Edição e encerramento de turmas",
+    "sourcePage": 2,
+    "detail": "Manter as operações e situações existentes                       P, S",
+    "module": "Secretaria",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "SEC-04",
+    "name": "Organizar a relação entre aluno, turma, curso e contrato",
+    "sourcePage": 2,
+    "detail": "R",
+    "module": "Secretaria",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "SEC-05",
+    "name": "Consulta de alunos por turma",
+    "sourcePage": 2,
+    "detail": "Preservar listagens, filtros e informações acadêmicas             S",
+    "module": "Secretaria",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "SEC-06",
+    "name": "Transferência de alunos entre turmas",
+    "sourcePage": 2,
+    "detail": "R",
+    "module": "Secretaria",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "SEC-07",
+    "name": "Alteração de vínculos acadêmicos",
+    "sourcePage": 2,
+    "detail": "R",
+    "module": "Secretaria",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "SEC-08",
+    "name": "Cadastro de disciplinas",
+    "sourcePage": 3,
+    "detail": "R",
+    "module": "Secretaria",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "SEC-09",
+    "name": "Grade curricular dos cursos",
+    "sourcePage": 3,
+    "detail": "R, S",
+    "module": "Secretaria",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "SEC-10",
+    "name": "Preservar as atribuições e associações atualmente utilizadas",
+    "sourcePage": 3,
+    "detail": "R",
+    "module": "Secretaria",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "SEC-11",
+    "name": "Cadastro de horários e dias de aula",
+    "sourcePage": 3,
+    "detail": "R",
+    "module": "Secretaria",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "SEC-12",
+    "name": "Cadastro de datas de aula e calendários",
+    "sourcePage": 3,
+    "detail": "R",
+    "module": "Secretaria",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "SEC-13",
+    "name": "P",
+    "sourcePage": 3,
+    "detail": "",
+    "module": "Secretaria",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "SEC-14",
+    "name": "Cadastro e manutenção de feriados",
+    "sourcePage": 3,
+    "detail": "Preservar os registros utilizados na programação de atividades      P",
+    "module": "Secretaria",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "SEC-15",
+    "name": "Gestão de materiais didáticos",
+    "sourcePage": 3,
+    "detail": "R",
+    "module": "Secretaria",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "SEC-16",
+    "name": "Liberação de materiais para alunos",
+    "sourcePage": 3,
+    "detail": "Preservar os controles existentes de disponibilização               S",
+    "module": "Secretaria",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "SUP-01",
+    "name": "Acesso individual do supervisor",
+    "sourcePage": 7,
+    "detail": "R",
+    "module": "Supervisor",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "SUP-02",
+    "name": "Consulta de estagiários vinculados",
+    "sourcePage": 7,
+    "detail": "Preservar a relação dos estudantes sob sua responsabilidade         S",
+    "module": "Supervisor",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "SUP-03",
+    "name": "Preservar os formulários e conteúdos existentes",
+    "sourcePage": 7,
+    "detail": "S",
+    "module": "Supervisor",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "SUP-04",
+    "name": "Emissão e alteração de TRE",
+    "sourcePage": 7,
+    "detail": "Manter o procedimento e os registros atuais                         S",
+    "module": "Supervisor",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "SUP-05",
+    "name": "Preservar as informações autorizadas",
+    "sourcePage": 7,
+    "detail": "P",
+    "module": "Supervisor",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "SUP-06",
+    "name": "Manter os históricos disponibilizados",
+    "sourcePage": 7,
+    "detail": "P",
+    "module": "Supervisor",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  },
+  {
+    "code": "SUP-07",
+    "name": "Administração dos dados da conta",
+    "sourcePage": 7,
+    "detail": "Preservar atualização de dados permitidos e senha                   S",
+    "module": "Supervisor",
+    "status": "A validar em homologacao",
+    "target": "E1 - reproduzir comportamento legado"
+  }
+]

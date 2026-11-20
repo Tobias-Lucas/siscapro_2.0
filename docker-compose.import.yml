@@ -1,0 +1,53 @@
+name: proativa-siscapro-import-local
+services:
+  mariadb-import:
+    image: mariadb:10.11
+    command:
+      - "--max-allowed-packet=268435456"
+      - "--net-read-timeout=600"
+      - "--net-write-timeout=600"
+    restart: unless-stopped
+    environment:
+      MARIADB_ROOT_PASSWORD: ${IMPORT_DB_PASSWORD:?Configure IMPORT_DB_PASSWORD no .env.development}
+      MARIADB_DATABASE: siscapro_import
+    volumes:
+      - proativa_import_mariadb:/var/lib/mysql
+    networks: [import_isolated]
+    mem_limit: 3g
+    cpus: '2.0'
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: ["ALL"]
+    cap_add: ["CHOWN", "DAC_OVERRIDE", "FOWNER", "SETGID", "SETUID"]
+    healthcheck:
+      test: ["CMD-SHELL", "MYSQL_PWD=\"$$MARIADB_ROOT_PASSWORD\" mariadb-admin ping -uroot --silent"]
+      interval: 8s
+      timeout: 5s
+      retries: 30
+  mariadb-loopback:
+    image: haproxy:3.2-alpine
+    restart: unless-stopped
+    depends_on:
+      mariadb-import:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:${IMPORT_DB_PORT:-3310}:3306"
+    volumes:
+      - ./scripts/import-gateway-haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+    networks: [import_isolated, import_gateway]
+    mem_limit: 128m
+    cpus: '0.25'
+    read_only: true
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: ["ALL"]
+    healthcheck:
+      test: ["CMD-SHELL", "haproxy -c -f /usr/local/etc/haproxy/haproxy.cfg >/dev/null 2>&1"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+volumes:
+  proativa_import_mariadb:
+
+networks:
+  import_isolated:
+    internal: true
+  import_gateway: {}

@@ -1,0 +1,25 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+!.env.development.example
+apps/api/src/generated/
+apps/web/dist/
+coverage/
+*.log
+.DS_Store
+.idea/
+.vscode/
+
+DEV_ADMIN_CREDENTIALS.txt
+.local-documents/
+!.env.production.example
+
+# Only local protected data and credentials
+.local-dev-users-credentials.md
+.local-private-imports/
+.local-*/
+*.backup-before-*
+*.bak
+qa/VALIDACAO_TECNICA_*.txt

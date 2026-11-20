@@ -1,0 +1,200 @@
+﻿code;module;name;sourcePage;detail;target;status
+ACA-01;Academico;Lançamento de frequência dos alunos;3;Reproduzir o registro de presenças e faltas                         R;E1 - reproduzir comportamento legado;A validar em homologacao
+ACA-02;Academico;Lançamento de frequência por turma;3;Manter as operações coletivas e individuais existentes              S;E1 - reproduzir comportamento legado;A validar em homologacao
+ACA-03;Academico;Preservar as particularidades dos diferentes programas;3;P;E1 - reproduzir comportamento legado;A validar em homologacao
+ACA-04;Academico;Reunir os procedimentos de correção em um fluxo coerente;3;R;E1 - reproduzir comportamento legado;A validar em homologacao
+ACA-05;Academico;Registro retroativo de frequência;3;Manter as rotinas existentes para períodos anteriores               P;E1 - reproduzir comportamento legado;A validar em homologacao
+ACA-06;Academico;Consulta de frequência individual;3;Preservar as consultas do histórico de cada aluno                   S;E1 - reproduzir comportamento legado;A validar em homologacao
+ACA-07;Academico;Justificativa de faltas;3;R;E1 - reproduzir comportamento legado;A validar em homologacao
+ACA-08;Academico;Lançamento de notas;3;R;E1 - reproduzir comportamento legado;A validar em homologacao
+ACA-09;Academico;Alteração e consulta de notas;3;Manter as mesmas informações e operações autorizadas                S;E1 - reproduzir comportamento legado;A validar em homologacao
+ACA-10;Academico;Espelhos e relatórios de notas;3;P;E1 - reproduzir comportamento legado;A validar em homologacao
+ACA-11;Academico;Histórico escolar;3;Manter consulta, pré-visualização e emissão dos históricos         P, S;E1 - reproduzir comportamento legado;A validar em homologacao
+ACA-12;Academico;Consolidar a apresentação das consultas existentes;3;R, S;E1 - reproduzir comportamento legado;A validar em homologacao
+ACA-13;Academico;Manter os dados históricos vinculados aos alunos;3;R;E1 - reproduzir comportamento legado;A validar em homologacao
+ADM-01;Administracao;Acesso ao sistema por usuários internos;1;Manter autenticação e acesso às áreas autorizadas               R;E1 - reproduzir comportamento legado;A validar em homologacao
+ADM-02;Administracao;Cadastro e edição de usuários;1;Centralizar a gestão dos usuários internos                     R, S;E1 - reproduzir comportamento legado;A validar em homologacao
+ADM-03;Administracao;Preservar as restrições de acesso por função e departamento;1;R;E1 - reproduzir comportamento legado;A validar em homologacao
+ADM-04;Administracao;Vinculação de usuários às unidades;1;Manter a separação das operações e informações por unidade      P;E1 - reproduzir comportamento legado;A validar em homologacao
+ADM-05;Administracao;R, S;1;;E1 - reproduzir comportamento legado;A validar em homologacao
+ADM-06;Administracao;Histórico de acesso dos usuários;1;Manter consultas de acesso e atividade                          P;E1 - reproduzir comportamento legado;A validar em homologacao
+ADM-07;Administracao;Cadastro de unidades da Proativa;1;R;E1 - reproduzir comportamento legado;A validar em homologacao
+ADM-08;Administracao;S;1;;E1 - reproduzir comportamento legado;A validar em homologacao
+ADM-09;Administracao;R;1;;E1 - reproduzir comportamento legado;A validar em homologacao
+ADM-10;Administracao;P, S;1;;E1 - reproduzir comportamento legado;A validar em homologacao
+ALU-01;Alunos;Cadastro de alunos;2;R;E1 - reproduzir comportamento legado;A validar em homologacao
+ALU-02;Alunos;Consulta e pesquisa de alunos;2;S;E1 - reproduzir comportamento legado;A validar em homologacao
+ALU-03;Alunos;Reorganizar a edição por grupos de informações;2;R, S;E1 - reproduzir comportamento legado;A validar em homologacao
+ALU-04;Alunos;Manter os campos e vínculos utilizados nos processos atuais;2;R;E1 - reproduzir comportamento legado;A validar em homologacao
+ALU-05;Alunos;Preservar os registros, com acesso restrito aos responsáveis;2;R;E1 - reproduzir comportamento legado;A validar em homologacao
+ALU-06;Alunos;Consulta de alunos ativos e inativos;2;Manter a classificação e os históricos correspondentes            P;E1 - reproduzir comportamento legado;A validar em homologacao
+ALU-07;Alunos;Reunir os arquivos e dados relacionados ao mesmo cadastro;2;R, S;E1 - reproduzir comportamento legado;A validar em homologacao
+ALU-08;Alunos;Preservar as consultas de pendências e situações cadastrais;2;P;E1 - reproduzir comportamento legado;A validar em homologacao
+ALU-09;Alunos;Integrar o acesso do aluno ao seu cadastro institucional;2;R;E1 - reproduzir comportamento legado;A validar em homologacao
+ALU-10;Alunos;R;2;;E1 - reproduzir comportamento legado;A validar em homologacao
+ATD-01;Atendimento;Registro de atendimento a alunos;9;Manter informações, responsáveis, observações e documentos     R;E1 - reproduzir comportamento legado;A validar em homologacao
+ATD-02;Atendimento;Consulta de histórico de atendimento;9;Preservar registros e filtros existentes                       S;E1 - reproduzir comportamento legado;A validar em homologacao
+ATD-03;Atendimento;Registro de atendimento a empresas;9;Manter histórico de contatos e informações de atendimento      R;E1 - reproduzir comportamento legado;A validar em homologacao
+ATD-04;Atendimento;Preservar informações e histórico correspondentes;9;R;E1 - reproduzir comportamento legado;A validar em homologacao
+ATD-05;Atendimento;Manter registros vinculados aos alunos;9;R;E1 - reproduzir comportamento legado;A validar em homologacao
+ATD-06;Atendimento;Cadastro e histórico de visitas;9;Preservar contatos, datas, assuntos e unidades                 S;E1 - reproduzir comportamento legado;A validar em homologacao
+ATD-07;Atendimento;Manter registros, observações e relatórios existentes;9;R;E1 - reproduzir comportamento legado;A validar em homologacao
+ATD-08;Atendimento;Questionário socioeconômico;9;R;E1 - reproduzir comportamento legado;A validar em homologacao
+ATD-09;Atendimento;Manter os formulários, resultados e históricos existentes;9;R;E1 - reproduzir comportamento legado;A validar em homologacao
+ATD-10;Atendimento;Abertura de chamados;10;S;E1 - reproduzir comportamento legado;A validar em homologacao
+ATD-11;Atendimento;Manter interações, situações e anexos;10;S;E1 - reproduzir comportamento legado;A validar em homologacao
+ATD-12;Atendimento;Fechamento e reabertura de chamados;10;Preservar os procedimentos atuais                                  P;E1 - reproduzir comportamento legado;A validar em homologacao
+ATD-13;Atendimento;Manter origem, assunto, responsável, situação e datas;10;R;E1 - reproduzir comportamento legado;A validar em homologacao
+ATD-14;Atendimento;Preservar prazos, responsáveis, andamento e conclusão;10;R;E1 - reproduzir comportamento legado;A validar em homologacao
+ATD-15;Atendimento;Manter filtros e relatórios atuais;10;S;E1 - reproduzir comportamento legado;A validar em homologacao
+COM-01;Comunicacao;Reunir os modelos utilizados pelos setores;10;R;E1 - reproduzir comportamento legado;A validar em homologacao
+COM-02;Comunicacao;Preservar os procedimentos existentes;10;P;E1 - reproduzir comportamento legado;A validar em homologacao
+COM-03;Comunicacao;Manter os avisos vinculados às ações correspondentes;10;P;E1 - reproduzir comportamento legado;A validar em homologacao
+COM-04;Comunicacao;Envio de notificações empresariais;10;Preservar os comunicados atuais                                    P;E1 - reproduzir comportamento legado;A validar em homologacao
+COM-05;Comunicacao;Manter os avisos atualmente executados;11;P;E1 - reproduzir comportamento legado;A validar em homologacao
+COM-06;Comunicacao;Envio de mensagens em massa;11;Preservar os fluxos e critérios de destinatários já existentes     S;E1 - reproduzir comportamento legado;A validar em homologacao
+COM-07;Comunicacao;Manter os dados e vínculos atualmente controlados;11;R;E1 - reproduzir comportamento legado;A validar em homologacao
+COM-08;Comunicacao;Preservar os procedimentos existentes de comunicação;11;S;E1 - reproduzir comportamento legado;A validar em homologacao
+COM-09;Comunicacao;Organizar as orientações e solicitações disponíveis;11;S;E1 - reproduzir comportamento legado;A validar em homologacao
+CON-01;Contratos;R;6;;E1 - reproduzir comportamento legado;A validar em homologacao
+CON-02;Contratos;Manter os procedimentos de manutenção contratual;6;R;E1 - reproduzir comportamento legado;A validar em homologacao
+CON-03;Contratos;Preservar os dados e regras utilizados atualmente;6;R;E1 - reproduzir comportamento legado;A validar em homologacao
+CON-04;Contratos;Cadastro de contratos de estágio;6;Manter as particularidades dos contratos de estágio             R;E1 - reproduzir comportamento legado;A validar em homologacao
+CON-05;Contratos;Preservar as modalidades, condições e modelos aplicáveis;6;R;E1 - reproduzir comportamento legado;A validar em homologacao
+CON-06;Contratos;Emissão de documentos contratuais;6;Reproduzir os modelos utilizados no sistema atual               S;E1 - reproduzir comportamento legado;A validar em homologacao
+CON-07;Contratos;Anexação de contratos assinados;6;Preservar o vínculo entre documento, contrato e pessoa          R;E1 - reproduzir comportamento legado;A validar em homologacao
+CON-08;Contratos;Emissão de termos aditivos;6;Manter os formulários e modelos existentes                      S;E1 - reproduzir comportamento legado;A validar em homologacao
+CON-09;Contratos;Reproduzir os procedimentos utilizados atualmente;6;R;E1 - reproduzir comportamento legado;A validar em homologacao
+CON-10;Contratos;Suspensão contratual;6;Preservar motivos, períodos e situações de suspensão            P;E1 - reproduzir comportamento legado;A validar em homologacao
+CON-11;Contratos;Manter o processo e seus efeitos nos registros relacionados;6;R;E1 - reproduzir comportamento legado;A validar em homologacao
+CON-12;Contratos;Transferência de contrato;6;R;E1 - reproduzir comportamento legado;A validar em homologacao
+CON-13;Contratos;Redução de carga horária;6;Manter os procedimentos específicos existentes                  P;E1 - reproduzir comportamento legado;A validar em homologacao
+CON-14;Contratos;Preservar consultas e relatórios de vigência;6;S;E1 - reproduzir comportamento legado;A validar em homologacao
+CON-15;Contratos;Manter histórico e filtros disponíveis;6;S;E1 - reproduzir comportamento legado;A validar em homologacao
+CON-16;Contratos;Administração de motivos contratuais;6;R;E1 - reproduzir comportamento legado;A validar em homologacao
+CON-17;Contratos;Preservar os documentos e seus vínculos;7;R;E1 - reproduzir comportamento legado;A validar em homologacao
+DOC-01;Documentos;Envio e armazenamento de documentos;10;Preservar anexos e vínculos aos cadastros correspondentes          R;E1 - reproduzir comportamento legado;A validar em homologacao
+DOC-02;Documentos;Análise de documentação de alunos;10;R;E1 - reproduzir comportamento legado;A validar em homologacao
+DOC-03;Documentos;Preservar os procedimentos existentes;10;S;E1 - reproduzir comportamento legado;A validar em homologacao
+DOC-04;Documentos;Reorganizar solicitações, situações e respostas;10;R, S;E1 - reproduzir comportamento legado;A validar em homologacao
+DOC-05;Documentos;Preservar os modelos e critérios atuais;10;S;E1 - reproduzir comportamento legado;A validar em homologacao
+DOC-06;Documentos;Documentos de cursos e instituições;10;Manter arquivos e vínculos aos registros acadêmicos                R;E1 - reproduzir comportamento legado;A validar em homologacao
+DOC-07;Documentos;Preservar a relação entre documentos e vínculos contratuais;10;R;E1 - reproduzir comportamento legado;A validar em homologacao
+EMP-01;Empresas;Cadastro de empresas;5;R;E1 - reproduzir comportamento legado;A validar em homologacao
+EMP-02;Empresas;Edição e consulta de empresas;5;Preservar consultas e alterações autorizadas                  S;E1 - reproduzir comportamento legado;A validar em homologacao
+EMP-03;Empresas;Agrupamento de empresas;5;Manter empresas pertencentes ao mesmo grupo empresarial       R;E1 - reproduzir comportamento legado;A validar em homologacao
+EMP-04;Empresas;Controle de empresas ativas e inativas;5;Preservar situações e consultas correspondentes               P;E1 - reproduzir comportamento legado;A validar em homologacao
+EMP-05;Empresas;R;5;;E1 - reproduzir comportamento legado;A validar em homologacao
+EMP-06;Empresas;Preservar as verificações e condições de uso existentes;5;R;E1 - reproduzir comportamento legado;A validar em homologacao
+EMP-07;Empresas;Consulta de contratos empresariais;5;Reunir os vínculos contratuais da empresa                     S;E1 - reproduzir comportamento legado;A validar em homologacao
+EMP-08;Empresas;Registro de atendimentos de empresas;5;Manter os históricos de relacionamento                        R;E1 - reproduzir comportamento legado;A validar em homologacao
+EMP-09;Empresas;Preservar registros e informações relacionadas;5;P;E1 - reproduzir comportamento legado;A validar em homologacao
+EST-01;Estagio;Cadastro de instituições de ensino;7;R;E1 - reproduzir comportamento legado;A validar em homologacao
+EST-02;Estagio;Cadastro de cursos das instituições;7;Manter cursos, níveis e vínculos institucionais                     R;E1 - reproduzir comportamento legado;A validar em homologacao
+EST-03;Estagio;Preservar atividades, cursos e classificações existentes;7;R;E1 - reproduzir comportamento legado;A validar em homologacao
+EST-04;Estagio;Cadastro de jornadas de estágio;7;Manter jornadas e horários atualmente utilizados                    P;E1 - reproduzir comportamento legado;A validar em homologacao
+EST-05;Estagio;Preservar os registros relacionados aos estágios;7;R;E1 - reproduzir comportamento legado;A validar em homologacao
+EST-06;Estagio;Cadastro e manutenção de supervisores;7;Manter pessoas responsáveis, empresas e vínculos                    R;E1 - reproduzir comportamento legado;A validar em homologacao
+EST-07;Estagio;Preservar os relacionamentos e períodos aplicáveis;7;R;E1 - reproduzir comportamento legado;A validar em homologacao
+EST-08;Estagio;Manter datas, situações e documentos correspondentes;7;P;E1 - reproduzir comportamento legado;A validar em homologacao
+EST-09;Estagio;Preservar o histórico contratual e documental;7;R;E1 - reproduzir comportamento legado;A validar em homologacao
+EST-10;Estagio;Manter os modelos e conteúdos existentes;7;P;E1 - reproduzir comportamento legado;A validar em homologacao
+FAC-01;Facilitador;Acesso individual do facilitador;4;Manter a autenticação e as permissões correspondentes              R;E1 - reproduzir comportamento legado;A validar em homologacao
+FAC-02;Facilitador;Consulta de turmas vinculadas;4;S;E1 - reproduzir comportamento legado;A validar em homologacao
+FAC-03;Facilitador;Consulta de alunos das turmas;4;Preservar os dados necessários ao acompanhamento                   S;E1 - reproduzir comportamento legado;A validar em homologacao
+FAC-04;Facilitador;Lançamento de frequência;4;R, S;E1 - reproduzir comportamento legado;A validar em homologacao
+FAC-05;Facilitador;Consulta de frequência de alunos;4;Preservar os históricos e demonstrativos autorizados               P;E1 - reproduzir comportamento legado;A validar em homologacao
+FAC-06;Facilitador;Manter as consultas presentes no portal;4;P;E1 - reproduzir comportamento legado;A validar em homologacao
+FAC-07;Facilitador;Preservar as informações disponibilizadas ao facilitador;4;P;E1 - reproduzir comportamento legado;A validar em homologacao
+FAC-08;Facilitador;Atualização de dados de acesso;4;Manter edição de dados permitidos e alteração de senha            R, S;E1 - reproduzir comportamento legado;A validar em homologacao
+FIN-01;Financeiro;Cadastro de bancos e contas;8;Preservar instituições, contas e informações financeiras         R;E1 - reproduzir comportamento legado;A validar em homologacao
+FIN-02;Financeiro;Cadastro de tipos de receitas e despesas;8;Manter a classificação atualmente utilizada                      R;E1 - reproduzir comportamento legado;A validar em homologacao
+FIN-03;Financeiro;Lançamento de receitas;8;Reproduzir o registro de entradas financeiras                    S;E1 - reproduzir comportamento legado;A validar em homologacao
+FIN-04;Financeiro;Lançamento de despesas;8;Reproduzir o registro de saídas financeiras                      S;E1 - reproduzir comportamento legado;A validar em homologacao
+FIN-05;Financeiro;Manter as operações existentes de lançamento;8;R;E1 - reproduzir comportamento legado;A validar em homologacao
+FIN-06;Financeiro;Consulta de extratos e movimentações;8;Preservar consultas por banco, período e natureza                S;E1 - reproduzir comportamento legado;A validar em homologacao
+FIN-07;Financeiro;Cadastro de cobranças contratuais;8;Preservar as regras atualmente aplicadas às cobranças            R;E1 - reproduzir comportamento legado;A validar em homologacao
+FIN-08;Financeiro;Cobranças mensais de empresas;8;Reproduzir o processamento e os demonstrativos atuais            R;E1 - reproduzir comportamento legado;A validar em homologacao
+FIN-09;Financeiro;Cobranças individuais e agrupadas;8;Manter as particularidades de faturamento existentes             R;E1 - reproduzir comportamento legado;A validar em homologacao
+FIN-10;Financeiro;Histórico de cobranças por contrato;8;Preservar competências, valores, situações e vínculos            R;E1 - reproduzir comportamento legado;A validar em homologacao
+FIN-11;Financeiro;Lançamento e consulta de mensalidades;8;R;E1 - reproduzir comportamento legado;A validar em homologacao
+FIN-12;Financeiro;Baixa e retificação de pagamentos;8;Manter os procedimentos de atualização financeira                S;E1 - reproduzir comportamento legado;A validar em homologacao
+FIN-13;Financeiro;Preservar as regras e registros necessários;8;R;E1 - reproduzir comportamento legado;A validar em homologacao
+FIN-14;Financeiro;Manter os procedimentos e observações existentes;8;P;E1 - reproduzir comportamento legado;A validar em homologacao
+FIN-15;Financeiro;Emissão de espelhos de cobrança;8;Reproduzir os modelos e cálculos atuais                          S;E1 - reproduzir comportamento legado;A validar em homologacao
+FIN-16;Financeiro;Manter documentos e canais de envio existentes;8;R;E1 - reproduzir comportamento legado;A validar em homologacao
+FIN-17;Financeiro;Emissão de recibos empresariais;8;Preservar os modelos aplicáveis                                  P;E1 - reproduzir comportamento legado;A validar em homologacao
+FIN-18;Financeiro;Preservar vencimentos, parcelas, valores e documentos;8;R;E1 - reproduzir comportamento legado;A validar em homologacao
+FIN-19;Financeiro;Manter os registros de pagamentos efetuados;8;S;E1 - reproduzir comportamento legado;A validar em homologacao
+FIN-20;Financeiro;Consulta de contas pagas e pendentes;8;Preservar consultas e filtros por situação                       S;E1 - reproduzir comportamento legado;A validar em homologacao
+FIN-21;Financeiro;Consulta de inadimplência;8;Manter os critérios e relatórios atuais                          S;E1 - reproduzir comportamento legado;A validar em homologacao
+FIN-22;Financeiro;Preservar informações e demonstrativos de produção;8;R;E1 - reproduzir comportamento legado;A validar em homologacao
+FIN-23;Financeiro;Reproduzir os relatórios e cálculos existentes;8;P;E1 - reproduzir comportamento legado;A validar em homologacao
+PAL-01;Portal aluno;Acesso à área do aluno;4;Manter autenticação e visualização das informações individuais     R;E1 - reproduzir comportamento legado;A validar em homologacao
+PAL-02;Portal aluno;Reorganizar a apresentação dos vínculos do aluno;4;S;E1 - reproduzir comportamento legado;A validar em homologacao
+PAL-03;Portal aluno;Consulta de notas;4;Preservar resultados e detalhes das avaliações                     S;E1 - reproduzir comportamento legado;A validar em homologacao
+PAL-04;Portal aluno;Consulta de frequência;4;Manter os registros e períodos disponíveis                         S;E1 - reproduzir comportamento legado;A validar em homologacao
+PAL-05;Portal aluno;Preservar as informações disponibilizadas ao aluno;4;P;E1 - reproduzir comportamento legado;A validar em homologacao
+PAL-06;Portal aluno;Abertura de requerimentos;4;Reproduzir os formulários e tipos de solicitação existentes        S;E1 - reproduzir comportamento legado;A validar em homologacao
+PAL-07;Portal aluno;Acompanhamento de requerimentos;4;Manter situações, respostas e histórico das solicitações           S;E1 - reproduzir comportamento legado;A validar em homologacao
+PAL-08;Portal aluno;Solicitação de justificativa de falta;4;Preservar envio de justificativa e documentação                    S;E1 - reproduzir comportamento legado;A validar em homologacao
+PAL-09;Portal aluno;Manter o processo de solicitação e seu encaminhamento;4;P;E1 - reproduzir comportamento legado;A validar em homologacao
+PAL-10;Portal aluno;Consulta e envio de documentos;4;Reorganizar os arquivos vinculados ao aluno                       R, S;E1 - reproduzir comportamento legado;A validar em homologacao
+PAL-11;Portal aluno;Consulta de boletos;4;Preservar os documentos financeiros disponíveis                    P;E1 - reproduzir comportamento legado;A validar em homologacao
+PAL-12;Portal aluno;Emissão de declaração de matrícula;4;Preservar os modelos e informações existentes                      P;E1 - reproduzir comportamento legado;A validar em homologacao
+PAL-13;Portal aluno;Consulta de vagas e candidaturas;4;Manter acesso às oportunidades e à participação nos processos      S;E1 - reproduzir comportamento legado;A validar em homologacao
+PAL-14;Portal aluno;Consulta de processos seletivos;4;Preservar informações e resultados disponíveis                     P;E1 - reproduzir comportamento legado;A validar em homologacao
+PAL-15;Portal aluno;Currículo eletrônico;4;Manter os dados e operações de currículo existentes                S;E1 - reproduzir comportamento legado;A validar em homologacao
+PAL-16;Portal aluno;Preservar formulários e registros atualmente disponíveis;5;R;E1 - reproduzir comportamento legado;A validar em homologacao
+PAL-17;Portal aluno;Reunir a administração da conta em uma área organizada;5;S;E1 - reproduzir comportamento legado;A validar em homologacao
+PEMP-01;Portal empresa;Acesso da empresa ao portal;5;Preservar acesso às informações da organização                R;E1 - reproduzir comportamento legado;A validar em homologacao
+PEMP-02;Portal empresa;Administração de dados da empresa;5;Manter informações de perfil e alterações permitidas          S;E1 - reproduzir comportamento legado;A validar em homologacao
+PEMP-03;Portal empresa;Consulta de aprendizes ativos e inativos;5;Preservar relação de aprendizes por situação                  S;E1 - reproduzir comportamento legado;A validar em homologacao
+PEMP-04;Portal empresa;Consulta de estagiários ativos e inativos;5;Preservar relação de estagiários por situação                 S;E1 - reproduzir comportamento legado;A validar em homologacao
+PEMP-05;Portal empresa;Consulta de contratos individuais;5;Manter documentos e informações contratuais                   P;E1 - reproduzir comportamento legado;A validar em homologacao
+PEMP-06;Portal empresa;Consulta de frequência dos aprendizes;5;Preservar consulta individual e agrupada                      S;E1 - reproduzir comportamento legado;A validar em homologacao
+PEMP-07;Portal empresa;Consulta de calendário acadêmico;5;Manter acesso à programação disponibilizada                   P;E1 - reproduzir comportamento legado;A validar em homologacao
+PEMP-08;Portal empresa;Consulta de notas e relatórios;5;Reorganizar consultas individuais e consolidadas              S;E1 - reproduzir comportamento legado;A validar em homologacao
+PEMP-09;Portal empresa;Preservar as informações existentes;5;P;E1 - reproduzir comportamento legado;A validar em homologacao
+PEMP-10;Portal empresa;Manter faturas, boletos, notas e documentos disponíveis;5;S;E1 - reproduzir comportamento legado;A validar em homologacao
+PEMP-11;Portal empresa;Preservar os procedimentos atuais;6;P;E1 - reproduzir comportamento legado;A validar em homologacao
+PEMP-12;Portal empresa;Gestão de supervisores de estágio;6;R;E1 - reproduzir comportamento legado;A validar em homologacao
+PEMP-13;Portal empresa;Solicitação de abertura de vagas;6;Preservar os formulários e encaminhamentos existentes           S;E1 - reproduzir comportamento legado;A validar em homologacao
+PEMP-14;Portal empresa;Manter as listagens e informações correspondentes;6;S;E1 - reproduzir comportamento legado;A validar em homologacao
+PEMP-15;Portal empresa;Preservar os procedimentos e documentos aplicáveis;6;P;E1 - reproduzir comportamento legado;A validar em homologacao
+REC-01;Recrutamento;Cadastro de vagas;9;Manter informações de vagas, empresas, requisitos e períodos     R;E1 - reproduzir comportamento legado;A validar em homologacao
+REC-02;Recrutamento;Publicação e edição de vagas;9;Preservar as operações de manutenção das oportunidades         S;E1 - reproduzir comportamento legado;A validar em homologacao
+REC-03;Recrutamento;Manter as situações e procedimentos existentes;9;P;E1 - reproduzir comportamento legado;A validar em homologacao
+REC-04;Recrutamento;Cadastro e consulta de candidatos;9;R;E1 - reproduzir comportamento legado;A validar em homologacao
+REC-05;Recrutamento;Inscrição e candidatura a vagas;9;Manter os formulários e registros de participação              S;E1 - reproduzir comportamento legado;A validar em homologacao
+REC-06;Recrutamento;Preservar informações de encaminhamento e acompanhamento;9;R;E1 - reproduzir comportamento legado;A validar em homologacao
+REC-07;Recrutamento;Manter o histórico de candidaturas;9;P;E1 - reproduzir comportamento legado;A validar em homologacao
+REC-08;Recrutamento;Emissão de cartas de encaminhamento;9;Reproduzir os modelos de documentos existentes                 S;E1 - reproduzir comportamento legado;A validar em homologacao
+REC-09;Recrutamento;Preservar editais, períodos, responsáveis e situações;9;R;E1 - reproduzir comportamento legado;A validar em homologacao
+REC-10;Recrutamento;Manter os dados e arquivos correspondentes;9;R;E1 - reproduzir comportamento legado;A validar em homologacao
+REC-11;Recrutamento;Emissão de comprovantes de inscrição;9;Preservar modelos e informações atuais                         P;E1 - reproduzir comportamento legado;A validar em homologacao
+REC-12;Recrutamento;Listagens de inscritos e classificados;9;Manter as consultas e classificações disponíveis               S;E1 - reproduzir comportamento legado;A validar em homologacao
+REC-13;Recrutamento;Preservar os demonstrativos existentes;9;P;E1 - reproduzir comportamento legado;A validar em homologacao
+SEC-01;Secretaria;Cadastro e manutenção de cursos;2;R;E1 - reproduzir comportamento legado;A validar em homologacao
+SEC-02;Secretaria;Cadastro de turmas;2;R;E1 - reproduzir comportamento legado;A validar em homologacao
+SEC-03;Secretaria;Edição e encerramento de turmas;2;Manter as operações e situações existentes                       P, S;E1 - reproduzir comportamento legado;A validar em homologacao
+SEC-04;Secretaria;Organizar a relação entre aluno, turma, curso e contrato;2;R;E1 - reproduzir comportamento legado;A validar em homologacao
+SEC-05;Secretaria;Consulta de alunos por turma;2;Preservar listagens, filtros e informações acadêmicas             S;E1 - reproduzir comportamento legado;A validar em homologacao
+SEC-06;Secretaria;Transferência de alunos entre turmas;2;R;E1 - reproduzir comportamento legado;A validar em homologacao
+SEC-07;Secretaria;Alteração de vínculos acadêmicos;2;R;E1 - reproduzir comportamento legado;A validar em homologacao
+SEC-08;Secretaria;Cadastro de disciplinas;3;R;E1 - reproduzir comportamento legado;A validar em homologacao
+SEC-09;Secretaria;Grade curricular dos cursos;3;R, S;E1 - reproduzir comportamento legado;A validar em homologacao
+SEC-10;Secretaria;Preservar as atribuições e associações atualmente utilizadas;3;R;E1 - reproduzir comportamento legado;A validar em homologacao
+SEC-11;Secretaria;Cadastro de horários e dias de aula;3;R;E1 - reproduzir comportamento legado;A validar em homologacao
+SEC-12;Secretaria;Cadastro de datas de aula e calendários;3;R;E1 - reproduzir comportamento legado;A validar em homologacao
+SEC-13;Secretaria;P;3;;E1 - reproduzir comportamento legado;A validar em homologacao
+SEC-14;Secretaria;Cadastro e manutenção de feriados;3;Preservar os registros utilizados na programação de atividades      P;E1 - reproduzir comportamento legado;A validar em homologacao
+SEC-15;Secretaria;Gestão de materiais didáticos;3;R;E1 - reproduzir comportamento legado;A validar em homologacao
+SEC-16;Secretaria;Liberação de materiais para alunos;3;Preservar os controles existentes de disponibilização               S;E1 - reproduzir comportamento legado;A validar em homologacao
+SUP-01;Supervisor;Acesso individual do supervisor;7;R;E1 - reproduzir comportamento legado;A validar em homologacao
+SUP-02;Supervisor;Consulta de estagiários vinculados;7;Preservar a relação dos estudantes sob sua responsabilidade         S;E1 - reproduzir comportamento legado;A validar em homologacao
+SUP-03;Supervisor;Preservar os formulários e conteúdos existentes;7;S;E1 - reproduzir comportamento legado;A validar em homologacao
+SUP-04;Supervisor;Emissão e alteração de TRE;7;Manter o procedimento e os registros atuais                         S;E1 - reproduzir comportamento legado;A validar em homologacao
+SUP-05;Supervisor;Preservar as informações autorizadas;7;P;E1 - reproduzir comportamento legado;A validar em homologacao
+SUP-06;Supervisor;Manter os históricos disponibilizados;7;P;E1 - reproduzir comportamento legado;A validar em homologacao
+SUP-07;Supervisor;Administração dos dados da conta;7;Preservar atualização de dados permitidos e senha                   S;E1 - reproduzir comportamento legado;A validar em homologacao

@@ -1,0 +1,1370 @@
+[
+  {
+    "module": "painel",
+    "resource": "visao_geral",
+    "action": "ver",
+    "code": "painel.visao_geral.ver"
+  },
+  {
+    "module": "painel",
+    "resource": "alertas",
+    "action": "ver",
+    "code": "painel.alertas.ver"
+  },
+  {
+    "module": "painel",
+    "resource": "financeiro",
+    "action": "ver",
+    "code": "painel.financeiro.ver"
+  },
+  {
+    "module": "alunos",
+    "resource": "cadastro",
+    "action": "listar",
+    "code": "alunos.cadastro.listar"
+  },
+  {
+    "module": "alunos",
+    "resource": "cadastro",
+    "action": "visualizar",
+    "code": "alunos.cadastro.visualizar"
+  },
+  {
+    "module": "alunos",
+    "resource": "cadastro",
+    "action": "criar",
+    "code": "alunos.cadastro.criar"
+  },
+  {
+    "module": "alunos",
+    "resource": "cadastro",
+    "action": "editar",
+    "code": "alunos.cadastro.editar"
+  },
+  {
+    "module": "alunos",
+    "resource": "cadastro",
+    "action": "inativar",
+    "code": "alunos.cadastro.inativar"
+  },
+  {
+    "module": "alunos",
+    "resource": "cadastro",
+    "action": "exportar",
+    "code": "alunos.cadastro.exportar"
+  },
+  {
+    "module": "alunos",
+    "resource": "dados_sensiveis",
+    "action": "visualizar",
+    "code": "alunos.dados_sensiveis.visualizar"
+  },
+  {
+    "module": "alunos",
+    "resource": "documentos",
+    "action": "visualizar",
+    "code": "alunos.documentos.visualizar"
+  },
+  {
+    "module": "alunos",
+    "resource": "documentos",
+    "action": "validar",
+    "code": "alunos.documentos.validar"
+  },
+  {
+    "module": "alunos",
+    "resource": "documentos",
+    "action": "baixar",
+    "code": "alunos.documentos.baixar"
+  },
+  {
+    "module": "matriculas",
+    "resource": "vinculos",
+    "action": "listar",
+    "code": "matriculas.vinculos.listar"
+  },
+  {
+    "module": "matriculas",
+    "resource": "vinculos",
+    "action": "visualizar",
+    "code": "matriculas.vinculos.visualizar"
+  },
+  {
+    "module": "matriculas",
+    "resource": "vinculos",
+    "action": "criar",
+    "code": "matriculas.vinculos.criar"
+  },
+  {
+    "module": "matriculas",
+    "resource": "vinculos",
+    "action": "editar",
+    "code": "matriculas.vinculos.editar"
+  },
+  {
+    "module": "matriculas",
+    "resource": "vinculos",
+    "action": "transferir",
+    "code": "matriculas.vinculos.transferir"
+  },
+  {
+    "module": "matriculas",
+    "resource": "vinculos",
+    "action": "cancelar",
+    "code": "matriculas.vinculos.cancelar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "cursos",
+    "action": "listar",
+    "code": "secretaria.cursos.listar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "cursos",
+    "action": "visualizar",
+    "code": "secretaria.cursos.visualizar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "cursos",
+    "action": "criar",
+    "code": "secretaria.cursos.criar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "cursos",
+    "action": "editar",
+    "code": "secretaria.cursos.editar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "cursos",
+    "action": "inativar",
+    "code": "secretaria.cursos.inativar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "turmas",
+    "action": "listar",
+    "code": "secretaria.turmas.listar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "turmas",
+    "action": "visualizar",
+    "code": "secretaria.turmas.visualizar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "turmas",
+    "action": "criar",
+    "code": "secretaria.turmas.criar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "turmas",
+    "action": "editar",
+    "code": "secretaria.turmas.editar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "turmas",
+    "action": "inativar",
+    "code": "secretaria.turmas.inativar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "matrizes",
+    "action": "listar",
+    "code": "secretaria.matrizes.listar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "matrizes",
+    "action": "visualizar",
+    "code": "secretaria.matrizes.visualizar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "matrizes",
+    "action": "criar",
+    "code": "secretaria.matrizes.criar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "matrizes",
+    "action": "editar",
+    "code": "secretaria.matrizes.editar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "matrizes",
+    "action": "publicar",
+    "code": "secretaria.matrizes.publicar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "frequencia",
+    "action": "visualizar",
+    "code": "secretaria.frequencia.visualizar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "frequencia",
+    "action": "lancar",
+    "code": "secretaria.frequencia.lancar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "frequencia",
+    "action": "justificar",
+    "code": "secretaria.frequencia.justificar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "frequencia",
+    "action": "corrigir",
+    "code": "secretaria.frequencia.corrigir"
+  },
+  {
+    "module": "secretaria",
+    "resource": "frequencia",
+    "action": "exportar",
+    "code": "secretaria.frequencia.exportar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "notas",
+    "action": "visualizar",
+    "code": "secretaria.notas.visualizar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "notas",
+    "action": "lancar",
+    "code": "secretaria.notas.lancar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "notas",
+    "action": "corrigir",
+    "code": "secretaria.notas.corrigir"
+  },
+  {
+    "module": "secretaria",
+    "resource": "notas",
+    "action": "exportar",
+    "code": "secretaria.notas.exportar"
+  },
+  {
+    "module": "cronogramas",
+    "resource": "planejamento",
+    "action": "visualizar",
+    "code": "cronogramas.planejamento.visualizar"
+  },
+  {
+    "module": "cronogramas",
+    "resource": "planejamento",
+    "action": "criar",
+    "code": "cronogramas.planejamento.criar"
+  },
+  {
+    "module": "cronogramas",
+    "resource": "planejamento",
+    "action": "editar",
+    "code": "cronogramas.planejamento.editar"
+  },
+  {
+    "module": "cronogramas",
+    "resource": "planejamento",
+    "action": "publicar",
+    "code": "cronogramas.planejamento.publicar"
+  },
+  {
+    "module": "cronogramas",
+    "resource": "salas",
+    "action": "visualizar",
+    "code": "cronogramas.salas.visualizar"
+  },
+  {
+    "module": "cronogramas",
+    "resource": "salas",
+    "action": "criar",
+    "code": "cronogramas.salas.criar"
+  },
+  {
+    "module": "cronogramas",
+    "resource": "salas",
+    "action": "editar",
+    "code": "cronogramas.salas.editar"
+  },
+  {
+    "module": "cronogramas",
+    "resource": "disponibilidades",
+    "action": "visualizar",
+    "code": "cronogramas.disponibilidades.visualizar"
+  },
+  {
+    "module": "cronogramas",
+    "resource": "disponibilidades",
+    "action": "criar",
+    "code": "cronogramas.disponibilidades.criar"
+  },
+  {
+    "module": "cronogramas",
+    "resource": "disponibilidades",
+    "action": "editar",
+    "code": "cronogramas.disponibilidades.editar"
+  },
+  {
+    "module": "cronogramas",
+    "resource": "substituicoes",
+    "action": "visualizar",
+    "code": "cronogramas.substituicoes.visualizar"
+  },
+  {
+    "module": "cronogramas",
+    "resource": "substituicoes",
+    "action": "criar",
+    "code": "cronogramas.substituicoes.criar"
+  },
+  {
+    "module": "cronogramas",
+    "resource": "substituicoes",
+    "action": "aprovar",
+    "code": "cronogramas.substituicoes.aprovar"
+  },
+  {
+    "module": "empresas",
+    "resource": "cadastro",
+    "action": "listar",
+    "code": "empresas.cadastro.listar"
+  },
+  {
+    "module": "empresas",
+    "resource": "cadastro",
+    "action": "visualizar",
+    "code": "empresas.cadastro.visualizar"
+  },
+  {
+    "module": "empresas",
+    "resource": "cadastro",
+    "action": "criar",
+    "code": "empresas.cadastro.criar"
+  },
+  {
+    "module": "empresas",
+    "resource": "cadastro",
+    "action": "editar",
+    "code": "empresas.cadastro.editar"
+  },
+  {
+    "module": "empresas",
+    "resource": "cadastro",
+    "action": "inativar",
+    "code": "empresas.cadastro.inativar"
+  },
+  {
+    "module": "empresas",
+    "resource": "dados_comerciais",
+    "action": "visualizar",
+    "code": "empresas.dados_comerciais.visualizar"
+  },
+  {
+    "module": "empresas",
+    "resource": "vinculos",
+    "action": "visualizar",
+    "code": "empresas.vinculos.visualizar"
+  },
+  {
+    "module": "empresas",
+    "resource": "vinculos",
+    "action": "exportar",
+    "code": "empresas.vinculos.exportar"
+  },
+  {
+    "module": "contratos",
+    "resource": "instrumentos",
+    "action": "listar",
+    "code": "contratos.instrumentos.listar"
+  },
+  {
+    "module": "contratos",
+    "resource": "instrumentos",
+    "action": "visualizar",
+    "code": "contratos.instrumentos.visualizar"
+  },
+  {
+    "module": "contratos",
+    "resource": "instrumentos",
+    "action": "criar",
+    "code": "contratos.instrumentos.criar"
+  },
+  {
+    "module": "contratos",
+    "resource": "instrumentos",
+    "action": "editar",
+    "code": "contratos.instrumentos.editar"
+  },
+  {
+    "module": "contratos",
+    "resource": "instrumentos",
+    "action": "aprovar",
+    "code": "contratos.instrumentos.aprovar"
+  },
+  {
+    "module": "contratos",
+    "resource": "instrumentos",
+    "action": "emitir",
+    "code": "contratos.instrumentos.emitir"
+  },
+  {
+    "module": "contratos",
+    "resource": "instrumentos",
+    "action": "exportar",
+    "code": "contratos.instrumentos.exportar"
+  },
+  {
+    "module": "contratos",
+    "resource": "aditivos",
+    "action": "visualizar",
+    "code": "contratos.aditivos.visualizar"
+  },
+  {
+    "module": "contratos",
+    "resource": "aditivos",
+    "action": "criar",
+    "code": "contratos.aditivos.criar"
+  },
+  {
+    "module": "contratos",
+    "resource": "aditivos",
+    "action": "aprovar",
+    "code": "contratos.aditivos.aprovar"
+  },
+  {
+    "module": "contratos",
+    "resource": "aditivos",
+    "action": "emitir",
+    "code": "contratos.aditivos.emitir"
+  },
+  {
+    "module": "contratos",
+    "resource": "movimentacoes",
+    "action": "visualizar",
+    "code": "contratos.movimentacoes.visualizar"
+  },
+  {
+    "module": "contratos",
+    "resource": "movimentacoes",
+    "action": "criar",
+    "code": "contratos.movimentacoes.criar"
+  },
+  {
+    "module": "contratos",
+    "resource": "movimentacoes",
+    "action": "aprovar",
+    "code": "contratos.movimentacoes.aprovar"
+  },
+  {
+    "module": "contratos",
+    "resource": "valores",
+    "action": "visualizar",
+    "code": "contratos.valores.visualizar"
+  },
+  {
+    "module": "triagem",
+    "resource": "vagas",
+    "action": "listar",
+    "code": "triagem.vagas.listar"
+  },
+  {
+    "module": "triagem",
+    "resource": "vagas",
+    "action": "visualizar",
+    "code": "triagem.vagas.visualizar"
+  },
+  {
+    "module": "triagem",
+    "resource": "vagas",
+    "action": "criar",
+    "code": "triagem.vagas.criar"
+  },
+  {
+    "module": "triagem",
+    "resource": "vagas",
+    "action": "editar",
+    "code": "triagem.vagas.editar"
+  },
+  {
+    "module": "triagem",
+    "resource": "vagas",
+    "action": "publicar",
+    "code": "triagem.vagas.publicar"
+  },
+  {
+    "module": "triagem",
+    "resource": "vagas",
+    "action": "cancelar",
+    "code": "triagem.vagas.cancelar"
+  },
+  {
+    "module": "triagem",
+    "resource": "candidatos",
+    "action": "listar",
+    "code": "triagem.candidatos.listar"
+  },
+  {
+    "module": "triagem",
+    "resource": "candidatos",
+    "action": "visualizar",
+    "code": "triagem.candidatos.visualizar"
+  },
+  {
+    "module": "triagem",
+    "resource": "candidatos",
+    "action": "editar",
+    "code": "triagem.candidatos.editar"
+  },
+  {
+    "module": "triagem",
+    "resource": "candidatos",
+    "action": "encaminhar",
+    "code": "triagem.candidatos.encaminhar"
+  },
+  {
+    "module": "triagem",
+    "resource": "candidatos",
+    "action": "exportar",
+    "code": "triagem.candidatos.exportar"
+  },
+  {
+    "module": "triagem",
+    "resource": "documentos",
+    "action": "visualizar",
+    "code": "triagem.documentos.visualizar"
+  },
+  {
+    "module": "triagem",
+    "resource": "documentos",
+    "action": "validar",
+    "code": "triagem.documentos.validar"
+  },
+  {
+    "module": "triagem",
+    "resource": "selecoes",
+    "action": "visualizar",
+    "code": "triagem.selecoes.visualizar"
+  },
+  {
+    "module": "triagem",
+    "resource": "selecoes",
+    "action": "criar",
+    "code": "triagem.selecoes.criar"
+  },
+  {
+    "module": "triagem",
+    "resource": "selecoes",
+    "action": "editar",
+    "code": "triagem.selecoes.editar"
+  },
+  {
+    "module": "triagem",
+    "resource": "selecoes",
+    "action": "publicar",
+    "code": "triagem.selecoes.publicar"
+  },
+  {
+    "module": "estagio",
+    "resource": "vinculos",
+    "action": "listar",
+    "code": "estagio.vinculos.listar"
+  },
+  {
+    "module": "estagio",
+    "resource": "vinculos",
+    "action": "visualizar",
+    "code": "estagio.vinculos.visualizar"
+  },
+  {
+    "module": "estagio",
+    "resource": "vinculos",
+    "action": "criar",
+    "code": "estagio.vinculos.criar"
+  },
+  {
+    "module": "estagio",
+    "resource": "vinculos",
+    "action": "editar",
+    "code": "estagio.vinculos.editar"
+  },
+  {
+    "module": "estagio",
+    "resource": "supervisores",
+    "action": "visualizar",
+    "code": "estagio.supervisores.visualizar"
+  },
+  {
+    "module": "estagio",
+    "resource": "supervisores",
+    "action": "criar",
+    "code": "estagio.supervisores.criar"
+  },
+  {
+    "module": "estagio",
+    "resource": "supervisores",
+    "action": "editar",
+    "code": "estagio.supervisores.editar"
+  },
+  {
+    "module": "estagio",
+    "resource": "relatorios",
+    "action": "visualizar",
+    "code": "estagio.relatorios.visualizar"
+  },
+  {
+    "module": "estagio",
+    "resource": "relatorios",
+    "action": "criar",
+    "code": "estagio.relatorios.criar"
+  },
+  {
+    "module": "estagio",
+    "resource": "relatorios",
+    "action": "editar",
+    "code": "estagio.relatorios.editar"
+  },
+  {
+    "module": "estagio",
+    "resource": "relatorios",
+    "action": "aprovar",
+    "code": "estagio.relatorios.aprovar"
+  },
+  {
+    "module": "estagio",
+    "resource": "relatorios",
+    "action": "emitir",
+    "code": "estagio.relatorios.emitir"
+  },
+  {
+    "module": "estagio",
+    "resource": "recessos",
+    "action": "visualizar",
+    "code": "estagio.recessos.visualizar"
+  },
+  {
+    "module": "estagio",
+    "resource": "recessos",
+    "action": "criar",
+    "code": "estagio.recessos.criar"
+  },
+  {
+    "module": "estagio",
+    "resource": "recessos",
+    "action": "aprovar",
+    "code": "estagio.recessos.aprovar"
+  },
+  {
+    "module": "financeiro",
+    "resource": "titulos",
+    "action": "listar",
+    "code": "financeiro.titulos.listar"
+  },
+  {
+    "module": "financeiro",
+    "resource": "titulos",
+    "action": "visualizar",
+    "code": "financeiro.titulos.visualizar"
+  },
+  {
+    "module": "financeiro",
+    "resource": "titulos",
+    "action": "criar",
+    "code": "financeiro.titulos.criar"
+  },
+  {
+    "module": "financeiro",
+    "resource": "titulos",
+    "action": "editar",
+    "code": "financeiro.titulos.editar"
+  },
+  {
+    "module": "financeiro",
+    "resource": "titulos",
+    "action": "exportar",
+    "code": "financeiro.titulos.exportar"
+  },
+  {
+    "module": "financeiro",
+    "resource": "pagamentos",
+    "action": "visualizar",
+    "code": "financeiro.pagamentos.visualizar"
+  },
+  {
+    "module": "financeiro",
+    "resource": "pagamentos",
+    "action": "baixar",
+    "code": "financeiro.pagamentos.baixar"
+  },
+  {
+    "module": "financeiro",
+    "resource": "pagamentos",
+    "action": "estornar",
+    "code": "financeiro.pagamentos.estornar"
+  },
+  {
+    "module": "financeiro",
+    "resource": "contas",
+    "action": "visualizar",
+    "code": "financeiro.contas.visualizar"
+  },
+  {
+    "module": "financeiro",
+    "resource": "contas",
+    "action": "criar",
+    "code": "financeiro.contas.criar"
+  },
+  {
+    "module": "financeiro",
+    "resource": "contas",
+    "action": "editar",
+    "code": "financeiro.contas.editar"
+  },
+  {
+    "module": "financeiro",
+    "resource": "contas",
+    "action": "baixar",
+    "code": "financeiro.contas.baixar"
+  },
+  {
+    "module": "financeiro",
+    "resource": "valores",
+    "action": "visualizar",
+    "code": "financeiro.valores.visualizar"
+  },
+  {
+    "module": "financeiro",
+    "resource": "relatorios",
+    "action": "visualizar",
+    "code": "financeiro.relatorios.visualizar"
+  },
+  {
+    "module": "financeiro",
+    "resource": "relatorios",
+    "action": "exportar",
+    "code": "financeiro.relatorios.exportar"
+  },
+  {
+    "module": "atendimento",
+    "resource": "requerimentos",
+    "action": "listar",
+    "code": "atendimento.requerimentos.listar"
+  },
+  {
+    "module": "atendimento",
+    "resource": "requerimentos",
+    "action": "visualizar",
+    "code": "atendimento.requerimentos.visualizar"
+  },
+  {
+    "module": "atendimento",
+    "resource": "requerimentos",
+    "action": "criar",
+    "code": "atendimento.requerimentos.criar"
+  },
+  {
+    "module": "atendimento",
+    "resource": "requerimentos",
+    "action": "editar",
+    "code": "atendimento.requerimentos.editar"
+  },
+  {
+    "module": "atendimento",
+    "resource": "requerimentos",
+    "action": "concluir",
+    "code": "atendimento.requerimentos.concluir"
+  },
+  {
+    "module": "atendimento",
+    "resource": "chamados",
+    "action": "listar",
+    "code": "atendimento.chamados.listar"
+  },
+  {
+    "module": "atendimento",
+    "resource": "chamados",
+    "action": "visualizar",
+    "code": "atendimento.chamados.visualizar"
+  },
+  {
+    "module": "atendimento",
+    "resource": "chamados",
+    "action": "criar",
+    "code": "atendimento.chamados.criar"
+  },
+  {
+    "module": "atendimento",
+    "resource": "chamados",
+    "action": "editar",
+    "code": "atendimento.chamados.editar"
+  },
+  {
+    "module": "atendimento",
+    "resource": "chamados",
+    "action": "fechar",
+    "code": "atendimento.chamados.fechar"
+  },
+  {
+    "module": "atendimento",
+    "resource": "chamados",
+    "action": "reabrir",
+    "code": "atendimento.chamados.reabrir"
+  },
+  {
+    "module": "atendimento",
+    "resource": "historicos",
+    "action": "visualizar",
+    "code": "atendimento.historicos.visualizar"
+  },
+  {
+    "module": "atendimento",
+    "resource": "historicos",
+    "action": "exportar",
+    "code": "atendimento.historicos.exportar"
+  },
+  {
+    "module": "documentos",
+    "resource": "arquivos",
+    "action": "listar",
+    "code": "documentos.arquivos.listar"
+  },
+  {
+    "module": "documentos",
+    "resource": "arquivos",
+    "action": "visualizar",
+    "code": "documentos.arquivos.visualizar"
+  },
+  {
+    "module": "documentos",
+    "resource": "arquivos",
+    "action": "enviar",
+    "code": "documentos.arquivos.enviar"
+  },
+  {
+    "module": "documentos",
+    "resource": "arquivos",
+    "action": "baixar",
+    "code": "documentos.arquivos.baixar"
+  },
+  {
+    "module": "documentos",
+    "resource": "arquivos",
+    "action": "remover",
+    "code": "documentos.arquivos.remover"
+  },
+  {
+    "module": "documentos",
+    "resource": "validacao",
+    "action": "visualizar",
+    "code": "documentos.validacao.visualizar"
+  },
+  {
+    "module": "documentos",
+    "resource": "validacao",
+    "action": "aprovar",
+    "code": "documentos.validacao.aprovar"
+  },
+  {
+    "module": "documentos",
+    "resource": "validacao",
+    "action": "rejeitar",
+    "code": "documentos.validacao.rejeitar"
+  },
+  {
+    "module": "documentos",
+    "resource": "modelos",
+    "action": "visualizar",
+    "code": "documentos.modelos.visualizar"
+  },
+  {
+    "module": "documentos",
+    "resource": "modelos",
+    "action": "criar",
+    "code": "documentos.modelos.criar"
+  },
+  {
+    "module": "documentos",
+    "resource": "modelos",
+    "action": "editar",
+    "code": "documentos.modelos.editar"
+  },
+  {
+    "module": "documentos",
+    "resource": "modelos",
+    "action": "publicar",
+    "code": "documentos.modelos.publicar"
+  },
+  {
+    "module": "relatorios",
+    "resource": "academicos",
+    "action": "visualizar",
+    "code": "relatorios.academicos.visualizar"
+  },
+  {
+    "module": "relatorios",
+    "resource": "academicos",
+    "action": "exportar",
+    "code": "relatorios.academicos.exportar"
+  },
+  {
+    "module": "relatorios",
+    "resource": "contratuais",
+    "action": "visualizar",
+    "code": "relatorios.contratuais.visualizar"
+  },
+  {
+    "module": "relatorios",
+    "resource": "contratuais",
+    "action": "exportar",
+    "code": "relatorios.contratuais.exportar"
+  },
+  {
+    "module": "relatorios",
+    "resource": "financeiros",
+    "action": "visualizar",
+    "code": "relatorios.financeiros.visualizar"
+  },
+  {
+    "module": "relatorios",
+    "resource": "financeiros",
+    "action": "exportar",
+    "code": "relatorios.financeiros.exportar"
+  },
+  {
+    "module": "relatorios",
+    "resource": "gerenciais",
+    "action": "visualizar",
+    "code": "relatorios.gerenciais.visualizar"
+  },
+  {
+    "module": "relatorios",
+    "resource": "gerenciais",
+    "action": "exportar",
+    "code": "relatorios.gerenciais.exportar"
+  },
+  {
+    "module": "usuarios",
+    "resource": "contas",
+    "action": "listar",
+    "code": "usuarios.contas.listar"
+  },
+  {
+    "module": "usuarios",
+    "resource": "contas",
+    "action": "visualizar",
+    "code": "usuarios.contas.visualizar"
+  },
+  {
+    "module": "usuarios",
+    "resource": "contas",
+    "action": "criar",
+    "code": "usuarios.contas.criar"
+  },
+  {
+    "module": "usuarios",
+    "resource": "contas",
+    "action": "editar",
+    "code": "usuarios.contas.editar"
+  },
+  {
+    "module": "usuarios",
+    "resource": "contas",
+    "action": "inativar",
+    "code": "usuarios.contas.inativar"
+  },
+  {
+    "module": "usuarios",
+    "resource": "contas",
+    "action": "resetar_acesso",
+    "code": "usuarios.contas.resetar_acesso"
+  },
+  {
+    "module": "usuarios",
+    "resource": "permissoes",
+    "action": "visualizar",
+    "code": "usuarios.permissoes.visualizar"
+  },
+  {
+    "module": "usuarios",
+    "resource": "permissoes",
+    "action": "atribuir",
+    "code": "usuarios.permissoes.atribuir"
+  },
+  {
+    "module": "usuarios",
+    "resource": "permissoes",
+    "action": "revogar",
+    "code": "usuarios.permissoes.revogar"
+  },
+  {
+    "module": "usuarios",
+    "resource": "templates",
+    "action": "listar",
+    "code": "usuarios.templates.listar"
+  },
+  {
+    "module": "usuarios",
+    "resource": "templates",
+    "action": "visualizar",
+    "code": "usuarios.templates.visualizar"
+  },
+  {
+    "module": "usuarios",
+    "resource": "templates",
+    "action": "criar",
+    "code": "usuarios.templates.criar"
+  },
+  {
+    "module": "usuarios",
+    "resource": "templates",
+    "action": "editar",
+    "code": "usuarios.templates.editar"
+  },
+  {
+    "module": "usuarios",
+    "resource": "templates",
+    "action": "publicar",
+    "code": "usuarios.templates.publicar"
+  },
+  {
+    "module": "usuarios",
+    "resource": "templates",
+    "action": "arquivar",
+    "code": "usuarios.templates.arquivar"
+  },
+  {
+    "module": "usuarios",
+    "resource": "templates",
+    "action": "aplicar",
+    "code": "usuarios.templates.aplicar"
+  },
+  {
+    "module": "integracao",
+    "resource": "legado",
+    "action": "visualizar",
+    "code": "integracao.legado.visualizar"
+  },
+  {
+    "module": "integracao",
+    "resource": "legado",
+    "action": "importar",
+    "code": "integracao.legado.importar"
+  },
+  {
+    "module": "integracao",
+    "resource": "legado",
+    "action": "conciliar",
+    "code": "integracao.legado.conciliar"
+  },
+  {
+    "module": "integracao",
+    "resource": "legado",
+    "action": "reprocessar",
+    "code": "integracao.legado.reprocessar"
+  },
+  {
+    "module": "integracao",
+    "resource": "auditoria",
+    "action": "visualizar",
+    "code": "integracao.auditoria.visualizar"
+  },
+  {
+    "module": "integracao",
+    "resource": "auditoria",
+    "action": "exportar",
+    "code": "integracao.auditoria.exportar"
+  },
+  {
+    "module": "usuarios",
+    "resource": "templates",
+    "action": "inativar",
+    "code": "usuarios.templates.inativar"
+  },
+  {
+    "module": "usuarios",
+    "resource": "permissoes",
+    "action": "editar",
+    "code": "usuarios.permissoes.editar"
+  },
+  {
+    "module": "integracao",
+    "resource": "staging",
+    "action": "visualizar",
+    "code": "integracao.staging.visualizar"
+  },
+  {
+    "module": "integracao",
+    "resource": "staging",
+    "action": "conciliar",
+    "code": "integracao.staging.conciliar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "turmas_cursos",
+    "action": "visualizar",
+    "code": "secretaria.turmas_cursos.visualizar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "turmas_cursos",
+    "action": "editar",
+    "code": "secretaria.turmas_cursos.editar"
+  },
+  {
+    "module": "painel",
+    "resource": "visao_geral",
+    "action": "listar",
+    "code": "painel.visao_geral.listar"
+  },
+  {
+    "module": "relatorios",
+    "resource": "gerenciais",
+    "action": "listar",
+    "code": "relatorios.gerenciais.listar"
+  },
+  {
+    "module": "cadastros",
+    "resource": "referencias",
+    "action": "visualizar",
+    "code": "cadastros.referencias.visualizar"
+  },
+  {
+    "module": "cadastros",
+    "resource": "referencias",
+    "action": "listar",
+    "code": "cadastros.referencias.listar"
+  },
+  {
+    "module": "cadastros",
+    "resource": "referencias",
+    "action": "editar",
+    "code": "cadastros.referencias.editar"
+  },
+  {
+    "module": "cadastros",
+    "resource": "referencias",
+    "action": "criar",
+    "code": "cadastros.referencias.criar"
+  },
+  {
+    "module": "cadastros",
+    "resource": "referencias",
+    "action": "inativar",
+    "code": "cadastros.referencias.inativar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "frequencia",
+    "action": "listar",
+    "code": "secretaria.frequencia.listar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "frequencia",
+    "action": "criar",
+    "code": "secretaria.frequencia.criar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "frequencia",
+    "action": "editar",
+    "code": "secretaria.frequencia.editar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "notas",
+    "action": "listar",
+    "code": "secretaria.notas.listar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "notas",
+    "action": "criar",
+    "code": "secretaria.notas.criar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "notas",
+    "action": "editar",
+    "code": "secretaria.notas.editar"
+  },
+  {
+    "module": "financeiro",
+    "resource": "pagamentos",
+    "action": "criar",
+    "code": "financeiro.pagamentos.criar"
+  },
+  {
+    "module": "financeiro",
+    "resource": "pagamentos",
+    "action": "editar",
+    "code": "financeiro.pagamentos.editar"
+  },
+  {
+    "module": "triagem",
+    "resource": "vagas",
+    "action": "inativar",
+    "code": "triagem.vagas.inativar"
+  },
+  {
+    "module": "estagio",
+    "resource": "vinculos",
+    "action": "inativar",
+    "code": "estagio.vinculos.inativar"
+  },
+  {
+    "module": "contratos",
+    "resource": "instrumentos",
+    "action": "inativar",
+    "code": "contratos.instrumentos.inativar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "facilitadores",
+    "action": "visualizar",
+    "code": "secretaria.facilitadores.visualizar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "facilitadores",
+    "action": "atribuir",
+    "code": "secretaria.facilitadores.atribuir"
+  },
+  {
+    "module": "secretaria",
+    "resource": "facilitadores",
+    "action": "desvincular",
+    "code": "secretaria.facilitadores.desvincular"
+  },
+  {
+    "module": "cronogramas",
+    "resource": "aulas",
+    "action": "visualizar",
+    "code": "cronogramas.aulas.visualizar"
+  },
+  {
+    "module": "empresas",
+    "resource": "demandas",
+    "action": "listar",
+    "code": "empresas.demandas.listar"
+  },
+  {
+    "module": "empresas",
+    "resource": "demandas",
+    "action": "visualizar",
+    "code": "empresas.demandas.visualizar"
+  },
+  {
+    "module": "empresas",
+    "resource": "demandas",
+    "action": "criar",
+    "code": "empresas.demandas.criar"
+  },
+  {
+    "module": "empresas",
+    "resource": "demandas",
+    "action": "editar",
+    "code": "empresas.demandas.editar"
+  },
+  {
+    "module": "empresas",
+    "resource": "demandas",
+    "action": "concluir",
+    "code": "empresas.demandas.concluir"
+  },
+  {
+    "module": "empresas",
+    "resource": "demandas",
+    "action": "cancelar",
+    "code": "empresas.demandas.cancelar"
+  },
+  {
+    "module": "empresas",
+    "resource": "demandas_tarefas",
+    "action": "listar",
+    "code": "empresas.demandas.tarefas.listar"
+  },
+  {
+    "module": "empresas",
+    "resource": "demandas_tarefas",
+    "action": "visualizar",
+    "code": "empresas.demandas.tarefas.visualizar"
+  },
+  {
+    "module": "empresas",
+    "resource": "demandas_tarefas",
+    "action": "criar",
+    "code": "empresas.demandas.tarefas.criar"
+  },
+  {
+    "module": "empresas",
+    "resource": "demandas_tarefas",
+    "action": "editar",
+    "code": "empresas.demandas.tarefas.editar"
+  },
+  {
+    "module": "empresas",
+    "resource": "demandas_tarefas",
+    "action": "concluir",
+    "code": "empresas.demandas.tarefas.concluir"
+  },
+  {
+    "module": "empresas",
+    "resource": "demandas_tipos",
+    "action": "visualizar",
+    "code": "empresas.demandas.tipos.visualizar"
+  },
+  {
+    "module": "empresas",
+    "resource": "demandas_tipos",
+    "action": "gerenciar",
+    "code": "empresas.demandas.tipos.gerenciar"
+  },
+  {
+    "module": "relatorios",
+    "resource": "demandas",
+    "action": "visualizar",
+    "code": "relatorios.demandas.visualizar"
+  },
+  {
+    "module": "relatorios",
+    "resource": "demandas",
+    "action": "exportar",
+    "code": "relatorios.demandas.exportar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "facilitadores",
+    "action": "listar",
+    "code": "secretaria.facilitadores.listar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "facilitadores",
+    "action": "criar",
+    "code": "secretaria.facilitadores.criar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "facilitadores",
+    "action": "editar",
+    "code": "secretaria.facilitadores.editar"
+  },
+  {
+    "module": "secretaria",
+    "resource": "facilitadores",
+    "action": "excluir",
+    "code": "secretaria.facilitadores.excluir"
+  }
+]

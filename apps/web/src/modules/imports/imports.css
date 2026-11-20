@@ -1,0 +1,366 @@
+.import-pagina .panel {
+  min-width: 0;
+}
+
+.import-grade-superior {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+  margin: 0 0 16px;
+}
+
+.import-painel {
+  padding: 24px;
+  margin-bottom: 16px;
+}
+
+.import-painel h2 {
+  font-size: 18px;
+  line-height: 1.35;
+  margin: 0 0 12px;
+}
+
+.import-painel h3 {
+  font-size: 16px;
+  margin: 0 0 8px;
+}
+
+.import-ajuda {
+  color: #5c7180;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 8px 0 14px;
+}
+
+.import-campo {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 7px;
+  margin: 14px 0;
+  font-weight: 600;
+}
+
+.import-campo input[type='file'],
+.import-campo select {
+  width: 100%;
+  min-height: 43px;
+  padding: 9px 12px;
+  background: #fff;
+  border: 1px solid #c8d8e0;
+  border-radius: 8px;
+  color: #16394e;
+}
+
+.import-campo-curto {
+  min-width: 170px;
+  margin: 0;
+}
+
+.import-opcao {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+  border: 1px solid #d6e1e7;
+  border-radius: 10px;
+  margin-top: 9px;
+  padding: 14px;
+}
+
+.import-opcao:has(input:checked) {
+  border-color: #11709a;
+  background-color: #eef8fc;
+}
+
+.import-opcao input {
+  margin-top: 3px;
+}
+
+.import-opcao span {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.import-opcao small {
+  color: #5c7180;
+  line-height: 1.5;
+}
+
+.import-indicadores {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.import-indicadores > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  border: 1px solid #d8e4eb;
+  border-radius: 10px;
+}
+
+.import-indicadores small {
+  color: #617483;
+}
+
+.import-indicadores strong {
+  font-size: 18px;
+  overflow-wrap: anywhere;
+  color: #0c3c54;
+}
+
+.import-etapas {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin: 20px 0 16px;
+}
+
+.import-etapa {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #6c7f8c;
+  border-radius: 9px;
+  border: 1px solid #d9e3e9;
+  padding: 11px;
+}
+
+.import-etapa > span {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.import-etapa.ativa {
+  color: #086b97;
+  border-color: #54a9ce;
+  background: #edf8fc;
+}
+
+.import-etapa.concluida {
+  color: #177959;
+  background: #f3fbf8;
+}
+
+.import-acompanhamento {
+  border-radius: 12px;
+  padding: 18px;
+  background: #f5f9fb;
+  border: 1px solid #d3e3eb;
+}
+
+.import-acompanhamento-cabecalho,
+.import-secao-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.import-acompanhamento-cabecalho p {
+  margin: 5px 0 0;
+  color: #60798a;
+}
+
+.import-situacao {
+  border-radius: 100px;
+  background: #e0f2ee;
+  padding: 7px 12px;
+  color: #176b57;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.import-situacao.import-alerta {
+  color: #a8541a;
+  background: #fff0df;
+}
+
+.import-barra {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 16px 0 10px;
+}
+
+.import-barra > span {
+  min-width: 110px;
+  font-size: 13px;
+  color: #315a6e;
+  text-align: right;
+}
+
+.import-barra-trilho {
+  width: 100%;
+  height: 13px;
+  background: #dbe7ed;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.import-barra-valor {
+  height: 100%;
+  background: #0e789e;
+  border-radius: inherit;
+  transition: width 0.4s ease;
+}
+
+.import-barra-valor.indeterminada {
+  animation: import-deslocamento 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes import-deslocamento {
+  from { transform: translateX(0); }
+  to { transform: translateX(165%); }
+}
+
+.import-metricas,
+.import-resumo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  color: #536d7d;
+  font-size: 13px;
+  margin-top: 16px;
+}
+
+.import-metricas strong,
+.import-resumo strong {
+  color: #0d3a53;
+}
+
+.import-acoes {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 16px 0 0;
+}
+
+.import-registros {
+  max-height: 420px;
+  overflow-y: auto;
+  border: 1px solid #d8e4ea;
+  border-radius: 10px;
+}
+
+.import-evento {
+  display: grid;
+  grid-template-columns: 76px 100px minmax(0, 1fr);
+  align-items: start;
+  gap: 12px;
+  padding: 12px 14px;
+  border-bottom: 1px solid #e7edf1;
+}
+
+.import-evento:last-child {
+  border-bottom: none;
+}
+
+.import-evento time,
+.import-evento small {
+  color: #72838c;
+  font-size: 12px;
+}
+
+.import-evento p {
+  margin: 0 0 4px;
+  color: #153b51;
+  overflow-wrap: anywhere;
+}
+
+.import-nivel {
+  border-radius: 50px;
+  font-size: 11px;
+  padding: 5px 8px;
+  text-align: center;
+  background: #eef3f6;
+  color: #425d6c;
+}
+
+.nivel-success {
+  background: #e1f5ea;
+  color: #166d48;
+}
+
+.nivel-warning {
+  background: #fff0d5;
+  color: #8f5900;
+}
+
+.nivel-error {
+  background: #ffebeb;
+  color: #a32d2d;
+}
+
+.import-filtro {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.import-paginacao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.import-pagina .table-wrap td small {
+  display: block;
+  color: #627f8f;
+  margin-top: 5px;
+}
+
+.import-aviso {
+  font-size: 13px;
+  color: #9e462d;
+}
+
+@media (max-width: 1080px) {
+  .import-indicadores {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .import-etapas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .import-grade-superior {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .import-acompanhamento-cabecalho,
+  .import-secao-titulo {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .import-evento {
+    grid-template-columns: 60px minmax(0, 1fr);
+  }
+  .import-evento > div {
+    grid-column: 1 / -1;
+  }
+  .import-painel {
+    padding: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .import-barra-valor.indeterminada {
+    animation: none;
+  }
+}

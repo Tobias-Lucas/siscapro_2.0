@@ -1,0 +1,78 @@
+name: proativa-siscapro-prod
+services:
+  postgres:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    env_file: .env.production
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:?Defina POSTGRES_DB em .env.production}
+      POSTGRES_USER: ${POSTGRES_USER:?Defina POSTGRES_USER em .env.production}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Defina POSTGRES_PASSWORD em .env.production}
+    volumes:
+      - proativa_prod_postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks: [proativa]
+
+  redis:
+    image: redis:8-alpine
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - proativa_prod_redis:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+    networks: [proativa]
+
+  api:
+    image: ${PROATIVA_API_IMAGE:?Defina uma imagem versionada para a API}
+    restart: unless-stopped
+    env_file: .env.production
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      DATABASE_URL: ${DATABASE_URL:?Defina DATABASE_URL apontando para postgres}
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379}
+      DOCUMENTS_DIR: /app/private-documents
+      COOKIE_SECURE: "true"
+      LEGACY_ENABLED: "false"
+      LEGACY_ENABLE_ACCOUNT_LOGIN: "false"
+      DEMO_SEED_ENABLED: "false"
+    volumes:
+      - proativa_prod_documents:/app/private-documents
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/api/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+    networks: [proativa]
+
+  web:
+    image: ${PROATIVA_WEB_IMAGE:?Defina uma imagem versionada para o frontend}
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${WEB_PORT:-8080}:80"
+    depends_on:
+      api:
+        condition: service_healthy
+    networks: [proativa]
+
+networks:
+  proativa:
+    driver: bridge
+
+volumes:
+  proativa_prod_postgres:
+  proativa_prod_redis:
+  proativa_prod_documents:

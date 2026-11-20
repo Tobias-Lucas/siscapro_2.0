@@ -1,0 +1,34 @@
+{
+  "name": "proativa-siscapro",
+  "version": "3.3.1",
+  "private": true,
+  "workspaces": [
+    "apps/api",
+    "apps/web"
+  ],
+  "scripts": {
+    "dev:api": "npm run dev:api:env -w @proativa/api",
+    "dev:web": "npm run dev -w @proativa/web",
+    "build": "npm run build -w @proativa/api && npm run build -w @proativa/web",
+    "db:generate": "npm run prisma:generate -w @proativa/api",
+    "db:migrate": "npm run prisma:migrate -w @proativa/api",
+    "db:seed": "npm run prisma:seed -w @proativa/api",
+    "lint": "npm run lint -w @proativa/api && npm run lint -w @proativa/web",
+    "smoke": "node --env-file=.env scripts/smoke-test.mjs",
+    "dev:infra:up": "docker compose -f docker-compose.infra.yml --env-file .env.development up -d postgres redis",
+    "dev:infra:down": "docker compose -f docker-compose.infra.yml --env-file .env.development down",
+    "dev:setup": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/setup-dev.ps1",
+    "build:release": "npm run build",
+    "dev:setup:unix": "bash scripts/setup-dev.sh",
+    "db:migrate:dev": "npm run prisma:migrate:dev -w @proativa/api",
+    "db:seed:dev": "npm run prisma:seed:dev -w @proativa/api",
+    "db:validate": "npm run prisma:validate -w @proativa/api",
+    "verify:v3.3": "node scripts/verify-v3-3.mjs",
+    "dev:users:seed": "node --env-file=.env.development --import tsx apps/api/scripts/seed-dev-accounts.ts",
+    "dev:sql:prepare": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/prepare-private-import.ps1",
+    "smoke:dev": "node --env-file=.env.development scripts/smoke-test.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

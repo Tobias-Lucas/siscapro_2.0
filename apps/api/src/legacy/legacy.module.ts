@@ -1,0 +1,1 @@
+import { Module } from '@nestjs/common'; import { LegacyController } from './legacy.controller.js'; import { LegacyService } from './legacy.service.js'; @Module({controllers:[LegacyController],providers:[LegacyService],exports:[LegacyService]}) export class LegacyModule {}

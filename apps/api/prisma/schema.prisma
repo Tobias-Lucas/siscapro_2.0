@@ -1,0 +1,1587 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum UserRole {
+  SUPER_ADMIN
+  ADMIN
+  SECRETARY
+  FINANCE
+  TRIAGE
+  CONTRACTS
+  SOCIAL_SERVICE
+  RECEPTION
+  COMMERCIAL
+  HR
+  STUDENT
+  PROFESSOR
+  COMPANY
+  INTERNSHIP_SUPERVISOR
+  APPRENTICE
+  CANDIDATE
+  LEGAL_GUARDIAN
+}
+
+enum PasswordAlgorithm {
+  ARGON2ID
+  LEGACY_MD5
+}
+
+enum RecordStatus {
+  ACTIVE
+  INACTIVE
+  PENDING
+  ARCHIVED
+}
+
+enum ContractStatus {
+  DRAFT
+  PENDING_SIGNATURE
+  ACTIVE
+  SUSPENDED
+  TERMINATED
+  CANCELLED
+}
+
+enum RequestStatus {
+  OPEN
+  IN_PROGRESS
+  WAITING
+  DONE
+  CANCELLED
+}
+
+model User {
+  id                String            @id @default(cuid())
+  name              String
+  email             String            @unique
+  login             String?           @unique
+  passwordHash      String
+  passwordAlgorithm PasswordAlgorithm @default(ARGON2ID)
+  role              UserRole          @default(RECEPTION)
+  active            Boolean           @default(false)
+  legacySource      String?
+  legacyId          String?
+  legacyRoleRaw     String?
+  legacyDepartmentRaw String?
+  disciplines     Discipline[]
+  disciplineTeachers DisciplineTeacher[]
+  personId          String?
+  companyId         String?
+  lastLoginAt       DateTime?
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+  person            Person?           @relation(fields: [personId], references: [id])
+  company           Company?          @relation(fields: [companyId], references: [id])
+  auditLogs         AuditLog[]
+  teacherAssignments TeacherAssignment[]
+
+  @@index([legacySource, legacyId])
+  userUnitEntries UserUnit[]
+  academicLessonEntries AcademicLesson[]
+  contractMovementEntries ContractMovement[]
+  internshipSupervisorEntries InternshipSupervisor[]
+  serviceInteractionEntries ServiceInteraction[]
+  socialVisitEntries SocialVisit[]
+  portalMessageEntries PortalMessage[]
+  documentReviewEntries DocumentReview[]
+  teacherAvailabilityEntries TeacherAvailability[]
+  scheduleRules ScheduleRule[]
+  scheduleTemplateEntries ScheduleTemplate[]
+  scheduleGenerationRunEntries ScheduleGenerationRun[]
+  resolvedScheduleConflictEntries ScheduleConflict[]
+  accessMode String @default("LEGACY")
+  accessTemplateId String?
+  accessTemplateVersion Int?
+  accessTemplate AccessTemplate? @relation(fields: [accessTemplateId], references: [id], onDelete: SetNull)
+  accessOverrides AccessOverride[]
+  createdDemandEntries Demand[] @relation("DemandCreator")
+  assignedDemandEntries Demand[] @relation("DemandAssignee")
+  createdDemandTaskEntries DemandTask[] @relation("DemandTaskCreator")
+  assignedDemandTaskEntries DemandTask[] @relation("DemandTaskAssignee")
+}
+
+model Person {
+  id              String       @id @default(cuid())
+  fullName        String
+  socialName      String?
+  cpf             String?      @unique
+  rg              String?
+  birthDate       DateTime?
+  sex             String?
+  email           String?
+  phone           String?
+  secondaryPhone  String?
+  zipCode         String?
+  address         String?
+  addressNumber   String?
+  addressExtra    String?
+  district        String?
+  city            String?
+  state           String?
+  motherName      String?
+  fatherName      String?
+  legalGuardian   String?
+  guardianCpf     String?
+  guardianEmail   String?
+  status          RecordStatus @default(ACTIVE)
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+  users           User[]
+  enrollments     Enrollment[]
+  contracts       Contract[]
+  applications    Application[]
+  attendances     Attendance[]
+  grades           Grade[]
+  serviceRequests ServiceRequest[]
+  documents       Document[]
+  materialReleaseEntries MaterialRelease[]
+  absenceJustificationEntries AbsenceJustification[]
+  socialVisitEntries SocialVisit[]
+  selectionEntryEntries SelectionEntry[]
+  demandTaskEntries DemandTask[]
+}
+
+model Company {
+  id              String       @id @default(cuid())
+  cnpj            String?      @unique
+  legalName       String
+  tradeName       String?
+  email           String?
+  financeEmail    String?
+  phone           String?
+  zipCode         String?
+  address         String?
+  addressNumber   String?
+  district        String?
+  city            String?
+  state           String?
+  legalRep        String?
+  status          RecordStatus @default(ACTIVE)
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+  users           User[]
+  contracts       Contract[]
+  vacancies       Vacancy[]
+  financialTitles FinancialTitle[]
+  enrollments     Enrollment[]
+  companyGroupMemberEntries CompanyGroupMember[]
+  companyContactEntries CompanyContact[]
+  businessContractEntries BusinessContract[]
+  internshipSupervisorEntries InternshipSupervisor[]
+  invoiceEntries Invoice[]
+  socialVisitEntries SocialVisit[]
+  demandEntries Demand[]
+}
+
+model Course {
+  id          String       @id @default(cuid())
+  name        String
+  code        String?
+  modality    String?
+  workload    Int?
+  theoryWorkloadRaw String?
+  practiceWorkloadRaw String?
+  authorizationProtocol String?
+  legacySegmentCode String?
+  legacyUnitCode String?
+  status      RecordStatus @default(ACTIVE)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  classGroups ClassGroup[]
+  enrollments Enrollment[]
+  contracts   Contract[]
+  disciplines Discipline[]
+  courseHours CourseHours[]
+  teachingDays CourseTeachingDays[]
+  disciplineTeachers DisciplineTeacher[]
+  curriculumMatrixEntries CurriculumMatrix[]
+  learningMaterialEntries LearningMaterial[]
+  classGroupLinks ClassGroupCourse[]
+}
+
+model ClassGroup {
+  id          String       @id @default(cuid())
+  name        String
+  code        String?
+  type        String?
+  courseId    String?
+  unit        String?
+  legacySegmentCode String?
+  legacyProfileCode String?
+  room        String?
+  classroomId String?
+  startDate   DateTime?
+  endDate     DateTime?
+  status      RecordStatus @default(ACTIVE)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  course      Course?      @relation(fields: [courseId], references: [id])
+  enrollments Enrollment[]
+  attendances Attendance[]
+  grades      Grade[]
+  teacherAssignments TeacherAssignment[]
+  academicLessonEntries AcademicLesson[]
+  classroom Classroom? @relation(fields: [classroomId], references: [id])
+  scheduleRuleEntries ScheduleRule[]
+  courseLinks ClassGroupCourse[]
+}
+
+// Reproduces the existing academic structures and adds the normalized foundation for future timetable planning.
+// `disciplinas` can be shared across courses (disc_id_curso may be null).
+model Discipline {
+  id             String        @id @default(cuid())
+  courseId       String?
+  teacherId      String?
+  legacyProfessorReference String?
+  name           String
+  phaseCode      String?
+  moduleLabel    String?
+  workloadRaw    String?
+  startDate      DateTime?
+  endDate        DateTime?
+  statusRaw      String?
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+  course         Course?       @relation(fields: [courseId], references: [id])
+  teacher        User?         @relation(fields: [teacherId], references: [id])
+  assignments    DisciplineTeacher[]
+
+  @@index([courseId, phaseCode])
+  curriculumModuleEntries CurriculumModule[]
+  academicLessonEntries AcademicLesson[]
+  learningMaterialEntries LearningMaterial[]
+  scheduleRuleEntries ScheduleRule[]
+}
+
+// Source: disciplinas_vinculos_prof (teacher + course + discipline).
+model DisciplineTeacher {
+  id             String     @id @default(cuid())
+  courseId       String
+  disciplineId   String
+  teacherId      String
+  course         Course     @relation(fields: [courseId], references: [id])
+  discipline     Discipline @relation(fields: [disciplineId], references: [id])
+  teacher        User       @relation(fields: [teacherId], references: [id])
+  createdAt      DateTime   @default(now())
+
+  @@unique([courseId, disciplineId, teacherId])
+  @@index([teacherId])
+}
+
+// Source: curso_horarios (registered course hours, not a generated weekly calendar).
+model CourseHours {
+  id            String   @id @default(cuid())
+  courseId      String
+  startTime     String
+  endTime       String
+  shift         String
+  daysComboRaw  String?
+  courseComboRaw String?
+  startTime2    String?
+  endTime2      String?
+  shift2        String?
+  daysCombo2Raw String?
+  courseCombo2Raw String?
+  unitRaw       String?
+  course        Course   @relation(fields: [courseId], references: [id])
+  teachingDays  CourseTeachingDays[]
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([courseId])
+}
+
+// Source: curso_dias_aulas (weekdays and theory/practice part).
+model CourseTeachingDays {
+  id           String      @id @default(cuid())
+  courseId     String
+  hoursId      String
+  monday       Boolean     @default(false)
+  tuesday      Boolean     @default(false)
+  wednesday    Boolean     @default(false)
+  thursday     Boolean     @default(false)
+  friday       Boolean     @default(false)
+  saturday     Boolean     @default(false)
+  partCode     String?
+  unitRaw      String?
+  course       Course      @relation(fields: [courseId], references: [id])
+  hours        CourseHours @relation(fields: [hoursId], references: [id])
+
+  @@index([courseId])
+}
+
+model TeacherAssignment {
+  id           String   @id @default(cuid())
+  userId       String
+  classGroupId String
+  assignedAt   DateTime @default(now())
+  user         User     @relation(fields: [userId], references: [id])
+  classGroup   ClassGroup @relation(fields: [classGroupId], references: [id])
+
+  @@unique([userId, classGroupId])
+  @@index([classGroupId])
+}
+
+model Enrollment {
+  id          String       @id @default(cuid())
+  personId    String
+  courseId    String?
+  classGroupId String?
+  companyId   String?
+  contractId  String?
+  legacyContractReference String?
+  rosterStartDate DateTime?
+  rosterEndDate DateTime?
+  returnDay   String?
+  startDate   DateTime?
+  endDate     DateTime?
+  status      RecordStatus @default(ACTIVE)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  person      Person       @relation(fields: [personId], references: [id])
+  course      Course?      @relation(fields: [courseId], references: [id])
+  classGroup  ClassGroup?  @relation(fields: [classGroupId], references: [id])
+  company     Company?     @relation(fields: [companyId], references: [id])
+  contract    Contract?    @relation(fields: [contractId], references: [id])
+
+  @@index([personId, classGroupId])
+}
+
+model Attendance {
+  id           String   @id @default(cuid())
+  personId     String
+  classGroupId String
+  classDate    DateTime
+  sessionKey   String   @default("turn")
+  legacyCode   String?
+  legacyDateReference String?
+  present      Boolean  @default(false)
+  justified    Boolean  @default(false)
+  reason       String?
+  attachment   String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  person       Person   @relation(fields: [personId], references: [id])
+  classGroup   ClassGroup @relation(fields: [classGroupId], references: [id])
+
+  @@unique([personId, classGroupId, classDate, sessionKey])
+  absenceJustificationEntries AbsenceJustification[]
+}
+
+model Grade {
+  id           String   @id @default(cuid())
+  personId     String
+  classGroupId String
+  label        String
+  value        Decimal  @db.Decimal(10,2)
+  maxValue     Decimal? @db.Decimal(10,2)
+  date         DateTime @default(now())
+  createdAt    DateTime @default(now())
+  person       Person   @relation(fields: [personId], references: [id])
+  classGroup   ClassGroup @relation(fields: [classGroupId], references: [id])
+}
+
+model Contract {
+  id                String         @id @default(cuid())
+  number            String?
+  personId          String
+  companyId         String?
+  courseId          String?
+  type              String?
+  status            ContractStatus @default(DRAFT)
+  startDate         DateTime?
+  endDate           DateTime?
+  suspensionStart   DateTime?
+  suspensionEnd     DateTime?
+  terminationDate   DateTime?
+  monthlyValue      Decimal?       @db.Decimal(12,2)
+  notes             String?
+  createdAt         DateTime       @default(now())
+  updatedAt         DateTime       @updatedAt
+  person            Person         @relation(fields: [personId], references: [id])
+  company           Company?       @relation(fields: [companyId], references: [id])
+  course            Course?        @relation(fields: [courseId], references: [id])
+  enrollments       Enrollment[]
+  internships       Internship[]
+  financialTitles   FinancialTitle[]
+  documents         Document[]
+  contractAmendmentEntries ContractAmendment[]
+  contractMovementEntries ContractMovement[]
+}
+
+model Internship {
+  id             String       @id @default(cuid())
+  contractId     String
+  institution    String?
+  supervisorName String?
+  supervisorEmail String?
+  courseName     String?
+  semester       String?
+  weeklyHours    Int?
+  startTime      String?
+  endTime        String?
+  insurancePolicy String?
+  status         RecordStatus @default(ACTIVE)
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+  contract       Contract     @relation(fields: [contractId], references: [id])
+  internshipReportEntries InternshipReport[]
+  internshipLeaveEntries InternshipLeave[]
+}
+
+model Vacancy {
+  id             String       @id @default(cuid())
+  companyId      String
+  title          String
+  profile        String?
+  area           String?
+  activities     String?
+  city           String?
+  district       String?
+  minAge         Int?
+  maxAge         Int?
+  quantity       Int          @default(1)
+  scholarship    Decimal?     @db.Decimal(12,2)
+  expiresAt      DateTime?
+  status         RecordStatus @default(ACTIVE)
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+  company        Company      @relation(fields: [companyId], references: [id])
+  applications   Application[]
+}
+
+model Application {
+  id         String        @id @default(cuid())
+  vacancyId  String
+  personId   String
+  status     RequestStatus @default(OPEN)
+  notes      String?
+  createdAt  DateTime      @default(now())
+  updatedAt  DateTime      @updatedAt
+  vacancy    Vacancy       @relation(fields: [vacancyId], references: [id])
+  person     Person        @relation(fields: [personId], references: [id])
+
+  @@unique([vacancyId, personId])
+}
+
+model FinancialTitle {
+  id          String        @id @default(cuid())
+  companyId   String?
+  contractId  String?
+  description String
+  competence  String?
+  dueDate     DateTime
+  amount      Decimal       @db.Decimal(12,2)
+  status      RequestStatus @default(OPEN)
+  bankRef     String?
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  company     Company?      @relation(fields: [companyId], references: [id])
+  contract    Contract?     @relation(fields: [contractId], references: [id])
+  payments    Payment[]
+  billingAttachmentEntries BillingAttachment[]
+}
+
+model Payment {
+  id               String   @id @default(cuid())
+  financialTitleId String
+  paidAt           DateTime
+  amount           Decimal  @db.Decimal(12,2)
+  externalRef      String?
+  createdAt        DateTime @default(now())
+  financialTitle   FinancialTitle @relation(fields: [financialTitleId], references: [id])
+
+  @@unique([financialTitleId, externalRef])
+}
+
+model ServiceRequest {
+  id          String        @id @default(cuid())
+  personId    String?
+  type        String
+  description String?
+  response    String?
+  dueDate     DateTime?
+  status      RequestStatus @default(OPEN)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  person      Person?       @relation(fields: [personId], references: [id])
+  serviceInteractionEntries ServiceInteraction[]
+}
+
+model Document {
+  id          String       @id @default(cuid())
+  personId    String?
+  contractId  String?
+  type        String
+  fileName    String
+  storageKey  String
+  mimeType    String?
+  checksum    String?
+  version     Int          @default(1)
+  status      RecordStatus @default(ACTIVE)
+  createdAt   DateTime     @default(now())
+  person      Person?      @relation(fields: [personId], references: [id])
+  contract    Contract?    @relation(fields: [contractId], references: [id])
+  learningMaterialEntries LearningMaterial[]
+  absenceJustificationEntries AbsenceJustification[]
+  contractAmendmentEntries ContractAmendment[]
+  billingAttachmentEntries BillingAttachment[]
+  documentReviewEntries DocumentReview[]
+}
+
+
+// Operational demand workflow. Exact legacy column mapping remains a separate, evidence-based adapter.
+model DemandType {
+  id String @id @default(cuid())
+  code String @unique
+  name String
+  active Boolean @default(true)
+  legacyId String? @unique
+  demands Demand[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Demand {
+  id String @id @default(cuid())
+  legacyId String? @unique
+  legacyStatusRaw String?
+  originChannel String @default("MANUAL")
+  externalReference String?
+  title String?
+  description String?
+  status String @default("OPEN")
+  receivedAt DateTime?
+  dueAt DateTime?
+  completedAt DateTime?
+  cancelledAt DateTime?
+  cancellationReason String?
+  companyId String?
+  typeId String?
+  unitId String?
+  departmentId String?
+  assignedUserId String?
+  createdById String?
+  company Company? @relation(fields: [companyId], references: [id], onDelete: SetNull)
+  type DemandType? @relation(fields: [typeId], references: [id], onDelete: SetNull)
+  unit Unit? @relation(fields: [unitId], references: [id], onDelete: SetNull)
+  department Department? @relation(fields: [departmentId], references: [id], onDelete: SetNull)
+  assignedUser User? @relation("DemandAssignee", fields: [assignedUserId], references: [id], onDelete: SetNull)
+  createdBy User? @relation("DemandCreator", fields: [createdById], references: [id], onDelete: SetNull)
+  tasks DemandTask[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([status, receivedAt])
+  @@unique([originChannel, externalReference])
+  @@index([companyId, status])
+  @@index([assignedUserId, status])
+  @@index([unitId, departmentId])
+}
+
+model DemandTask {
+  id String @id @default(cuid())
+  legacyId String? @unique
+  legacyStatusRaw String?
+  demandId String
+  personId String?
+  assignedUserId String?
+  createdById String?
+  title String?
+  description String?
+  dueAt DateTime?
+  status String @default("OPEN")
+  completedAt DateTime?
+  demand Demand @relation(fields: [demandId], references: [id], onDelete: Cascade)
+  person Person? @relation(fields: [personId], references: [id], onDelete: SetNull)
+  assignedUser User? @relation("DemandTaskAssignee", fields: [assignedUserId], references: [id], onDelete: SetNull)
+  createdBy User? @relation("DemandTaskCreator", fields: [createdById], references: [id], onDelete: SetNull)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([demandId, status])
+  @@index([assignedUserId, status])
+  @@index([personId])
+}
+
+model LegacyMapping {
+  id         String   @id @default(cuid())
+  source     String
+  entity     String
+  legacyId   String
+  newId      String
+  fingerprint String?
+  syncedAt   DateTime @default(now())
+
+  @@unique([source, entity, legacyId])
+  @@index([entity, newId])
+}
+
+model SyncRun {
+  id          String   @id @default(cuid())
+  source      String
+  entity      String?
+  mode        String
+  status      String
+  startedAt   DateTime @default(now())
+  finishedAt  DateTime?
+  readCount   Int      @default(0)
+  writeCount  Int      @default(0)
+  errorCount  Int      @default(0)
+  message     String?
+}
+
+model AuditLog {
+  id         String   @id @default(cuid())
+  userId     String?
+  action     String
+  entity     String?
+  entityId   String?
+  metadata   Json?
+  ip         String?
+  createdAt  DateTime @default(now())
+  user       User?    @relation(fields: [userId], references: [id])
+
+  @@index([entity, entityId])
+  @@index([createdAt])
+}
+
+
+model Unit {
+  id String @id @default(cuid())
+  code String @unique
+  name String
+  city String?
+  state String?
+  address String?
+  status RecordStatus @default(ACTIVE)
+  userUnitEntries UserUnit[]
+  holidayEntries Holiday[]
+  classroomEntries Classroom[]
+  scheduleTemplateEntries ScheduleTemplate[]
+  demandEntries Demand[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+
+model Department {
+  id String @id @default(cuid())
+  code String @unique
+  name String
+  description String?
+  status RecordStatus @default(ACTIVE)
+  userUnitEntries UserUnit[]
+  demandEntries Demand[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+
+model UserUnit {
+  id String @id @default(cuid())
+  userId String
+  unitId String
+  departmentId String?
+  active Boolean @default(true)
+  user User @relation(fields: [userId], references: [id])
+  unit Unit @relation(fields: [unitId], references: [id])
+  department Department? @relation(fields: [departmentId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@unique([userId, unitId])
+  @@index([userId])
+  @@index([unitId])
+  @@index([departmentId])
+}
+
+
+model ReferenceItem {
+  id String @id @default(cuid())
+  domain String
+  code String
+  label String
+  sortOrder Int @default(0)
+  active Boolean @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@unique([domain, code])
+}
+
+
+model CompanyGroup {
+  id String @id @default(cuid())
+  name String @unique
+  description String?
+  status RecordStatus @default(ACTIVE)
+  companyGroupMemberEntries CompanyGroupMember[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+
+model CompanyGroupMember {
+  id String @id @default(cuid())
+  groupId String
+  companyId String
+  group CompanyGroup @relation(fields: [groupId], references: [id])
+  company Company @relation(fields: [companyId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@unique([groupId, companyId])
+  @@index([groupId])
+  @@index([companyId])
+}
+
+
+model CompanyContact {
+  id String @id @default(cuid())
+  companyId String
+  fullName String
+  email String?
+  phone String?
+  category String
+  position String?
+  status RecordStatus @default(ACTIVE)
+  company Company @relation(fields: [companyId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([companyId])
+}
+
+
+model CurriculumMatrix {
+  id String @id @default(cuid())
+  courseId String
+  code String
+  version String
+  title String
+  durationMonths Int?
+  totalWorkload Int?
+  effectiveFrom DateTime?
+  effectiveTo DateTime?
+  status RecordStatus @default(ACTIVE)
+  course Course @relation(fields: [courseId], references: [id])
+  curriculumModuleEntries CurriculumModule[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([courseId])
+}
+
+
+model CurriculumModule {
+  id String @id @default(cuid())
+  matrixId String
+  disciplineId String?
+  title String
+  sequence Int
+  plannedHours Int?
+  lessonCount Int?
+  mandatory Boolean @default(true)
+  matrix CurriculumMatrix @relation(fields: [matrixId], references: [id])
+  discipline Discipline? @relation(fields: [disciplineId], references: [id])
+  scheduleRuleEntries ScheduleRule[]
+  academicLessonEntries AcademicLesson[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([matrixId])
+  @@index([disciplineId])
+}
+
+
+model AcademicLesson {
+  id String @id @default(cuid())
+  classGroupId String
+  disciplineId String?
+  teacherId String?
+  title String
+  lessonDate DateTime
+  shift String
+  room String?
+  classroomId String?
+  curriculumModuleId String?
+  scheduleRuleId String?
+  generationRunId String?
+  state String @default("PLANNED")
+  executedAt DateTime?
+  classGroup ClassGroup @relation(fields: [classGroupId], references: [id])
+  discipline Discipline? @relation(fields: [disciplineId], references: [id])
+  teacher User? @relation(fields: [teacherId], references: [id])
+  classroom Classroom? @relation(fields: [classroomId], references: [id])
+  curriculumModule CurriculumModule? @relation(fields: [curriculumModuleId], references: [id])
+  scheduleRule ScheduleRule? @relation(fields: [scheduleRuleId], references: [id])
+  generationRun ScheduleGenerationRun? @relation(fields: [generationRunId], references: [id])
+  scheduleConflicts ScheduleConflict[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([classGroupId])
+  @@index([disciplineId])
+  @@index([teacherId])
+  @@index([classroomId, lessonDate])
+  @@index([curriculumModuleId])
+  @@index([scheduleRuleId])
+  @@index([generationRunId])
+}
+
+
+// Physical room/learning environment. The legacy free-text room fields remain for compatibility.
+model Classroom {
+  id String @id @default(cuid())
+  code String
+  name String
+  unitId String?
+  floor String?
+  capacity Int?
+  roomType String?
+  status RecordStatus @default(ACTIVE)
+  notes String?
+  unit Unit? @relation(fields: [unitId], references: [id])
+  classGroupEntries ClassGroup[]
+  academicLessonEntries AcademicLesson[]
+  scheduleRuleEntries ScheduleRule[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@unique([unitId, code])
+  @@index([unitId])
+  @@index([status])
+}
+
+// Facilitator availability by weekday, shift and time range; no automatic allocation is run in this version.
+model TeacherAvailability {
+  id String @id @default(cuid())
+  teacherId String
+  weekday Int // 1=segunda ... 7=domingo
+  shift String
+  startTime String
+  endTime String
+  availabilityType String @default("AVAILABLE")
+  effectiveFrom DateTime?
+  effectiveTo DateTime?
+  notes String?
+  teacher User @relation(fields: [teacherId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([teacherId, weekday, shift])
+  @@index([effectiveFrom, effectiveTo])
+}
+
+// A semester/period container for the manually reviewed weekly plan and its future generation runs.
+model ScheduleTemplate {
+  id String @id @default(cuid())
+  name String
+  periodStart DateTime
+  periodEnd DateTime
+  unitId String?
+  version Int @default(1)
+  status String @default("DRAFT") // DRAFT, REVIEW, PUBLISHED, ARCHIVED
+  notes String?
+  createdById String?
+  publishedAt DateTime?
+  unit Unit? @relation(fields: [unitId], references: [id])
+  createdBy User? @relation(fields: [createdById], references: [id])
+  rules ScheduleRule[]
+  generationRuns ScheduleGenerationRun[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([unitId, periodStart, periodEnd])
+  @@index([status])
+}
+
+// Recurrence rule for a class/turma. weekPattern supports every week, alternating weeks and custom week numbers.
+model ScheduleRule {
+  id String @id @default(cuid())
+  templateId String
+  classGroupId String
+  curriculumModuleId String?
+  disciplineId String?
+  teacherId String?
+  classroomId String?
+  weekday Int
+  startTime String
+  endTime String
+  weekPattern String @default("EVERY_WEEK") // EVERY_WEEK, FIRST_AND_FIFTH, FIRST_THIRD_FIFTH, SECOND_AND_FOURTH, CUSTOM
+  weekNumbers Json? // semanas específicas quando weekPattern=CUSTOM
+  partCode String?
+  activityLabel String?
+  sequence Int @default(0)
+  active Boolean @default(true)
+  notes String?
+  template ScheduleTemplate @relation(fields: [templateId], references: [id])
+  classGroup ClassGroup @relation(fields: [classGroupId], references: [id])
+  curriculumModule CurriculumModule? @relation(fields: [curriculumModuleId], references: [id])
+  discipline Discipline? @relation(fields: [disciplineId], references: [id])
+  teacher User? @relation(fields: [teacherId], references: [id])
+  classroom Classroom? @relation(fields: [classroomId], references: [id])
+  academicLessons AcademicLesson[]
+  conflicts ScheduleConflict[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([templateId, weekday, startTime])
+  @@index([classGroupId])
+  @@index([teacherId, weekday])
+  @@index([classroomId, weekday])
+  @@index([curriculumModuleId])
+}
+
+// Audit record for a future cronogram-generation operation. It is only a data structure in V2.2.
+model ScheduleGenerationRun {
+  id String @id @default(cuid())
+  templateId String
+  requestedById String?
+  status String @default("PENDING")
+  periodStart DateTime
+  periodEnd DateTime
+  startedAt DateTime?
+  finishedAt DateTime?
+  plannedLessons Int @default(0)
+  conflictCount Int @default(0)
+  summary Json?
+  template ScheduleTemplate @relation(fields: [templateId], references: [id])
+  requestedBy User? @relation(fields: [requestedById], references: [id])
+  lessons AcademicLesson[]
+  conflicts ScheduleConflict[]
+  createdAt DateTime @default(now())
+  @@index([templateId, createdAt])
+  @@index([status])
+}
+
+// Conflicts and manual resolutions produced by a future schedule validation engine.
+model ScheduleConflict {
+  id String @id @default(cuid())
+  generationRunId String
+  scheduleRuleId String?
+  academicLessonId String?
+  conflictType String
+  severity String @default("WARNING")
+  description String
+  resolutionStatus String @default("OPEN")
+  resolutionNote String?
+  resolvedById String?
+  resolvedAt DateTime?
+  generationRun ScheduleGenerationRun @relation(fields: [generationRunId], references: [id])
+  scheduleRule ScheduleRule? @relation(fields: [scheduleRuleId], references: [id])
+  academicLesson AcademicLesson? @relation(fields: [academicLessonId], references: [id])
+  resolvedBy User? @relation(fields: [resolvedById], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([generationRunId, resolutionStatus])
+  @@index([scheduleRuleId])
+  @@index([academicLessonId])
+}
+
+
+model Holiday {
+  id String @id @default(cuid())
+  unitId String?
+  holidayDate DateTime
+  name String
+  scope String @default("INSTITUTIONAL")
+  unit Unit? @relation(fields: [unitId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([unitId])
+}
+
+
+model LearningMaterial {
+  id String @id @default(cuid())
+  courseId String
+  disciplineId String?
+  documentId String?
+  title String
+  description String?
+  status RecordStatus @default(ACTIVE)
+  course Course @relation(fields: [courseId], references: [id])
+  discipline Discipline? @relation(fields: [disciplineId], references: [id])
+  document Document? @relation(fields: [documentId], references: [id])
+  materialReleaseEntries MaterialRelease[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([courseId])
+  @@index([disciplineId])
+  @@index([documentId])
+}
+
+
+model MaterialRelease {
+  id String @id @default(cuid())
+  materialId String
+  personId String
+  releasedAt DateTime @default(now())
+  material LearningMaterial @relation(fields: [materialId], references: [id])
+  person Person @relation(fields: [personId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@unique([materialId, personId])
+  @@index([materialId])
+  @@index([personId])
+}
+
+
+model AbsenceJustification {
+  id String @id @default(cuid())
+  personId String
+  attendanceId String?
+  documentId String?
+  reason String
+  status RequestStatus @default(OPEN)
+  reviewNotes String?
+  person Person @relation(fields: [personId], references: [id])
+  attendance Attendance? @relation(fields: [attendanceId], references: [id])
+  document Document? @relation(fields: [documentId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([personId])
+  @@index([attendanceId])
+  @@index([documentId])
+}
+
+
+model BusinessContract {
+  id String @id @default(cuid())
+  companyId String
+  number String
+  modality String?
+  startDate DateTime
+  endDate DateTime?
+  amount Decimal? @db.Decimal(12,2)
+  status ContractStatus @default(DRAFT)
+  notes String?
+  company Company @relation(fields: [companyId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([companyId])
+}
+
+
+model ContractAmendment {
+  id String @id @default(cuid())
+  contractId String
+  type String
+  effectiveAt DateTime
+  description String
+  documentId String?
+  status RequestStatus @default(OPEN)
+  contract Contract @relation(fields: [contractId], references: [id])
+  document Document? @relation(fields: [documentId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([contractId])
+  @@index([documentId])
+}
+
+
+model ContractMovement {
+  id String @id @default(cuid())
+  contractId String
+  actorId String?
+  kind String
+  previousState String?
+  newState String?
+  effectiveAt DateTime
+  reason String?
+  contract Contract @relation(fields: [contractId], references: [id])
+  actor User? @relation(fields: [actorId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([contractId])
+  @@index([actorId])
+}
+
+
+model Institution {
+  id String @id @default(cuid())
+  name String
+  cnpj String?
+  city String?
+  state String?
+  contactEmail String?
+  status RecordStatus @default(ACTIVE)
+  institutionCourseEntries InstitutionCourse[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+
+model InstitutionCourse {
+  id String @id @default(cuid())
+  institutionId String
+  name String
+  level String?
+  status RecordStatus @default(ACTIVE)
+  institution Institution @relation(fields: [institutionId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([institutionId])
+}
+
+
+model InternshipSupervisor {
+  id String @id @default(cuid())
+  companyId String
+  userId String?
+  fullName String
+  email String?
+  phone String?
+  status RecordStatus @default(ACTIVE)
+  company Company @relation(fields: [companyId], references: [id])
+  user User? @relation(fields: [userId], references: [id])
+  internshipReportEntries InternshipReport[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([companyId])
+  @@index([userId])
+}
+
+
+model InternshipReport {
+  id String @id @default(cuid())
+  internshipId String
+  supervisorId String?
+  kind String
+  periodStart DateTime
+  periodEnd DateTime
+  content String
+  status RequestStatus @default(OPEN)
+  internship Internship @relation(fields: [internshipId], references: [id])
+  supervisor InternshipSupervisor? @relation(fields: [supervisorId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([internshipId])
+  @@index([supervisorId])
+}
+
+
+model InternshipLeave {
+  id String @id @default(cuid())
+  internshipId String
+  startDate DateTime
+  endDate DateTime
+  reason String?
+  status RequestStatus @default(OPEN)
+  internship Internship @relation(fields: [internshipId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([internshipId])
+}
+
+
+model FinanceAccount {
+  id String @id @default(cuid())
+  name String
+  bankName String?
+  agency String?
+  accountNumber String?
+  pixKey String?
+  status RecordStatus @default(ACTIVE)
+  financeMovementEntries FinanceMovement[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+
+model FinanceCategory {
+  id String @id @default(cuid())
+  name String
+  kind String
+  active Boolean @default(true)
+  financeMovementEntries FinanceMovement[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+
+model FinanceMovement {
+  id String @id @default(cuid())
+  accountId String
+  categoryId String?
+  direction String
+  description String
+  occurredAt DateTime
+  amount Decimal @db.Decimal(12,2)
+  externalReference String?
+  account FinanceAccount @relation(fields: [accountId], references: [id])
+  category FinanceCategory? @relation(fields: [categoryId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([accountId])
+  @@index([categoryId])
+}
+
+
+model Invoice {
+  id String @id @default(cuid())
+  companyId String?
+  reference String @unique
+  competence String?
+  dueDate DateTime?
+  issuedAt DateTime?
+  amount Decimal @db.Decimal(12,2)
+  status RequestStatus @default(OPEN)
+  company Company? @relation(fields: [companyId], references: [id])
+  invoiceLineEntries InvoiceLine[]
+  billingAttachmentEntries BillingAttachment[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([companyId])
+}
+
+
+model InvoiceLine {
+  id String @id @default(cuid())
+  invoiceId String
+  description String
+  quantity Decimal @db.Decimal(12,2)
+  unitPrice Decimal @db.Decimal(12,2)
+  amount Decimal @db.Decimal(12,2)
+  invoice Invoice @relation(fields: [invoiceId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([invoiceId])
+}
+
+
+model BillingAttachment {
+  id String @id @default(cuid())
+  titleId String?
+  invoiceId String?
+  documentId String
+  kind String
+  title FinancialTitle? @relation(fields: [titleId], references: [id])
+  invoice Invoice? @relation(fields: [invoiceId], references: [id])
+  document Document @relation(fields: [documentId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([titleId])
+  @@index([invoiceId])
+  @@index([documentId])
+}
+
+
+model ServiceInteraction {
+  id String @id @default(cuid())
+  requestId String
+  authorId String
+  body String
+  status RequestStatus @default(OPEN)
+  request ServiceRequest @relation(fields: [requestId], references: [id])
+  author User @relation(fields: [authorId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([requestId])
+  @@index([authorId])
+}
+
+
+model SocialVisit {
+  id String @id @default(cuid())
+  personId String?
+  companyId String?
+  authorId String
+  visitDate DateTime
+  summary String
+  status RequestStatus @default(OPEN)
+  person Person? @relation(fields: [personId], references: [id])
+  company Company? @relation(fields: [companyId], references: [id])
+  author User @relation(fields: [authorId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([personId])
+  @@index([companyId])
+  @@index([authorId])
+}
+
+
+model SelectionProcess {
+  id String @id @default(cuid())
+  title String
+  code String?
+  startDate DateTime?
+  endDate DateTime?
+  status RequestStatus @default(OPEN)
+  description String?
+  selectionEntryEntries SelectionEntry[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+
+model SelectionEntry {
+  id String @id @default(cuid())
+  processId String
+  personId String
+  score Decimal? @db.Decimal(10,2)
+  rank Int?
+  status RequestStatus @default(OPEN)
+  process SelectionProcess @relation(fields: [processId], references: [id])
+  person Person @relation(fields: [personId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@unique([processId, personId])
+  @@index([processId])
+  @@index([personId])
+}
+
+
+model PortalMessage {
+  id String @id @default(cuid())
+  recipientId String
+  subject String
+  body String
+  readAt DateTime?
+  channel String @default("IN_APP")
+  recipient User @relation(fields: [recipientId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([recipientId])
+}
+
+
+model DocumentTemplate {
+  id String @id @default(cuid())
+  name String
+  type String
+  templateText String
+  version Int @default(1)
+  status RecordStatus @default(ACTIVE)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+
+model DocumentReview {
+  id String @id @default(cuid())
+  documentId String
+  reviewerId String
+  status RequestStatus @default(OPEN)
+  note String?
+  reviewedAt DateTime?
+  document Document @relation(fields: [documentId], references: [id])
+  reviewer User @relation(fields: [reviewerId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([documentId])
+  @@index([reviewerId])
+}
+
+
+model LegacySyncIssue {
+  id String @id @default(cuid())
+  sourceTable String
+  legacyRecordId String
+  errorCode String
+  description String
+  resolvedAt DateTime?
+  status RequestStatus @default(OPEN)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// V3: modular IAM - grants are explicit; CUSTOM accounts deny by default.
+model AccessTemplate {
+  id String @id @default(cuid())
+  code String @unique
+  name String
+  description String?
+  active Boolean @default(true)
+  version Int @default(1)
+  grants AccessGrant[]
+  revisions AccessTemplateRevision[]
+  users User[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model AccessGrant {
+  id String @id @default(cuid())
+  templateId String
+  code String
+  scope String @default("GLOBAL")
+  allowedFields Json?
+  template AccessTemplate @relation(fields: [templateId], references: [id], onDelete: Cascade)
+  @@unique([templateId, code])
+  @@index([code])
+}
+
+
+model AccessTemplateRevision {
+  id String @id @default(cuid())
+  templateId String
+  version Int
+  createdById String?
+  changeNote String?
+  createdAt DateTime @default(now())
+  template AccessTemplate @relation(fields: [templateId], references: [id], onDelete: Cascade)
+  grants AccessTemplateRevisionGrant[]
+  @@unique([templateId, version])
+  @@index([templateId, createdAt])
+}
+
+model AccessTemplateRevisionGrant {
+  id String @id @default(cuid())
+  revisionId String
+  code String
+  scope String @default("GLOBAL")
+  allowedFields Json?
+  revision AccessTemplateRevision @relation(fields: [revisionId], references: [id], onDelete: Cascade)
+  @@unique([revisionId, code])
+  @@index([code])
+}
+
+model AccessOverride {
+  id String @id @default(cuid())
+  userId String
+  code String
+  allowed Boolean
+  scope String @default("GLOBAL")
+  allowedFields Json?
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@unique([userId, code])
+  @@index([code])
+}
+
+// A class may serve several catalog courses; never infer course only from ClassGroup.courseId.
+model ClassGroupCourse {
+  id String @id @default(cuid())
+  classGroupId String
+  courseId String
+  evidence String @default("LEGACY_ENROLLMENT")
+  classGroup ClassGroup @relation(fields: [classGroupId], references: [id], onDelete: Cascade)
+  course Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  @@unique([classGroupId, courseId])
+  @@index([courseId])
+}
+
+// Staging is strictly separate from operational tables. No credentials/PDF files are migrated.
+model LegacyImportBatch {
+  id String @id @default(cuid())
+  source String @default("SISCAPRO_STAGING")
+  status String @default("RUNNING")
+  fileName String?
+  fileBytes BigInt?
+  fileHash String?
+  stagingPhase String @default("RESTORE")
+  importScope String @default("FULL")
+  importControl String @default("RUN")
+  importHeartbeat DateTime?
+  importWorkerToken String?
+  currentImportTable String?
+  restoreTotalBytes BigInt?
+  restoreProcessedBytes BigInt @default(0)
+  restoreScannedBytes BigInt @default(0)
+  completedImportChunks Int @default(0)
+  tableSummaries LegacyImportTableStatus[]
+  chunkCheckpoints LegacyImportChunkCheckpoint[]
+  importEvents LegacyImportEvent[]
+  recordResults LegacyImportRecordResult[]
+  startedAt DateTime @default(now())
+  finishedAt DateTime?
+  rowCount Int @default(0)
+  message String?
+  rows LegacyRawRow[]
+}
+
+model LegacyRawRow {
+  id String @id @default(cuid())
+  sourceTable String
+  sourceKey String
+  identityMethod String
+  rowData Json
+  contentHash String
+  batchId String
+  importedAt DateTime @default(now())
+  batch LegacyImportBatch @relation(fields: [batchId], references: [id], onDelete: Restrict)
+  @@unique([batchId, sourceTable, sourceKey])
+  @@index([batchId, sourceTable])
+}
+
+model LegacyImportIssue {
+  id String @id @default(cuid())
+  ruleCode String
+  sourceTable String
+  sourceKey String
+  targetTable String
+  targetKey String?
+  status String @default("OPEN")
+  observation String?
+  detectedAt DateTime @default(now())
+  resolvedAt DateTime?
+  @@unique([ruleCode, sourceTable, sourceKey])
+  @@index([status, ruleCode])
+}
+
+// Resume-safe migration summaries; never store personal data or raw SQL in operational logs.
+model LegacyImportTableStatus {
+  id String @id @default(cuid())
+  batchId String
+  sourceTable String
+  targetEntity String?
+  recordCount Int @default(0)
+  writtenCount Int @default(0)
+  skippedCount Int @default(0)
+  failedCount Int @default(0)
+  status String @default("PENDING")
+  reasonCode String?
+  reason String?
+  updatedAt DateTime @updatedAt
+  batch LegacyImportBatch @relation(fields: [batchId], references: [id], onDelete: Cascade)
+  @@unique([batchId, sourceTable])
+  @@index([batchId, status])
+}
+
+// Audit every attempted transformation by source key, destination and reason.
+model LegacyImportRecordResult {
+  id String @id @default(cuid())
+  batchId String
+  sourceTable String
+  sourceKey String
+  targetEntity String
+  targetId String?
+  status String
+  reasonCode String?
+  explanation String?
+  processedAt DateTime @default(now())
+  batch LegacyImportBatch @relation(fields: [batchId], references: [id], onDelete: Cascade)
+  @@unique([batchId, sourceTable, sourceKey])
+  @@index([batchId, status])
+}
+
+// Additive, resumable checkpoints for RESTORE, STAGING and TRANSFORM.
+// Only source table names, offsets and hashes; never SQL text or personal fields.
+model LegacyImportChunkCheckpoint {
+  id String @id @default(cuid())
+  batchId String
+  phase String
+  sequence Int
+  sourceTable String
+  startOffset BigInt?
+  endOffset BigInt?
+  rowCount Int @default(0)
+  statementCount Int @default(0)
+  checksum String?
+  cursor String?
+  status String @default("COMPLETED")
+  reasonCode String?
+  createdAt DateTime @default(now())
+  completedAt DateTime @default(now())
+  batch LegacyImportBatch @relation(fields:[batchId], references:[id], onDelete:Cascade)
+  @@unique([batchId,phase,sequence])
+  @@index([batchId,phase,sourceTable,status], map: "LegacyImportChunk_batch_phase_table_status_idx")
+}
+
+// Eventos operacionais de importacao, sem conteudo pessoal ou texto SQL.
+model LegacyImportEvent {
+  id String @id @default(cuid())
+  batchId String
+  phase String
+  level String @default("INFO")
+  sourceTable String?
+  message String
+  createdAt DateTime @default(now())
+  batch LegacyImportBatch @relation(fields: [batchId], references: [id], onDelete: Cascade)
+  @@index([batchId, createdAt])
+}
